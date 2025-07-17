@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+        <LangVersion>default</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Fantasy.Net\Fantasy.Net\Fantasy.Net.csproj" />
+      <ProjectReference Include="..\Entity\Entity.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Benchmark\" />
+      <Folder Include="Outer\NormalMessage\" />
+    </ItemGroup>
+
+</Project>
