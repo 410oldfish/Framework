@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "com.code-philosophy.hybridclr": "https://github.com/focus-creative-games/hybridclr_unity.git",
-    "com.fantasy.unity": "file:F:/UnityProject/Framework/Framework/Server/Fantasy.Unity/Fantasy.Unity",
+    "com.fantasy.unity": "file:F:/UnityProject/Fantasy/Fantasy/Fantasy.Unity/Fantasy.Unity",
     "com.qq.weixin.minigame": "https://github.com/wechat-miniprogram/minigame-tuanjie-transform-sdk.git",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.ide.rider": "3.0.34",

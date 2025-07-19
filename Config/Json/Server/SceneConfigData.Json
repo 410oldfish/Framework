@@ -1,0 +1,3 @@
+{"List":[
+{"Id":1001,"ProcessConfigId":1,"WorldConfigId":1,"SceneRuntimeMode":"MainThread","SceneTypeString":"Gate","NetworkProtocol":"WebSocket","OuterPort":20000,"InnerPort":11001,"SceneType":3}
+]}

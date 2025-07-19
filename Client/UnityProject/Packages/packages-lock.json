@@ -1,11 +1,10 @@
 {
   "dependencies": {
     "com.code-philosophy.hybridclr": {
-      "version": "https://github.com/focus-creative-games/hybridclr_unity.git",
+      "version": "file:com.code-philosophy.hybridclr",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "ee7af5c5926c12402b3ccd121408646f1cf3128f"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.cysharp.unitask": {
       "version": "file:UniTask",
@@ -14,7 +13,7 @@
       "dependencies": {}
     },
     "com.fantasy.unity": {
-      "version": "file:F:/UnityProject/Framework/Framework/Server/Fantasy.Unity/Fantasy.Unity",
+      "version": "file:F:/UnityProject/Fantasy/Fantasy/Fantasy.Unity/Fantasy.Unity",
       "depth": 0,
       "source": "local",
       "dependencies": {

@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 using System.Reflection;
+using Fantasy;
 using GameLogic;
 using TEngine;
 using UnityEngine;
 using QFramework;
+using WeChatWASM;
+using Fantasy.Platform.Unity;
+using Log = TEngine.Log;
 
 #pragma warning disable CS0436
 
@@ -33,6 +37,8 @@ public partial class GameApp
     private static void StartGameLogic()
     {
         framework = GameMgr.Interface;
+        //Network
+        GameModule.Network.InitServer(_hotfixAssembly.ToArray());
             
         GameEvent.Get<ILoginUI>().ShowLoginUI();
         GameModule.UI.ShowUIAsync<TestPfb>();
