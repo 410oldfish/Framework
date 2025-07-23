@@ -34,14 +34,19 @@ public partial class GameApp
         StartGameLogic();
     }
 
-    private static void StartGameLogic()
+    private static async void StartGameLogic()
     {
+        //QFramework
         framework = GameMgr.Interface;
         //Network
         GameModule.Network.InitServer(_hotfixAssembly.ToArray());
             
-        GameEvent.Get<ILoginUI>().ShowLoginUI();
-        GameModule.UI.ShowUIAsync<TestPfb>();
+        //Scene
+        var rootObj = await GameModule.Resource.LoadAssetAsync<GameObject>("GameRoot");
+        var rootCanvas = await GameModule.Resource.LoadAssetAsync<GameObject>("RootCanvas");
+        GameObject.Instantiate(rootObj);
+        var canvas = GameObject.Instantiate(rootCanvas);
+        canvas.name = "RootCanvas";
     }
     
     private static void Release()

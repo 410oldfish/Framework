@@ -69,7 +69,7 @@ namespace MergeIt.Game.TopPanel
         async UniTaskVoid InitTasks()
         {
             Log.Debug("TopPanelComponent InitTasks");
-            foreach (var task in ConfigSystem.Instance.Tables.TbTask.DataList)
+            foreach (var task in ConfigSystem.Instance.Tables.TbMergeTask.DataList)
             {
                 _taskModel.AddTask(task);
                 
@@ -83,7 +83,7 @@ namespace MergeIt.Game.TopPanel
         
         async UniTask<GameObject> InitTask(int taskId)
         {
-            var testTask = ConfigSystem.Instance.Tables.TbTask.Get(taskId);
+            var testTask = ConfigSystem.Instance.Tables.TbMergeTask.Get(taskId);
             if(testTask == null)
             {
                 return null;

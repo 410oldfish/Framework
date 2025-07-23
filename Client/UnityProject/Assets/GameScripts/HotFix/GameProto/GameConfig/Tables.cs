@@ -14,83 +14,28 @@ namespace GameConfig
 {
 public partial class Tables
 {
-    /// <summary>
-    /// 雇员
-    /// </summary>
-    public character.TbWorker TbWorker {get; }
-    /// <summary>
-    /// 家具
-    /// </summary>
-    public item.TbForniture TbForniture {get; }
-    /// <summary>
-    /// 农作物
-    /// </summary>
-    public item.TbCrops TbCrops {get; }
-    /// <summary>
-    /// 牲畜
-    /// </summary>
-    public item.TbLivestock TbLivestock {get; }
-    /// <summary>
-    /// 鱼类
-    /// </summary>
-    public item.TbFish TbFish {get; }
-    /// <summary>
-    /// 牧场产物(肉类和副产品)
-    /// </summary>
-    public item.TbRanchProduct TbRanchProduct {get; }
-    /// <summary>
-    /// 调味品
-    /// </summary>
-    public item.TbSeasoning TbSeasoning {get; }
-    /// <summary>
-    /// 通用道具
-    /// </summary>
-    public item.TbCommonItem TbCommonItem {get; }
-    /// <summary>
-    /// 农场田地解锁条件
-    /// </summary>
-    public site.TbFarmlandUnlock TbFarmlandUnlock {get; }
+    public task.TbMergeTask TbMergeTask {get; }
+    public item.TbItem TbItem {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
-        TbWorker = new character.TbWorker(loader("character_tbworker"));
-        TbForniture = new item.TbForniture(loader("item_tbforniture"));
-        TbCrops = new item.TbCrops(loader("item_tbcrops"));
-        TbLivestock = new item.TbLivestock(loader("item_tblivestock"));
-        TbFish = new item.TbFish(loader("item_tbfish"));
-        TbRanchProduct = new item.TbRanchProduct(loader("item_tbranchproduct"));
-        TbSeasoning = new item.TbSeasoning(loader("item_tbseasoning"));
-        TbCommonItem = new item.TbCommonItem(loader("item_tbcommonitem"));
-        TbFarmlandUnlock = new site.TbFarmlandUnlock(loader("site_tbfarmlandunlock"));
+        TbMergeTask = new task.TbMergeTask(loader("task_tbmergetask"));
+        TbItem = new item.TbItem(loader("item_tbitem"));
         ResolveRef();
     }
     
     private void ResolveRef()
     {
-        TbWorker.ResolveRef(this);
-        TbForniture.ResolveRef(this);
-        TbCrops.ResolveRef(this);
-        TbLivestock.ResolveRef(this);
-        TbFish.ResolveRef(this);
-        TbRanchProduct.ResolveRef(this);
-        TbSeasoning.ResolveRef(this);
-        TbCommonItem.ResolveRef(this);
-        TbFarmlandUnlock.ResolveRef(this);
+        TbMergeTask.ResolveRef(this);
+        TbItem.ResolveRef(this);
     }
 	
 	public List<string> GetTableNames()
     {
         return new List<string>
         {
-            "character_tbworker",
-            "item_tbforniture",
-            "item_tbcrops",
-            "item_tblivestock",
-            "item_tbfish",
-            "item_tbranchproduct",
-            "item_tbseasoning",
-            "item_tbcommonitem",
-            "site_tbfarmlandunlock",
+            "task_tbmergetask",
+            "item_tbitem",
         };
     }
 }

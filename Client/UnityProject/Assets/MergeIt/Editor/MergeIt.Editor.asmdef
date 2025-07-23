@@ -2,8 +2,7 @@
     "name": "MergeIt.Editor",
     "rootNamespace": "MergeIt.Editor",
     "references": [
-        "GUID:e71b47cbb4aa74e4da4970248045f3d3",
-        "GUID:5d3929a9b97c67d48909b45494bcdcde"
+        "GUID:6e76b07590314a543b982daed6af2509"
     ],
     "includePlatforms": [
         "Editor"

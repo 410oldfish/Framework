@@ -1,8 +1,8 @@
 // Copyright (c) 2024, Awessets
 
 using System;
-using MergeIt.Core.Configs.Elements;
 using UnityEngine.UIElements;
+using MergeIt.Core.Configs.Elements;
 
 namespace MergeIt.Editor.Configs.ItemsDrawers
 {

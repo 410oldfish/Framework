@@ -7,15 +7,15 @@ namespace MergeIt.Game
 {
     public class TaskModel
     {
-        List<Task> _tasks = new List<Task>();
-        public List<Task> Tasks => _tasks;
+        List<MergeTask> _tasks = new List<MergeTask>();
+        public List<MergeTask> Tasks => _tasks;
         
-        public void AddTask(Task task)
+        public void AddTask(MergeTask task)
         {
             _tasks.Add(task);
         }
         
-        public void RemoveTask(Task task)
+        public void RemoveTask(MergeTask task)
         {
             _tasks.Remove(task);
         }

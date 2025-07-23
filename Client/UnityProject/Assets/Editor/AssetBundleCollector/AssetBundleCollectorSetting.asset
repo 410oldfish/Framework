@@ -37,6 +37,19 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: Animations
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Animations
+        CollectorGUID: c3baf6caf000f44459b7b849bbafef0e
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
     - GroupName: Audios
       GroupDesc: 
       AssetTags: 
@@ -76,6 +89,19 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: EffectPrefabs
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/EffectPrefabs
+        CollectorGUID: 43b2175129fe5bd47b164787a5a2afec
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
     - GroupName: Effects
       GroupDesc: 
       AssetTags: 
@@ -84,7 +110,7 @@ MonoBehaviour:
       - CollectPath: Assets/AssetRaw/Effects
         CollectorGUID: 0fe175e1e1bd49a4ca71e66b6a9b7237
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFileNameAndExt
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 
@@ -115,6 +141,19 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: Music
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Music
+        CollectorGUID: 02a049a2c2523334ab2ff0360fc3ae2f
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
     - GroupName: Scenes
       GroupDesc: 
       AssetTags: 
@@ -122,6 +161,32 @@ MonoBehaviour:
       Collectors:
       - CollectPath: Assets/AssetRaw/Scenes
         CollectorGUID: cace6ee6539f661419b5e5f8ae1c0146
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Shaders
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Shaders
+        CollectorGUID: 2a4bceb84ed685447ace957f497eb810
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Sound
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Sound
+        CollectorGUID: 021f973303d0b9b4eb3dec283e6e0865
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
@@ -146,29 +211,8 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/AssetRaw/UIRaw/Atlas
-        CollectorGUID: 6d11fa91acc253840a648b58f23db139
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/AssetRaw/UIRaw/Raw
-        CollectorGUID: 6bc134b912ac6bb4399ea1bec4c11636
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-    - GroupName: FontMaterial
-      GroupDesc: 
-      AssetTags: FontMaterial
-      ActiveRuleName: EnableGroup
-      Collectors:
-      - CollectPath: Assets/AssetRaw/FontMaterials
-        CollectorGUID: 6a213fb35a71b414b8850f96f93308c7
+      - CollectPath: Assets/AssetRaw/UIRaw
+        CollectorGUID: 30ac6ece1d52a824986d28eb79ec7e51
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
