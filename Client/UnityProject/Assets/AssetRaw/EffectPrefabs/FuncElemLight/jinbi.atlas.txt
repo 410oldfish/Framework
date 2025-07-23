@@ -1,0 +1,7 @@
+img_eft_jinbi.png
+size:30,32
+filter:Linear,Linear
+pma:true
+images/lizi01
+bounds:2,2,26,28
+offsets:3,3,32,32

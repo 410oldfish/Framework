@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b72332746789b41a27a405378028f3, type: 3}
+  m_Name: cfg_beverage_1_coffeeMachine
+  m_EditorClassIdentifier: 
+  _id: 140104
+  _funcType: 0
+  _type: 1
+  _commonSettings:
+    _expanded: 1
+    _description: Tap to get {0} Coins, or merge to produce Coins
+    _splitCostSettings:
+      _currencyType: 0
+      _amount: 0
+    _sellCostSettings:
+      _currencyType: 0
+      _amount: 0
+    _unlockCostSettings:
+      _currencyType: 0
+      _amount: 10
+    _name: coffeeMachine
+    _icon: {fileID: 8196838751629904819, guid: 145440666ff53a6418feecddc2426ff1, type: 3}
+    _isConsumable: 0
+    _consumableSettings:
+      _target: 0
+      _operation: 2
+      _value: 1
+  _generatorSettings:
+    _expanded: 1
+    _stack: 0
+    _minDrop: 2
+    _maxDrop: 5
+    _chargeTime: 1
+    _dropCount: 1
+    _skipChargeCostSettings:
+      _currencyType: 0
+      _amount: 1
+    _adSkip: 0
+    _charged: 1
+    _energyCost: 0
+    _isUnlimited: 1
+    _needOpen: 0
+    _openTime: 0
+    _skipOpenCostSettings:
+      _currencyType: 0
+      _amount: 0
+    _generateBlocked: 0
+    _generateItems:
+    - Element: {fileID: 11400000, guid: 2ade9e06540f3f046b4131ab0fe9a811, type: 2}
+      Possibility: 80
+    - Element: {fileID: 11400000, guid: 3b1ea04c92e91b44997eb4b7b6dd007b, type: 2}
+      Possibility: 20

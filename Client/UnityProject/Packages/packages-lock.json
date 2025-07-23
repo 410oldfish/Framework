@@ -25,7 +25,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2cc9cdddf7bfddd28fb4cf4dc000f44061443746"
+      "hash": "45e7581c92543239ae221a274fa5b96339301168"
     },
     "com.tuyoogame.yooasset": {
       "version": "file:YooAsset",

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:ui="UnityEngine.UIElements"
+         xmlns:uie="UnityEditor.UIElements"
+         xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd">
+	<ui:TextField name="Id" label="Id:" type = "string"
+                   binding-path="_id"/>
+    <uie:EnumField name="ElementType" label="Type:" type="MergeIt.Core.Configs.Types.ElementType, MergeIt.Core"
+                   binding-path="_type"/>
+	<uie:EnumField name="ElementFuncType" label="ElementFuncType:" type="MergeIt.Core.Configs.Types.ElementFuncType, MergeIt.Core"
+                   binding-path="_funcType"/>
+</ui:UXML>

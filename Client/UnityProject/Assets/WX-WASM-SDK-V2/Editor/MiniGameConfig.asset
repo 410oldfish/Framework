@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: MiniGameConfig
   m_EditorClassIdentifier: 
   ProjectConf:
-    projectName: LianJiMengZhu
+    projectName: Merge
     Appid: wx7d2c089847eda166
-    CDN: https://a.unity.cn/client_api/v1/buckets/85eeab6a-5825-46c5-98ec-75be6e740406/release_by_badge/v1/content/
+    CDN: https://a.unity.cn/client_api/v1/buckets/1cb08687-0f5f-4166-9c8a-404a48317f95/release_by_badge/V1/content/
     assetLoadType: 0
     compressDataPackage: 0
     VideoUrl: 
-    DST: F:/UnityProject/Outputs/WxApp
+    DST: E:\Work\Merge\Game\we-chat-game-first\Output
     StreamCDN: 
     bundleHashLength: 32
     bundlePathIdentifier: StreamingAssets;
@@ -44,13 +44,12 @@ MonoBehaviour:
     UseFriendRelation: 0
     UseCompressedTexture: 0
     UseMiniGameChat: 0
-    PreloadWXFont: 0
-    disableMultiTouch: 0
+    PreloadWXFont: 1
   CompileOptions:
     DevelopBuild: 0
     AutoProfile: 0
     ScriptOnly: 0
-    Il2CppOptimizeSize: 1
+    Il2CppOptimizeSize: 0
     profilingFuncs: 1
     Webgl2: 1
     fbslim: 0
@@ -58,7 +57,7 @@ MonoBehaviour:
     ProfilingMemory: 0
     CleanBuild: 0
     CustomNodePath: 
-    autoAdaptScreen: 0
+    autoAdaptScreen: 1
     showMonitorSuggestModal: 1
     enableProfileStats: 0
     enableRenderAnalysis: 0
@@ -66,7 +65,6 @@ MonoBehaviour:
     iOSAutoGCInterval: 10000
     enableIOSPerformancePlus: 0
     brotliMT: 1
-    enableWasm2023: 0
   CompressTexture:
     halfSize: 0
     useDXT5: 0
@@ -92,8 +90,8 @@ MonoBehaviour:
     Letterlike_Symbols: 1
     Enclosed_Alphanumerics: 1
     Number_Forms: 1
-    Currency_Symbols: 1
-    Arrows: 1
-    Geometric_Shapes: 1
-    Mathematical_Operators: 1
+    Currency_Symbols: 0
+    Arrows: 0
+    Geometric_Shapes: 0
+    Mathematical_Operators: 0
     CustomUnicode: 
