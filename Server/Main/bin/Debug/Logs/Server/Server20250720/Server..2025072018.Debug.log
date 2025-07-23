@@ -1,0 +1,3 @@
+2025-07-20 18:10:48.6575 (C2G_ConnectChatRequestHandler.cs:24) get chat route id : 2589026644207337472
+2025-07-20 18:14:44.8635 (C2G_ConnectChatRequestHandler.cs:24) get chat route id : 2589182774858481664
+2025-07-20 18:14:46.1377 (C2Chat_HelloRouteMsgHandler.cs:11) chat entity : Chat1  Hello Custom Route Message

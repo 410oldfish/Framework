@@ -1,6 +1,7 @@
 using ProtoBuf;
 
 using System.Collections.Generic;
+using Entity.Handler.Map;
 using MongoDB.Bson.Serialization.Attributes;
 using Fantasy;
 using Fantasy.Network.Interface;
@@ -17,6 +18,147 @@ using Fantasy.Serialize;
 
 namespace Fantasy
 {	
+	[ProtoContract]
+	public partial class G2M_ConnectRequest : AMessage, IRouteRequest, IProto
+	{
+		public static G2M_ConnectRequest Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2M_ConnectRequest>();
+		}
+		public override void Dispose()
+		{
+			GateRouteId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2M_ConnectRequest>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public M2G_ConnectResponse ResponseType { get; set; }
+		public uint OpCode() { return InnerOpcode.G2M_ConnectRequest; }
+		[ProtoMember(1)]
+		public long GateRouteId { get; set; }
+	}
+	[ProtoContract]
+	public partial class M2G_ConnectResponse : AMessage, IRouteResponse, IProto
+	{
+		public static M2G_ConnectResponse Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<M2G_ConnectResponse>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			AddressableId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<M2G_ConnectResponse>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.M2G_ConnectResponse; }
+		[ProtoMember(1)]
+		public long AddressableId { get; set; }
+		[ProtoMember(2)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2Chat_HelloRouteMsg : AMessage, IRouteMessage, IProto
+	{
+		public static G2Chat_HelloRouteMsg Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2Chat_HelloRouteMsg>();
+		}
+		public override void Dispose()
+		{
+			Tag = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2Chat_HelloRouteMsg>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.G2Chat_HelloRouteMsg; }
+		[ProtoMember(1)]
+		public string Tag { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2Chat_HelloRouteRequest : AMessage, IRouteRequest, IProto
+	{
+		public static G2Chat_HelloRouteRequest Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2Chat_HelloRouteRequest>();
+		}
+		public override void Dispose()
+		{
+			Tag = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2Chat_HelloRouteRequest>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public G2Chat_HelloRouteResponse ResponseType { get; set; }
+		public uint OpCode() { return InnerOpcode.G2Chat_HelloRouteRequest; }
+		[ProtoMember(1)]
+		public string Tag { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2Chat_HelloRouteResponse : AMessage, IRouteResponse, IProto
+	{
+		public static G2Chat_HelloRouteResponse Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2Chat_HelloRouteResponse>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			Tag = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2Chat_HelloRouteResponse>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.G2Chat_HelloRouteResponse; }
+		[ProtoMember(1)]
+		public string Tag { get; set; }
+		[ProtoMember(2)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2Chat_ConnectRequest : AMessage, IRouteRequest, IProto
+	{
+		public static G2Chat_ConnectRequest Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2Chat_ConnectRequest>();
+		}
+		public override void Dispose()
+		{
+			GateRouteId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2Chat_ConnectRequest>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public Chat2G_ConnectResponse ResponseType { get; set; }
+		public uint OpCode() { return InnerOpcode.G2Chat_ConnectRequest; }
+		[ProtoMember(1)]
+		public long GateRouteId { get; set; }
+	}
+	[ProtoContract]
+	public partial class Chat2G_ConnectResponse : AMessage, IRouteResponse, IProto
+	{
+		public static Chat2G_ConnectResponse Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Chat2G_ConnectResponse>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			RouteId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Chat2G_ConnectResponse>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.Chat2G_ConnectResponse; }
+		[ProtoMember(1)]
+		public long RouteId { get; set; }
+		[ProtoMember(2)]
+		public uint ErrorCode { get; set; }
+	}
 	[ProtoContract]
 	public partial class G2A_TestMessage : AMessage, IRouteMessage, IProto
 	{
@@ -150,6 +292,43 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public long ChatRouteId { get; set; }
 		[ProtoMember(2)]
+		public uint ErrorCode { get; set; }
+	}
+	/// <summary>
+	///  Map给另外一个Map发送Unit数据
+	/// </summary>
+	public partial class M2M_SendUnitRequest : AMessage, IRouteRequest
+	{
+		public static M2M_SendUnitRequest Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<M2M_SendUnitRequest>();
+		}
+		public override void Dispose()
+		{
+			user = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<M2M_SendUnitRequest>(this);
+#endif
+		}
+		[BsonIgnore]
+		public M2M_SendUnitResponse ResponseType { get; set; }
+		public uint OpCode() { return InnerOpcode.M2M_SendUnitRequest; }
+		public MapUser user { get; set; }
+	}
+	public partial class M2M_SendUnitResponse : AMessage, IRouteResponse
+	{
+		public static M2M_SendUnitResponse Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<M2M_SendUnitResponse>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<M2M_SendUnitResponse>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.M2M_SendUnitResponse; }
 		public uint ErrorCode { get; set; }
 	}
 	/// <summary>

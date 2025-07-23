@@ -31,6 +31,22 @@
           }
         }
       },
+      "Fantasy-Net.NLog/2024.1.20": {
+        "type": "package",
+        "dependencies": {
+          "Fantasy-Net": "2024.1.3",
+          "NLog": "5.3.4"
+        },
+        "compile": {
+          "lib/net8.0/Fantasy-Net.NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Fantasy-Net.NLog.dll": {}
+        },
+        "build": {
+          "buildTransitive/Fantasy-Net.NLog.targets": {}
+        }
+      },
       "Fantasy-Net.Tools.ExporterConfigTable/2024.2.26": {
         "type": "package",
         "compile": {
@@ -191,6 +207,19 @@
         },
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog/5.3.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
             "related": ".xml"
           }
         }
@@ -431,6 +460,22 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
+    "Fantasy-Net.NLog/2024.1.20": {
+      "sha512": "HJuHfecWrD7tcQYEZezJzgayvG5leAbdWlgvo9ft/CUuwTtAB+tkeKP3e3VtbkCoPaAZO4VAUN0Y30Ute2/vrQ==",
+      "type": "package",
+      "path": "fantasy-net.nlog/2024.1.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/NLog.config",
+        "build/NLog.xsd",
+        "buildTransitive/Fantasy-Net.NLog.targets",
+        "fantasy-net.nlog.2024.1.20.nupkg.sha512",
+        "fantasy-net.nlog.nuspec",
+        "icon.png",
+        "lib/net8.0/Fantasy-Net.NLog.dll"
+      ]
+    },
     "Fantasy-Net.Tools.ExporterConfigTable/2024.2.26": {
       "sha512": "GPCU6KWVIldeNyTompl6pLdLGSsNecAYScbg+lGtX8iWfYK+bXw4bdMdGoy+sp7KtET4IbWGRb6CGtTrsQuKPw==",
       "type": "package",
@@ -665,6 +710,30 @@
         "newtonsoft.json.13.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "NLog/5.3.4": {
+      "sha512": "gLy7+O1hEYJXIlcTr1/VWjGXrZTQFZzYNO18IWasD64pNwz0BreV+nHLxWKXWZzERRzoKnsk2XYtwLkTVk7J1A==",
+      "type": "package",
+      "path": "nlog/5.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "nlog.5.3.4.nupkg.sha512",
+        "nlog.nuspec"
       ]
     },
     "protobuf-net/3.2.52": {
@@ -970,7 +1039,8 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Entity >= 1.0.0",
-      "Fantasy-Net >= 2024.2.26"
+      "Fantasy-Net >= 2024.2.26",
+      "Fantasy-Net.NLog >= 2024.1.20"
     ]
   },
   "packageFolders": {
@@ -1029,6 +1099,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "Fantasy-Net.NLog": {
+            "target": "Package",
+            "version": "[2024.1.20, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

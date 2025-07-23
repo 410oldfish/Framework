@@ -8,6 +8,61 @@ package Fantasy.Network.Message;
 // 在message协议上方添加// Protocol+空格+协议名字
 // 例如:// Protocol ProtoBuf 或 // Protocol MemoryPack
 
+message C2G_ConnectChatRequest // IRequest, G2C_ConnectChatResponse
+{
+
+}
+
+message G2C_ConnectChatResponse // IResponse
+{
+
+}
+
+message C2Chat_HelloRouteMsg // ICustomRouteMessage, ChatRoute
+{
+	string Tag = 1;
+}
+
+message C2Chat_HelloRouteRequest // ICustomRouteRequest, Chat2C_HelloRouteResponse, ChatRoute
+{
+	string Tag = 1;
+}
+
+message Chat2C_HelloRouteResponse // ICustomRouteResponse
+{
+	string Tag = 1;
+}
+
+message Chat2C_PushChatRouteMsg // ICustomRouteMessage, ChatRoute
+{
+	string Tag = 1;
+}
+
+message C2G_ConnectAddressableRequest // IRequest, G2C_ConnectAddressableResponse
+{
+
+}
+
+message G2C_ConnectAddressableResponse // IResponse
+{
+
+}
+
+message C2M_HelloMsg // IAddressableRouteMessage
+{
+	string Tag = 1;
+}
+
+message C2M_HelloRequest // IAddressableRouteRequest, M2C_HelloResponse
+{
+	string Tag =1;
+}
+
+message M2C_HelloResponse // IAddressableRouteResponse
+{
+	string Tag = 1;
+}
+
 //Send
 
 message C2G_HelloFantasy // IMessage
@@ -103,6 +158,7 @@ message M2C_MoveToMapResponse // IAddressableRouteResponse
 {
 
 }
+
 /// 发送一个消息给Gate，让Gate发送一个Addressable消息给MAP
 message C2G_SendAddressableToMap // IMessage
 {

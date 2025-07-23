@@ -1,0 +1,8 @@
+2025-07-23 16:02:57.0445 (C2G_ConnectAddressableRequestHandler.cs:24) register addressable id: 301695287871930368
+2025-07-23 16:03:06.1465 (C2M_HelloMsgHandler.cs:14) MapUserList count: 2
+2025-07-23 16:03:06.1465 (C2M_HelloMsgHandler.cs:16) Map 1004 's  MapUser 301695287871930368 received message: Hello Addressable Message
+2025-07-23 16:03:56.0584 (C2G_ConnectAddressableRequestHandler.cs:24) register addressable id: 301696301484212224
+2025-07-23 16:03:58.7673 (C2M_HelloMsgHandler.cs:14) MapUserList count: 2
+2025-07-23 16:03:58.7673 (C2M_HelloMsgHandler.cs:17) 301682832466771968
+2025-07-23 16:03:58.7673 (C2M_HelloMsgHandler.cs:17) 301685598425710592
+2025-07-23 16:03:58.7673 (C2M_HelloMsgHandler.cs:20) Map 1004 's  MapUser 301696301484212224 received message: Hello Addressable Message

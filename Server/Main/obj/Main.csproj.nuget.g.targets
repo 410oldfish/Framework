@@ -2,5 +2,6 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)fantasy-net.tools.exporterconfigtable\2024.2.26\buildTransitive\Fantasy-Net.Tools.ExporterConfigTable.targets" Condition="Exists('$(NuGetPackageRoot)fantasy-net.tools.exporterconfigtable\2024.2.26\buildTransitive\Fantasy-Net.Tools.ExporterConfigTable.targets')" />
+    <Import Project="$(NuGetPackageRoot)fantasy-net.nlog\2024.1.20\buildTransitive\Fantasy-Net.NLog.targets" Condition="Exists('$(NuGetPackageRoot)fantasy-net.nlog\2024.1.20\buildTransitive\Fantasy-Net.NLog.targets')" />
   </ImportGroup>
 </Project>

@@ -5,6 +5,7 @@ using Fantasy.Network;
 using Fantasy.Network.Interface;
 using TEngine;
 using UnityEngine;
+using Log = TEngine.Log;
 
 namespace GameLogic
 {
@@ -39,12 +40,10 @@ namespace GameLogic
                 false);
         }
 
-        public void Send()
+        public void Send<TMessage>(TMessage msg)
+        where TMessage : IMessage
         {
-            _session.Send(new C2G_HelloFantasy()
-            {
-                Tag = "Hello Fantasy !!!"
-            });
+            _session.Send(msg);
         }
 
         public async FTask<TResponse> RPC<TRequest, TResponse>(TRequest request)
@@ -73,6 +72,61 @@ namespace GameLogic
                 _session = null;
                 Debugger.print("Session disposed.");
             }
+        }
+        
+        public async FTask<TResponse> CreateRoute<TRequest,TResponse>(TRequest request)
+        where TRequest : IRequest
+        where TResponse : IResponse
+        {
+            if (_session == null || _session.IsDisposed)
+            {
+                throw new InvalidOperationException("Session is not connected or has been disposed.");
+            }
+
+            var rep = (TResponse)await _session.Call(request);
+            if(rep.ErrorCode != 0)
+            {
+                Log.Error("route rep error ! " + rep.ErrorCode);
+            }
+            return rep;
+        }
+        
+        public void SendRoute()
+        {
+            _session.Send(new C2Chat_HelloRouteMsg()
+            {
+                Tag = "Hello Custom Route Message"
+            });
+        }
+
+        public async FTask<TRouteResponse> CallRoute<TRouteRequest, TRouteResponse>(TRouteRequest request)
+        where TRouteRequest : IRouteRequest
+        where TRouteResponse : IRouteResponse
+        {
+            if (_session == null || _session.IsDisposed)
+            {
+                throw new InvalidOperationException("Session is not connected or has been disposed.");
+            }
+
+            var response = (TRouteResponse) await _session.Call(request);
+            if (response == null)
+            {
+                throw new InvalidCastException($"Response cannot be cast to type {typeof(TRouteResponse).Name}");
+            }
+            
+            return response;
+        }
+
+        public void RegisterAddressable<TRequest, TResponse>(string address)
+            where TRequest : IRequest
+            where TResponse : IResponse
+        {
+            if (_session == null || _session.IsDisposed)
+            {
+                throw new InvalidOperationException("Session is not connected or has been disposed.");
+            }
+            
+            
         }
     }
 }

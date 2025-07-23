@@ -1,0 +1,6 @@
+2025-07-20 16:52:18.7181 (C2G_HelloFantasyHandler.cs:13) get message:Hello Fantasy !!!
+2025-07-20 16:52:18.7408 (G2Chat_HelloRouteMsgHandler.cs:11)  scene : 8 get message:Hello Chat, this is a route message from gate
+2025-07-20 16:52:38.0053 (C2G_HelloFantasyHandler.cs:13) get message:Hello Fantasy !!!
+2025-07-20 16:52:38.0053 (G2Chat_HelloRouteMsgHandler.cs:11)  scene : 8 get message:Hello Chat, this is a route message from gate
+2025-07-20 16:52:39.2333 (C2G_HelloFantasyHandler.cs:13) get message:Hello Fantasy !!!
+2025-07-20 16:52:39.2333 (G2Chat_HelloRouteMsgHandler.cs:11)  scene : 8 get message:Hello Chat, this is a route message from gate

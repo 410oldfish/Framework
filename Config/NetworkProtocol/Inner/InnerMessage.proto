@@ -1,5 +1,41 @@
 syntax = "proto3";
 package Sining.Message;
+
+message G2M_ConnectRequest // IRouteRequest, M2G_ConnectResponse
+{
+	int64 GateRouteId = 1;
+}
+
+message M2G_ConnectResponse // IRouteResponse
+{
+	int64 AddressableId = 1;
+}
+
+message G2Chat_HelloRouteMsg // IRouteMessage
+{
+	string Tag = 1;
+}
+
+message G2Chat_HelloRouteRequest // IRouteRequest, G2Chat_HelloRouteResponse
+{
+	string Tag = 1;
+}
+
+message G2Chat_HelloRouteResponse // IRouteResponse
+{
+	string Tag = 1;
+}
+
+message G2Chat_ConnectRequest // IRouteRequest, Chat2G_ConnectResponse
+{
+	int64 GateRouteId = 1;
+}
+
+message Chat2G_ConnectResponse // IRouteResponse
+{
+	int64 RouteId = 1;
+}
+
 message G2A_TestMessage // IRouteMessage
 {
 	string Tag = 1;
@@ -29,17 +65,17 @@ message Chat2G_CreateRouteResponse // IRouteResponse
 {
 	int64 ChatRouteId = 1;
 }
-// /// Map给另外一个Map发送Unit数据
-// // Protocol Bson
-// message M2M_SendUnitRequest // IRouteRequest,M2M_SendUnitResponse
-// {
-// 	Unit Unit = 1;
-// }
-// // Protocol Bson
-// message M2M_SendUnitResponse // IRouteResponse
-// {
+/// Map给另外一个Map发送Unit数据
+// Protocol Bson
+message M2M_SendUnitRequest // IRouteRequest,M2M_SendUnitResponse
+{
+	MapUser user = 1;
+}
+// Protocol Bson
+message M2M_SendUnitResponse // IRouteResponse
+{
 
-// }
+}
 /// Gate发送Addressable消息给MAP
 message G2M_SendAddressableMessage // IAddressableRouteMessage
 {

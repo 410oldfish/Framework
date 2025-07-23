@@ -45,3 +45,5 @@ F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Entity.pdb
 F:\UnityProject\Framework\Framework\Server\Main\obj\Debug\net9.0\Main.csproj.AssemblyReference.cache
 F:\UnityProject\Framework\Framework\Server\Main\obj\Debug\net9.0\Main.csproj.Up2Date
 F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Fantasy.Tools.ExporterConfigTable.dll
+F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Fantasy-Net.NLog.dll
+F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\NLog.dll

@@ -1,0 +1,12 @@
+2025-07-21 19:39:02.6396 (C2G_ConnectAddressableRequestHandler.cs:24) register addressable id: 298949343480905728
+2025-07-21 19:39:06.8938 (M2M_SendUnitRequestHandler.cs:16) get mapUser
+2025-07-21 19:39:06.8938 (C2M_MoveToMapRequestHandler.cs:29) Trans to map success
+2025-07-21 19:39:57.4317 (C2M_HelloMsgHandler.cs:12) MapUser 298949343480905728 received message: Hello Addressable Message
+2025-07-21 19:39:58.2853 (C2M_HelloMsgHandler.cs:12) MapUser 298949343480905728 received message: Hello Addressable Message
+2025-07-21 19:39:59.0634 (C2M_HelloMsgHandler.cs:12) MapUser 298949343480905728 received message: Hello Addressable Message
+2025-07-21 19:40:03.4265 (C2M_HelloRequestHandler.cs:11) MapUser connect test user received hello request with tag: Hello Addressable Request
+2025-07-21 19:41:43.7136 (C2G_ConnectAddressableRequestHandler.cs:24) register addressable id: 298952109439844352
+2025-07-21 19:41:47.2398 (C2M_HelloMsgHandler.cs:12) Map 1004 's  MapUser 298952109439844352 received message: Hello Addressable Message
+2025-07-21 19:41:50.6924 (M2M_SendUnitRequestHandler.cs:16) get mapUser
+2025-07-21 19:41:50.6924 (C2M_MoveToMapRequestHandler.cs:29) Trans to map success
+2025-07-21 19:41:52.8111 (C2M_HelloMsgHandler.cs:12) Map 1005 's  MapUser 298952109439844352 received message: Hello Addressable Message

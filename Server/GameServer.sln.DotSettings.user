@@ -3,4 +3,5 @@
   &lt;Assembly Path="C:\Users\47230\.nuget\packages\mongodb.driver\3.1.0\lib\net6.0\MongoDB.Driver.dll" /&gt;&#xD;
   &lt;Assembly Path="F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Fantasy-Net.ConfigTable.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
+	
 	</wpf:ResourceDictionary>

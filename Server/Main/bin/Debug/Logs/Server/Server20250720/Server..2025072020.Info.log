@@ -1,0 +1,24 @@
+2025-07-20 20:16:43.4068 (SerializerManager.cs:91) 初始化序列化器成功，数量为：2
+2025-07-20 20:16:43.9628 (TCPServerNetwork.cs:38) SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-20 20:16:43.9898 (WebSocketServerNetwork.cs:74) SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-20 20:16:44.3921 (TCPServerNetwork.cs:38) SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-20 20:16:44.7886 (TCPServerNetwork.cs:38) SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-20 20:16:45.2126 (TCPServerNetwork.cs:38) SceneConfigId = 1004 networkTarget = Inner TCPServer Listen 127.0.0.1:11004
+2025-07-20 20:16:45.6119 (TCPServerNetwork.cs:38) SceneConfigId = 1005 networkTarget = Inner TCPServer Listen 127.0.0.1:11005
+2025-07-20 20:16:45.6119 (Process.cs:118) Process:1 Startup Complete SceneCount:5
+2025-07-20 20:22:17.5808 (SerializerManager.cs:91) 初始化序列化器成功，数量为：2
+2025-07-20 20:22:18.1228 (TCPServerNetwork.cs:38) SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-20 20:22:18.1494 (WebSocketServerNetwork.cs:74) SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-20 20:22:18.5525 (TCPServerNetwork.cs:38) SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-20 20:22:18.9475 (TCPServerNetwork.cs:38) SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-20 20:22:19.3529 (TCPServerNetwork.cs:38) SceneConfigId = 1004 networkTarget = Inner TCPServer Listen 127.0.0.1:11004
+2025-07-20 20:22:19.7521 (TCPServerNetwork.cs:38) SceneConfigId = 1005 networkTarget = Inner TCPServer Listen 127.0.0.1:11005
+2025-07-20 20:22:19.7521 (Process.cs:118) Process:1 Startup Complete SceneCount:5
+2025-07-20 20:44:41.8349 (SerializerManager.cs:91) 初始化序列化器成功，数量为：2
+2025-07-20 20:44:42.3740 (TCPServerNetwork.cs:38) SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-20 20:44:42.4228 (WebSocketServerNetwork.cs:74) SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-20 20:44:42.8207 (TCPServerNetwork.cs:38) SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-20 20:44:43.2209 (TCPServerNetwork.cs:38) SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-20 20:44:43.6091 (TCPServerNetwork.cs:38) SceneConfigId = 1004 networkTarget = Inner TCPServer Listen 127.0.0.1:11004
+2025-07-20 20:44:43.9806 (TCPServerNetwork.cs:38) SceneConfigId = 1005 networkTarget = Inner TCPServer Listen 127.0.0.1:11005
+2025-07-20 20:44:43.9806 (Process.cs:118) Process:1 Startup Complete SceneCount:5

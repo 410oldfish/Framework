@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Y2dnEGQZYv4=",
+  "dgSpecHash": "w455iI2VVqM=",
   "success": true,
   "projectFilePath": "F:\\UnityProject\\Framework\\Framework\\Server\\Main\\Main.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\47230\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\47230\\.nuget\\packages\\fantasy-net.nlog\\2024.1.20\\fantasy-net.nlog.2024.1.20.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\fantasy-net.tools.exporterconfigtable\\2024.2.26\\fantasy-net.tools.exporterconfigtable.2024.2.26.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
@@ -14,6 +15,7 @@
     "C:\\Users\\47230\\.nuget\\packages\\mongodb.bson\\3.1.0\\mongodb.bson.3.1.0.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\mongodb.driver\\3.1.0\\mongodb.driver.3.1.0.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\47230\\.nuget\\packages\\nlog\\5.3.4\\nlog.5.3.4.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\protobuf-net\\3.2.52\\protobuf-net.3.2.52.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\protobuf-net.core\\3.2.52\\protobuf-net.core.3.2.52.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",

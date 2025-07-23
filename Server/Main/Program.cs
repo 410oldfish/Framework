@@ -22,6 +22,8 @@ MachineConfigData.Initialize(machineConfigDataJson);
 ProcessConfigData.Initialize(processConfigDataJson);
 WorldConfigData.Initialize(worldConfigDataJson);
 SceneConfigData.Initialize(sceneConfigDataJson);
+
+Fantasy.Log.Register(new Fantasy.NLog("Server"));
 // 初始化框架，添加程序集到框架中
 await Fantasy.Platform.Net.Entry.Initialize(typeof(Entity.Entry).Assembly);
 // 启动Fantasy.Net

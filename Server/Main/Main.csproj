@@ -21,4 +21,8 @@
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Fantasy-Net.NLog" Version="2024.1.20" />
+    </ItemGroup>
+
 </Project>

@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Fantasy-Net" Version="2024.2.26" />
       <PackageReference Include="Fantasy-Net.Tools.ExporterConfigTable" Version="2024.2.26" />
       <PackageReference Include="protobuf-net" Version="3.2.52" />
     </ItemGroup>

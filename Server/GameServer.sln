@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{21F562BB-9366-4619-8D02-6D9D3E6816C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fantasy.Net", "..\..\..\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Fantasy.Net.csproj", "{DD15E36A-CF0E-4AC5-9626-458B93CE1087}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{21F562BB-9366-4619-8D02-6D9D3E6816C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F562BB-9366-4619-8D02-6D9D3E6816C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F562BB-9366-4619-8D02-6D9D3E6816C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD15E36A-CF0E-4AC5-9626-458B93CE1087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD15E36A-CF0E-4AC5-9626-458B93CE1087}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD15E36A-CF0E-4AC5-9626-458B93CE1087}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD15E36A-CF0E-4AC5-9626-458B93CE1087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

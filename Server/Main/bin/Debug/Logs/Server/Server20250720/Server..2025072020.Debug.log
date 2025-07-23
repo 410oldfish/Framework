@@ -1,0 +1,4 @@
+2025-07-20 20:22:54.0435 (C2G_ConnectAddressableRequestHandler.cs:24) register addressable id: 297510220199100416
+2025-07-20 20:48:10.2054 (C2G_ConnectAddressableRequestHandler.cs:24) register addressable id: 297536264880783360
+2025-07-20 20:48:13.2928 (C2M_HelloMsgHandler.cs:12) MapUser 297536264880783360 received message: Hello Addressable Message
+2025-07-20 20:48:18.6267 (C2M_HelloRequestHandler.cs:11) MapUser connect test user received hello request with tag: Hello Addressable Request

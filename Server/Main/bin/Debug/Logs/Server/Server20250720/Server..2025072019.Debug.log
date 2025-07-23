@@ -1,0 +1,8 @@
+2025-07-20 19:16:06.5492 (C2G_ConnectChatRequestHandler.cs:24) get chat route id : 2589105809044537344
+2025-07-20 19:16:10.0802 (C2Chat_HelloRouteRequestHandler.cs:11)  scene : Chat1 get request:Hello Custom Route Request
+2025-07-20 19:29:02.3286 (G2Chat_ConnectRequestHandler.cs:21) GateRouteId:2589037630733680640
+2025-07-20 19:29:02.3568 (C2G_ConnectChatRequestHandler.cs:27) get chat route id : 2589042037370126336
+2025-07-20 19:29:21.9082 (C2Chat_HelloRouteMsgHandler.cs:11) chat entity : Chat1  Hello Custom Route Message
+2025-07-20 19:29:35.2076 (C2Chat_HelloRouteMsgHandler.cs:11) chat entity : Chat1  Hello Custom Route Message
+2025-07-20 19:29:35.5526 (C2Chat_HelloRouteMsgHandler.cs:11) chat entity : Chat1  Hello Custom Route Message
+2025-07-20 19:29:36.0269 (C2Chat_HelloRouteMsgHandler.cs:11) chat entity : Chat1  Hello Custom Route Message

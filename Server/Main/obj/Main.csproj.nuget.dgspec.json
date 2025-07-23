@@ -322,6 +322,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Fantasy-Net": {
+              "target": "Package",
+              "version": "[2024.2.26, )"
+            },
             "Fantasy-Net.Tools.ExporterConfigTable": {
               "target": "Package",
               "version": "[2024.2.26, )"
@@ -403,6 +407,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Fantasy-Net.NLog": {
+              "target": "Package",
+              "version": "[2024.1.20, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

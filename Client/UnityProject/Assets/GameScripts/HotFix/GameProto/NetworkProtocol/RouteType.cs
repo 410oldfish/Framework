@@ -5,5 +5,6 @@ namespace Fantasy
 	{
 		public const int GateRoute = 1001; // Gate
 		public const int ChatRoute = 1002; // Chat
+		public const int CenterRoute = 1003; // Center
 	}
 }

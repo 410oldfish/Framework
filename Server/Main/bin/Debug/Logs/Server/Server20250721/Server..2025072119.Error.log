@@ -1,0 +1,47 @@
+2025-07-21 19:50:07.0972 (ThreadSynchronizationContext.cs:24) System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10061): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:27017
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-07-21T09:50:06.7172875Z", LastUpdateTimestamp: "2025-07-21T09:50:06.7172887Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeeded(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSource(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadBindingHandle.GetReadChannelSource(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.Initialize(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.Create(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.ListCollectionsOperation.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoDatabase.ExecuteReadOperation[T](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoDatabase.ListCollectionNames(IClientSessionHandle session, ListCollectionNamesOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoDatabase.<>c__DisplayClass37_0.<ListCollectionNames>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoDatabase.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoDatabase.ListCollectionNames(ListCollectionNamesOptions options, CancellationToken cancellationToken)
+   at Fantasy.DataBase.MongoDataBase.Initialize(Scene scene, String connectionString, String dbName) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\DataBase\MongoDataBase.cs:line 56
+   at Fantasy.DataBase.World..ctor(Scene scene, Byte worldConfigId) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\DataBase\World.cs:line 41
+   at Fantasy.DataBase.World.Create(Scene scene, Byte id) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\DataBase\World.cs:line 64
+   at Fantasy.Scene.Create(Process process, MachineConfig machineConfig, SceneConfig sceneConfig) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Scene\Scene.cs:line 393
+   at Fantasy.Platform.Net.Process.Create(UInt32 processConfigId) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Platform\Net\Process.cs:line 115
+   at Fantasy.Platform.Net.Entry.StartProcess() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Platform\Net\Entry.cs:line 102
+   at Fantasy.Async.FTask.InnerCoroutine() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\FTask\Task\FTask.cs:line 44
+   at Fantasy.Async.FTask.InnerCoroutine() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\FTask\Task\FTask.cs:line 44
+   at Fantasy.Platform.Net.Entry.StartProcess() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Platform\Net\Entry.cs:line 110
+   at Fantasy.Platform.Net.Process.Create(UInt32 processConfigId) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Platform\Net\Process.cs:line 119
+   at Fantasy.Scene.Create(Process process, MachineConfig machineConfig, SceneConfig sceneConfig) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Scene\Scene.cs:line 423
+   at Fantasy.Scene.SetScheduler(Scene scene, String sceneRuntimeMode) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Scene\Scene.cs:line 500
+   at Fantasy.Scene.Initialize() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Scene\Scene.cs:line 182
+   at Fantasy.SingleCollection.SingleCollectionComponent.Initialize() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Entitas\Component\SingleCollectionComponent\SingleCollectionComponent.cs:line 39
+   at Fantasy.Assembly.AssemblySystem.Register(Object obj) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Assembly\AssemblySystem.cs:line 119
+   at Fantasy.SingleCollection.SingleCollectionComponent.Load(Int64 assemblyIdentity) in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Entitas\Component\SingleCollectionComponent\SingleCollectionComponent.cs:line 52
+   at Fantasy.SingleCollection.SingleCollectionComponent.<>c__DisplayClass5_0.<Load>b__0() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Entitas\Component\SingleCollectionComponent\SingleCollectionComponent.cs:line 49
+   at Fantasy.ThreadSynchronizationContext.Update() in F:\UnityProject\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Runtime\Core\Platform\Net\ThreadSynchronizationContext.cs:line 24
