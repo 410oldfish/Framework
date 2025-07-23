@@ -1,0 +1,14 @@
+mj_hdbq_dianzan_ani.png
+size:197,132
+filter:Linear,Linear
+pma:true
+ddz_hdbq_dianzan_gc_ani
+bounds:2,2,128,128
+ddz_hdbq_dianzan_gd_ani
+bounds:132,66,64,63
+offsets:0,1,64,64
+rotate:90
+ddz_hdbq_dianzan_xing_ani
+bounds:132,10,54,56
+offsets:8,7,69,69
+rotate:90
