@@ -47,18 +47,6 @@
           "buildTransitive/Fantasy-Net.NLog.targets": {}
         }
       },
-      "Fantasy-Net.Tools.ExporterConfigTable/2024.2.26": {
-        "type": "package",
-        "compile": {
-          "lib/net9.0/Fantasy.Tools.ExporterConfigTable.dll": {}
-        },
-        "runtime": {
-          "lib/net9.0/Fantasy.Tools.ExporterConfigTable.dll": {}
-        },
-        "build": {
-          "buildTransitive/Fantasy-Net.Tools.ExporterConfigTable.targets": {}
-        }
-      },
       "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
         "type": "package",
         "compile": {
@@ -159,7 +147,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.1.0": {
+      "MongoDB.Bson/3.4.1": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -224,23 +212,23 @@
           }
         }
       },
-      "protobuf-net/3.2.52": {
+      "protobuf-net/3.3.0-g6785ecbb35": {
         "type": "package",
         "dependencies": {
-          "protobuf-net.Core": "3.2.52"
+          "protobuf-net.Core": "3.3.0-g6785ecbb35"
         },
         "compile": {
-          "lib/net8.0/protobuf-net.dll": {
+          "lib/net9.0/protobuf-net.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/protobuf-net.dll": {
+          "lib/net9.0/protobuf-net.dll": {
             "related": ".xml"
           }
         }
       },
-      "protobuf-net.Core/3.2.52": {
+      "protobuf-net.Core/3.3.0-g6785ecbb35": {
         "type": "package",
         "compile": {
           "lib/net8.0/protobuf-net.Core.dll": {
@@ -361,20 +349,14 @@
           "lib/net7.0/ZstdSharp.dll": {}
         }
       },
-      "Entity/1.0.0": {
+      "Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Fantasy-Net": "2024.2.26",
-          "Fantasy-Net.ConfigTable": "2024.2.0",
-          "Fantasy-Net.Tools.ExporterConfigTable": "2024.2.26",
-          "protobuf-net": "3.2.52"
-        },
         "compile": {
-          "bin/placeholder/Entity.dll": {}
+          "bin/placeholder/Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Entity.dll": {}
+          "bin/placeholder/Core.dll": {}
         }
       },
       "Fantasy-Net/2024.2.26": {
@@ -398,17 +380,20 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Fantasy-Net.ConfigTable/2024.2.0": {
+      "Hotfix/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Fantasy-Net": "2024.2.26"
+          "Core": "1.0.0",
+          "Fantasy-Net": "2024.2.26",
+          "MongoDB.Bson": "3.4.1",
+          "protobuf-net": "3.3.0-g6785ecbb35"
         },
         "compile": {
-          "bin/placeholder/Fantasy-Net.ConfigTable.dll": {}
+          "bin/placeholder/Hotfix.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Fantasy-Net.ConfigTable.dll": {}
+          "bin/placeholder/Hotfix.dll": {}
         }
       }
     }
@@ -474,64 +459,6 @@
         "fantasy-net.nlog.nuspec",
         "icon.png",
         "lib/net8.0/Fantasy-Net.NLog.dll"
-      ]
-    },
-    "Fantasy-Net.Tools.ExporterConfigTable/2024.2.26": {
-      "sha512": "GPCU6KWVIldeNyTompl6pLdLGSsNecAYScbg+lGtX8iWfYK+bXw4bdMdGoy+sp7KtET4IbWGRb6CGtTrsQuKPw==",
-      "type": "package",
-      "path": "fantasy-net.tools.exporterconfigtable/2024.2.26",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "buildTransitive/Fantasy-Net.Tools.ExporterConfigTable.targets",
-        "fantasy-net.tools.exporterconfigtable.2024.2.26.nupkg.sha512",
-        "fantasy-net.tools.exporterconfigtable.nuspec",
-        "icon.png",
-        "lib/net8.0/Fantasy.Tools.ExporterConfigTable.dll",
-        "lib/net9.0/Fantasy.Tools.ExporterConfigTable.dll",
-        "tools/output/CommandLine.dll",
-        "tools/output/EPPlus.Interfaces.dll",
-        "tools/output/EPPlus.System.Drawing.dll",
-        "tools/output/EPPlus.dll",
-        "tools/output/ExporterSettings.json",
-        "tools/output/Fantasy.Tools.ConfigTable",
-        "tools/output/Fantasy.Tools.ConfigTable.deps.json",
-        "tools/output/Fantasy.Tools.ConfigTable.dll",
-        "tools/output/Fantasy.Tools.ConfigTable.pdb",
-        "tools/output/Fantasy.Tools.ConfigTable.runtimeconfig.json",
-        "tools/output/Microsoft.CodeAnalysis.CSharp.dll",
-        "tools/output/Microsoft.CodeAnalysis.dll",
-        "tools/output/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "tools/output/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "tools/output/Microsoft.Extensions.Configuration.Json.dll",
-        "tools/output/Microsoft.Extensions.Configuration.dll",
-        "tools/output/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "tools/output/Microsoft.Extensions.FileProviders.Physical.dll",
-        "tools/output/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "tools/output/Microsoft.Extensions.Primitives.dll",
-        "tools/output/Microsoft.IO.RecyclableMemoryStream.dll",
-        "tools/output/Microsoft.Win32.SystemEvents.dll",
-        "tools/output/Newtonsoft.Json.dll",
-        "tools/output/Run.bat",
-        "tools/output/Run.sh",
-        "tools/output/System.Collections.Immutable.dll",
-        "tools/output/System.Drawing.Common.dll",
-        "tools/output/System.IO.Pipelines.dll",
-        "tools/output/System.Reflection.Metadata.dll",
-        "tools/output/System.Security.Cryptography.Pkcs.dll",
-        "tools/output/System.Security.Cryptography.Xml.dll",
-        "tools/output/System.Text.Encoding.CodePages.dll",
-        "tools/output/System.Text.Encodings.Web.dll",
-        "tools/output/System.Text.Json.dll",
-        "tools/output/protobuf-net.Core.dll",
-        "tools/output/protobuf-net.dll",
-        "tools/output/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
-        "tools/output/runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "tools/output/runtimes/win/lib/net7.0/System.Drawing.Common.dll",
-        "tools/output/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll",
-        "tools/output/runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll",
-        "tools/output/runtimes/win/lib/net9.0/System.Text.Encoding.CodePages.dll"
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
@@ -644,10 +571,10 @@
         "runtimes/win-x64/native/mimalloc.dll"
       ]
     },
-    "MongoDB.Bson/3.1.0": {
-      "sha512": "3dhaZhz18B5vUoEP13o2j8A6zQfkHdZhwBvLZEjDJum4BTLLv1/Z8bt25UQEtpqvYwLgde4R6ekWZ7XAYUMxuw==",
+    "MongoDB.Bson/3.4.1": {
+      "sha512": "ps1fU/Bv2f6D1yBAuXm3O0sH/TvpfChaU6/xtQ1uxNHrfJ7KIGyxc180QHWNrTjxNf16l7LNiY7SH9CL5U/bmg==",
       "type": "package",
-      "path": "mongodb.bson/3.1.0",
+      "path": "mongodb.bson/3.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -658,7 +585,7 @@
         "lib/net6.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.3.1.0.nupkg.sha512",
+        "mongodb.bson.3.4.1.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
@@ -736,10 +663,10 @@
         "nlog.nuspec"
       ]
     },
-    "protobuf-net/3.2.52": {
-      "sha512": "XbZurNU3B/VaL/5OJ0kshO+AWxsZroI1saKuLfZpDwH2ngb2K9bdF1nIW6elFOViZw7TQCmfVZapxrMKCDqecQ==",
+    "protobuf-net/3.3.0-g6785ecbb35": {
+      "sha512": "l9tH8qXDqBxund+F9EyOIVVmaP+ZojHpMoa4HXMPpx15QdpudV9Ap2EQJ0b+BIUYYglCs1kMU2SSu2hiSBd96g==",
       "type": "package",
-      "path": "protobuf-net/3.2.52",
+      "path": "protobuf-net/3.3.0-g6785ecbb35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -747,20 +674,22 @@
         "lib/net462/protobuf-net.xml",
         "lib/net8.0/protobuf-net.dll",
         "lib/net8.0/protobuf-net.xml",
+        "lib/net9.0/protobuf-net.dll",
+        "lib/net9.0/protobuf-net.xml",
         "lib/netstandard2.0/protobuf-net.dll",
         "lib/netstandard2.0/protobuf-net.xml",
         "lib/netstandard2.1/protobuf-net.dll",
         "lib/netstandard2.1/protobuf-net.xml",
-        "protobuf-net.3.2.52.nupkg.sha512",
+        "protobuf-net.3.3.0-g6785ecbb35.nupkg.sha512",
         "protobuf-net.nuspec",
         "protobuf-net.png",
         "readme.md"
       ]
     },
-    "protobuf-net.Core/3.2.52": {
-      "sha512": "zOpGtUo2QTgbsiI0D0yCe8aUTgDPov6kqIu1CDHI6isqhYcAHdirRrdnfsQXmAUfAWx1LwVYGgC6xe6fNS4UAg==",
+    "protobuf-net.Core/3.3.0-g6785ecbb35": {
+      "sha512": "MYDrbEt1PQJME+mXnYj1V80TvYHLJe9HLP9xQW6w8Gko09htv04/752HVdwEOrUTI/gDFI7rCPhyryNee+zVFQ==",
       "type": "package",
-      "path": "protobuf-net.core/3.2.52",
+      "path": "protobuf-net.core/3.3.0-g6785ecbb35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -772,7 +701,7 @@
         "lib/netstandard2.0/protobuf-net.Core.xml",
         "lib/netstandard2.1/protobuf-net.Core.dll",
         "lib/netstandard2.1/protobuf-net.Core.xml",
-        "protobuf-net.core.3.2.52.nupkg.sha512",
+        "protobuf-net.core.3.3.0-g6785ecbb35.nupkg.sha512",
         "protobuf-net.core.nuspec",
         "protobuf-net.png",
         "readme.md"
@@ -1020,27 +949,28 @@
         "zstdsharp.port.nuspec"
       ]
     },
-    "Entity/1.0.0": {
+    "Core/1.0.0": {
       "type": "project",
-      "path": "../Entity/Entity.csproj",
-      "msbuildProject": "../Entity/Entity.csproj"
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     },
     "Fantasy-Net/2024.2.26": {
       "type": "project",
       "path": "../../../../Fantasy/Fantasy/Fantasy.Net/Fantasy.Net/Fantasy.Net.csproj",
       "msbuildProject": "../../../../Fantasy/Fantasy/Fantasy.Net/Fantasy.Net/Fantasy.Net.csproj"
     },
-    "Fantasy-Net.ConfigTable/2024.2.0": {
+    "Hotfix/1.0.0": {
       "type": "project",
-      "path": "../../../../Fantasy/Fantasy/Fantasy.Packages/Fantasy.ConfigTable/Net/Fantasy.ConfigTable.csproj",
-      "msbuildProject": "../../../../Fantasy/Fantasy/Fantasy.Packages/Fantasy.ConfigTable/Net/Fantasy.ConfigTable.csproj"
+      "path": "../Hotfix/Hotfix.csproj",
+      "msbuildProject": "../Hotfix/Hotfix.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Entity >= 1.0.0",
+      "Core >= 1.0.0",
       "Fantasy-Net >= 2024.2.26",
-      "Fantasy-Net.NLog >= 2024.1.20"
+      "Fantasy-Net.NLog >= 2024.1.20",
+      "Hotfix >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1078,8 +1008,11 @@
             "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj": {
               "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj"
             },
-            "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj": {
-              "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj"
+            "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj": {
+              "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj"
+            },
+            "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj": {
+              "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj"
             }
           }
         }

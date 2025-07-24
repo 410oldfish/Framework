@@ -1,0 +1,8 @@
+2025-07-24 15:18:18.7162 (SerializerManager.cs:91) 初始化序列化器成功，数量为：2
+2025-07-24 15:18:19.9226 (TCPServerNetwork.cs:38) SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-24 15:18:19.9507 (WebSocketServerNetwork.cs:74) SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-24 15:18:20.3513 (TCPServerNetwork.cs:38) SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-24 15:18:20.7636 (TCPServerNetwork.cs:38) SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-24 15:18:21.1654 (TCPServerNetwork.cs:38) SceneConfigId = 1004 networkTarget = Inner TCPServer Listen 127.0.0.1:11004
+2025-07-24 15:18:21.5420 (TCPServerNetwork.cs:38) SceneConfigId = 1005 networkTarget = Inner TCPServer Listen 127.0.0.1:11005
+2025-07-24 15:18:21.5420 (Process.cs:118) Process:1 Startup Complete SceneCount:5

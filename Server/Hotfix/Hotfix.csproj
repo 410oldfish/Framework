@@ -5,12 +5,13 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <RootNamespace>Game</RootNamespace>
+		<LangVersion>12</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <Compile Remove="Config\Core\**" />
       <Compile Remove="Class1.cs" />
+      <Compile Remove="12a.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -19,6 +20,16 @@
 
     <ItemGroup>
       <None Remove="Config\Core\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Fantasy-Net" Version="2024.2.26" />
+      <PackageReference Include="MongoDB.Bson" Version="3.4.1" />
+      <PackageReference Include="protobuf-net" Version="3.3.0-g6785ecbb35" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Core\Core.csproj" />
     </ItemGroup>
 
 </Project>

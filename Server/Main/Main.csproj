@@ -5,11 +5,13 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\..\Fantasy\Fantasy\Fantasy.Net\Fantasy.Net\Fantasy.Net.csproj" />
-      <ProjectReference Include="..\Entity\Entity.csproj" />
+      <ProjectReference Include="..\Core\Core.csproj" />
+      <ProjectReference Include="..\Hotfix\Hotfix.csproj" />
     </ItemGroup>
 
     <ItemGroup>

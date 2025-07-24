@@ -25,7 +25,9 @@ SceneConfigData.Initialize(sceneConfigDataJson);
 
 Fantasy.Log.Register(new Fantasy.NLog("Server"));
 // 初始化框架，添加程序集到框架中
-await Fantasy.Platform.Net.Entry.Initialize(typeof(Entity.Entry).Assembly);
+var coreAssemblies = typeof(Core.Entry).Assembly;
+var hotfixAssemblies = typeof(Hotfix.Entry).Assembly;
+await Fantasy.Platform.Net.Entry.Initialize( new[]{hotfixAssemblies, coreAssemblies});
 // 启动Fantasy.Net
 await Fantasy.Platform.Net.Entry.Start();
 // 也可以使用下面的Start方法来初始化并且启动Fantasy.Net

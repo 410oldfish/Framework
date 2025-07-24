@@ -8,10 +8,10 @@
     ".NETCoreApp,Version=v9.0": {
       "Main/1.0.0": {
         "dependencies": {
-          "Entity": "1.0.0",
+          "Core": "1.0.0",
           "Fantasy-Net": "2024.2.26",
           "Fantasy-Net.NLog": "2024.1.20",
-          "Fantasy-Net.ConfigTable.Reference": "1.0.0.0",
+          "Hotfix": "1.0.0",
           "Fantasy-Net.Reference": "1.0.0.0"
         },
         "runtime": {
@@ -44,14 +44,6 @@
         },
         "runtime": {
           "lib/net8.0/Fantasy-Net.NLog.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Fantasy-Net.Tools.ExporterConfigTable/2024.2.26": {
-        "runtime": {
-          "lib/net9.0/Fantasy.Tools.ExporterConfigTable.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -125,15 +117,15 @@
           }
         }
       },
-      "MongoDB.Bson/3.1.0": {
+      "MongoDB.Bson/3.4.1": {
         "dependencies": {
           "System.Memory": "4.5.5",
           "System.Runtime.CompilerServices.Unsafe": "5.0.0"
         },
         "runtime": {
           "lib/net6.0/MongoDB.Bson.dll": {
-            "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "assemblyVersion": "3.4.1.0",
+            "fileVersion": "3.4.1.0"
           }
         }
       },
@@ -141,7 +133,7 @@
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.1.0",
+          "MongoDB.Bson": "3.4.1",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -170,22 +162,22 @@
           }
         }
       },
-      "protobuf-net/3.2.52": {
+      "protobuf-net/3.3.0-g6785ecbb35": {
         "dependencies": {
-          "protobuf-net.Core": "3.2.52"
+          "protobuf-net.Core": "3.3.0-g6785ecbb35"
         },
         "runtime": {
-          "lib/net8.0/protobuf-net.dll": {
+          "lib/net9.0/protobuf-net.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.2.52.62683"
+            "fileVersion": "3.3.0.26501"
           }
         }
       },
-      "protobuf-net.Core/3.2.52": {
+      "protobuf-net.Core/3.3.0-g6785ecbb35": {
         "runtime": {
           "lib/net8.0/protobuf-net.Core.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.2.52.62683"
+            "fileVersion": "3.3.0.26501"
           }
         }
       },
@@ -223,15 +215,9 @@
           }
         }
       },
-      "Entity/1.0.0": {
-        "dependencies": {
-          "Fantasy-Net": "2024.2.26",
-          "Fantasy-Net.ConfigTable": "2024.2.0",
-          "Fantasy-Net.Tools.ExporterConfigTable": "2024.2.26",
-          "protobuf-net": "3.2.52"
-        },
+      "Core/1.0.0": {
         "runtime": {
-          "Entity.dll": {
+          "Core.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -240,11 +226,11 @@
       "Fantasy-Net/2024.2.26": {
         "dependencies": {
           "CommandLineParser": "2.9.1",
-          "MongoDB.Bson": "3.1.0",
+          "MongoDB.Bson": "3.4.1",
           "MongoDB.Driver": "3.1.0",
           "Newtonsoft.Json": "13.0.3",
           "mimalloc-csharp": "1.0.7",
-          "protobuf-net": "3.2.52"
+          "protobuf-net": "3.3.0-g6785ecbb35"
         },
         "runtime": {
           "Fantasy-Net.dll": {
@@ -252,19 +238,15 @@
           }
         }
       },
-      "Fantasy-Net.ConfigTable/2024.2.0": {
+      "Hotfix/1.0.0": {
         "dependencies": {
-          "Fantasy-Net": "2024.2.26"
+          "Core": "1.0.0",
+          "Fantasy-Net": "2024.2.26",
+          "MongoDB.Bson": "3.4.1",
+          "protobuf-net": "3.3.0-g6785ecbb35"
         },
         "runtime": {
-          "Fantasy-Net.ConfigTable.dll": {
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Fantasy-Net.ConfigTable.Reference/1.0.0.0": {
-        "runtime": {
-          "Fantasy-Net.ConfigTable.dll": {
+          "Hotfix.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -307,13 +289,6 @@
       "path": "fantasy-net.nlog/2024.1.20",
       "hashPath": "fantasy-net.nlog.2024.1.20.nupkg.sha512"
     },
-    "Fantasy-Net.Tools.ExporterConfigTable/2024.2.26": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-GPCU6KWVIldeNyTompl6pLdLGSsNecAYScbg+lGtX8iWfYK+bXw4bdMdGoy+sp7KtET4IbWGRb6CGtTrsQuKPw==",
-      "path": "fantasy-net.tools.exporterconfigtable/2024.2.26",
-      "hashPath": "fantasy-net.tools.exporterconfigtable.2024.2.26.nupkg.sha512"
-    },
     "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
       "type": "package",
       "serviceable": true,
@@ -342,12 +317,12 @@
       "path": "mimalloc-csharp/1.0.7",
       "hashPath": "mimalloc-csharp.1.0.7.nupkg.sha512"
     },
-    "MongoDB.Bson/3.1.0": {
+    "MongoDB.Bson/3.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3dhaZhz18B5vUoEP13o2j8A6zQfkHdZhwBvLZEjDJum4BTLLv1/Z8bt25UQEtpqvYwLgde4R6ekWZ7XAYUMxuw==",
-      "path": "mongodb.bson/3.1.0",
-      "hashPath": "mongodb.bson.3.1.0.nupkg.sha512"
+      "sha512": "sha512-ps1fU/Bv2f6D1yBAuXm3O0sH/TvpfChaU6/xtQ1uxNHrfJ7KIGyxc180QHWNrTjxNf16l7LNiY7SH9CL5U/bmg==",
+      "path": "mongodb.bson/3.4.1",
+      "hashPath": "mongodb.bson.3.4.1.nupkg.sha512"
     },
     "MongoDB.Driver/3.1.0": {
       "type": "package",
@@ -370,19 +345,19 @@
       "path": "nlog/5.3.4",
       "hashPath": "nlog.5.3.4.nupkg.sha512"
     },
-    "protobuf-net/3.2.52": {
+    "protobuf-net/3.3.0-g6785ecbb35": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XbZurNU3B/VaL/5OJ0kshO+AWxsZroI1saKuLfZpDwH2ngb2K9bdF1nIW6elFOViZw7TQCmfVZapxrMKCDqecQ==",
-      "path": "protobuf-net/3.2.52",
-      "hashPath": "protobuf-net.3.2.52.nupkg.sha512"
+      "sha512": "sha512-l9tH8qXDqBxund+F9EyOIVVmaP+ZojHpMoa4HXMPpx15QdpudV9Ap2EQJ0b+BIUYYglCs1kMU2SSu2hiSBd96g==",
+      "path": "protobuf-net/3.3.0-g6785ecbb35",
+      "hashPath": "protobuf-net.3.3.0-g6785ecbb35.nupkg.sha512"
     },
-    "protobuf-net.Core/3.2.52": {
+    "protobuf-net.Core/3.3.0-g6785ecbb35": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zOpGtUo2QTgbsiI0D0yCe8aUTgDPov6kqIu1CDHI6isqhYcAHdirRrdnfsQXmAUfAWx1LwVYGgC6xe6fNS4UAg==",
-      "path": "protobuf-net.core/3.2.52",
-      "hashPath": "protobuf-net.core.3.2.52.nupkg.sha512"
+      "sha512": "sha512-MYDrbEt1PQJME+mXnYj1V80TvYHLJe9HLP9xQW6w8Gko09htv04/752HVdwEOrUTI/gDFI7rCPhyryNee+zVFQ==",
+      "path": "protobuf-net.core/3.3.0-g6785ecbb35",
+      "hashPath": "protobuf-net.core.3.3.0-g6785ecbb35.nupkg.sha512"
     },
     "SharpCompress/0.30.1": {
       "type": "package",
@@ -440,7 +415,7 @@
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
     },
-    "Entity/1.0.0": {
+    "Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -450,13 +425,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Fantasy-Net.ConfigTable/2024.2.0": {
+    "Hotfix/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Fantasy-Net.ConfigTable.Reference/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

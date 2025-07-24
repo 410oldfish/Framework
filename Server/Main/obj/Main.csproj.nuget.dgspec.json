@@ -158,16 +158,15 @@
         }
       }
     },
-    "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Packages\\Fantasy.ConfigTable\\Net\\Fantasy.ConfigTable.csproj": {
-      "version": "2024.2.0",
+    "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Packages\\Fantasy.ConfigTable\\Net\\Fantasy.ConfigTable.csproj",
-        "projectName": "Fantasy-Net.ConfigTable",
-        "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Packages\\Fantasy.ConfigTable\\Net\\Fantasy.ConfigTable.csproj",
+        "projectUniqueName": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\47230\\.nuget\\packages\\",
-        "outputPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Packages\\Fantasy.ConfigTable\\Net\\obj\\",
+        "outputPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "crossTargeting": true,
         "fallbackFolders": [
           "D:\\VSShared\\NuGetPackages"
         ],
@@ -177,7 +176,6 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0",
           "net9.0"
         ],
         "sources": {
@@ -185,21 +183,9 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj": {
-                "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj"
-              }
-            }
-          },
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {
-              "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj": {
-                "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -215,40 +201,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Fantasy-Net": {
-              "target": "Package",
-              "version": "[2024.2.22, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
-        },
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "Fantasy-Net": {
-              "target": "Package",
-              "version": "[2024.2.22, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -269,14 +223,14 @@
         }
       }
     },
-    "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj": {
+    "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj",
-        "projectName": "Entity",
-        "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj",
+        "projectUniqueName": "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj",
+        "projectName": "Hotfix",
+        "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj",
         "packagesPath": "C:\\Users\\47230\\.nuget\\packages\\",
-        "outputPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\obj\\",
+        "outputPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VSShared\\NuGetPackages"
@@ -297,11 +251,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj": {
-                "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj"
-              },
-              "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Packages\\Fantasy.ConfigTable\\Net\\Fantasy.ConfigTable.csproj": {
-                "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Packages\\Fantasy.ConfigTable\\Net\\Fantasy.ConfigTable.csproj"
+              "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj": {
+                "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj"
               }
             }
           }
@@ -326,13 +277,13 @@
               "target": "Package",
               "version": "[2024.2.26, )"
             },
-            "Fantasy-Net.Tools.ExporterConfigTable": {
+            "MongoDB.Bson": {
               "target": "Package",
-              "version": "[2024.2.26, )"
+              "version": "[3.4.1, )"
             },
             "protobuf-net": {
               "target": "Package",
-              "version": "[3.2.52, )"
+              "version": "[3.3.0-g6785ecbb35, )"
             }
           },
           "imports": [
@@ -386,8 +337,11 @@
               "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj": {
                 "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj"
               },
-              "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj": {
-                "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Entity\\Entity.csproj"
+              "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj": {
+                "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj"
+              },
+              "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj": {
+                "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Hotfix\\Hotfix.csproj"
               }
             }
           }
