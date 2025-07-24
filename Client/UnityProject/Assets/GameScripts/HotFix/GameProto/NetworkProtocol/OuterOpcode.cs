@@ -2,12 +2,14 @@ namespace Fantasy
 {
 	public static partial class OuterOpcode
 	{
+		 public const uint C2Common_Farmland_UnlockLand_Req = 2147493649;
+		 public const uint Common2C_Farmland_Resp = 2415929105;
 		 public const uint C2G_ConnectChatRequest = 268445457;
 		 public const uint G2C_ConnectChatResponse = 402663185;
-		 public const uint C2Chat_HelloRouteMsg = 2147493649;
+		 public const uint C2Chat_HelloRouteMsg = 2147493650;
 		 public const uint C2Chat_HelloRouteRequest = 2281711377;
-		 public const uint Chat2C_HelloRouteResponse = 2415929105;
-		 public const uint Chat2C_PushChatRouteMsg = 2147493650;
+		 public const uint Chat2C_HelloRouteResponse = 2415929106;
+		 public const uint Chat2C_PushChatRouteMsg = 2147493651;
 		 public const uint C2G_ConnectAddressableRequest = 268445458;
 		 public const uint G2C_ConnectAddressableResponse = 402663186;
 		 public const uint C2M_HelloMsg = 1342187281;
@@ -29,14 +31,14 @@ namespace Fantasy
 		 public const uint M2C_TestResponse = 1610622738;
 		 public const uint C2G_CreateChatRouteRequest = 268445462;
 		 public const uint G2C_CreateChatRouteResponse = 402663190;
-		 public const uint C2Chat_TestMessage = 2147493651;
+		 public const uint C2Chat_TestMessage = 2147493652;
 		 public const uint C2Chat_TestMessageRequest = 2281711378;
-		 public const uint Chat2C_TestMessageResponse = 2415929106;
+		 public const uint Chat2C_TestMessageResponse = 2415929107;
 		 public const uint C2M_MoveToMapRequest = 1476405011;
 		 public const uint M2C_MoveToMapResponse = 1610622739;
 		 public const uint C2G_SendAddressableToMap = 134227734;
-		 public const uint C2Chat_TestRequestPushMessage = 2147493652;
-		 public const uint Chat2C_PushMessage = 2147493653;
+		 public const uint C2Chat_TestRequestPushMessage = 2147493653;
+		 public const uint Chat2C_PushMessage = 2147493654;
 		 public const uint C2G_CreateSubSceneRequest = 268445463;
 		 public const uint G2C_CreateSubSceneResponse = 402663191;
 		 public const uint C2G_SendToSubSceneMessage = 134227735;

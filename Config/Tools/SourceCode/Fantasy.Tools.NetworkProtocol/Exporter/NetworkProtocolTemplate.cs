@@ -11,6 +11,8 @@ public static class NetworkProtocolTemplate
                                             using Fantasy;
                                             using Fantasy.Network.Interface;
                                             using Fantasy.Serialize;
+                                            using GameConfig.item;
+                                            using Core;
                                             // ReSharper disable InconsistentNaming
                                             // ReSharper disable RedundantUsingDirective
                                             // ReSharper disable RedundantOverriddenMember

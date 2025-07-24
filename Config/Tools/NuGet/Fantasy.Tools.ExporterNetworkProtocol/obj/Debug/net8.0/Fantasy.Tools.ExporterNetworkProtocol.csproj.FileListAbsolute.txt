@@ -1,0 +1,12 @@
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\bin\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.deps.json
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\bin\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.dll
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\bin\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.pdb
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.GeneratedMSBuildEditorConfig.editorconfig
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.AssemblyInfoInputs.cache
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.AssemblyInfo.cs
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.csproj.CoreCompileInputs.cache
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.sourcelink.json
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.dll
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\refint\Fantasy.Tools.ExporterNetworkProtocol.dll
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\Fantasy.Tools.ExporterNetworkProtocol.pdb
+F:\UnityProject\Framework\Framework\Config\Tools\NuGet\Fantasy.Tools.ExporterNetworkProtocol\obj\Debug\net8.0\ref\Fantasy.Tools.ExporterNetworkProtocol.dll

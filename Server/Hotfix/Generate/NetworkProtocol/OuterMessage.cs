@@ -5,6 +5,8 @@ using MongoDB.Bson.Serialization.Attributes;
 using Fantasy;
 using Fantasy.Network.Interface;
 using Fantasy.Serialize;
+using GameConfig.item;
+using Core;
 // ReSharper disable InconsistentNaming
 // ReSharper disable RedundantUsingDirective
 // ReSharper disable RedundantOverriddenMember
@@ -17,6 +19,52 @@ using Fantasy.Serialize;
 
 namespace Fantasy
 {	
+	[ProtoContract]
+	public partial class C2Center_Farmland_UnlockLand_Req : AMessage, ICustomRouteMessage, IProto
+	{
+		public static C2Center_Farmland_UnlockLand_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2Center_Farmland_UnlockLand_Req>();
+		}
+		public override void Dispose()
+		{
+			LandId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<C2Center_Farmland_UnlockLand_Req>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public Center2C_Farmland_Resp ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2Center_Farmland_UnlockLand_Req; }
+		[ProtoIgnore]
+		public int RouteType => Fantasy.RouteType.CenterRoute;
+		[ProtoMember(1)]
+		public int LandId { get; set; }
+	}
+	[ProtoContract]
+	public partial class Center2C_Farmland_Resp : AMessage, ICustomRouteResponse, IProto
+	{
+		public static Center2C_Farmland_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Center2C_Farmland_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			Result = default;
+			CostItems_Sync.Clear();
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Center2C_Farmland_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.Center2C_Farmland_Resp; }
+		[ProtoMember(1)]
+		public bool Result { get; set; }
+		[ProtoMember(2)]
+		public List<ItemExchange> CostItems_Sync = new List<ItemExchange>();
+		[ProtoMember(3)]
+		public uint ErrorCode { get; set; }
+	}
 	[ProtoContract]
 	public partial class C2G_ConnectChatRequest : AMessage, IRequest, IProto
 	{

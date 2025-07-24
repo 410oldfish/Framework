@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fantasy.Tools.ConfigTable")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+828511e4368f8f39129620b940aeb46ecd086644")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52ff0c9bfcc0fc6e2106a5aaf9028baac1b65514")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fantasy.Tools.ConfigTable")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fantasy.Tools.ConfigTable")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

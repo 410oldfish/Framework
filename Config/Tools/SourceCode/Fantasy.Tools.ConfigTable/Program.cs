@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using CommandLine;
-using Fantasy.Exporter;
+using Fantasy;
 using Fantasy.Tools;
 using Fantasy.Tools.ConfigTable;
 

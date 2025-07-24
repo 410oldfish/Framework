@@ -8,6 +8,28 @@ package Fantasy.Network.Message;
 // 在message协议上方添加// Protocol+空格+协议名字
 // 例如:// Protocol ProtoBuf 或 // Protocol MemoryPack
 
+//------------业务逻辑--------------------------
+
+//------------种田模块 Farmland----------------------------
+
+message C2Center_Farmland_UnlockLand_Req // ICustomRouteMessage, Center2C_Farmland_Resp, CenterRoute
+{
+	int32 LandId = 1;
+}
+
+message Center2C_Farmland_Resp // ICustomRouteResponse
+{
+	bool Result = 1;
+	repeated ItemExchange CostItems_Sync = 2;
+}
+
+//------------------------------------------------
+
+
+
+
+//----------------------------------------------
+
 message C2G_ConnectChatRequest // IRequest, G2C_ConnectChatResponse
 {
 

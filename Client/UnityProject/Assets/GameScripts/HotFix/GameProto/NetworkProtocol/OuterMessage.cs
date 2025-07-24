@@ -9,6 +9,50 @@ using Fantasy.Serialize;
 namespace Fantasy
 {
 	[ProtoContract]
+	public partial class C2Common_Farmland_UnlockLand_Req : AMessage, ICustomRouteMessage, IProto
+	{
+		public static C2Common_Farmland_UnlockLand_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2Common_Farmland_UnlockLand_Req>();
+		}
+		public override void Dispose()
+		{
+			LandId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<C2Common_Farmland_UnlockLand_Req>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.C2Common_Farmland_UnlockLand_Req; }
+		[ProtoIgnore]
+		public int RouteType => Fantasy.RouteType.Common2C_Farmland_Resp;
+		[ProtoMember(1)]
+		public int LandId { get; set; }
+	}
+	[ProtoContract]
+	public partial class Common2C_Farmland_Resp : AMessage, ICustomRouteResponse, IProto
+	{
+		public static Common2C_Farmland_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Common2C_Farmland_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			Result = default;
+			CostItems_Sync.Clear();
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Common2C_Farmland_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.Common2C_Farmland_Resp; }
+		[ProtoMember(1)]
+		public bool Result { get; set; }
+		[ProtoMember(2)]
+		public List<ItemExchange> CostItems_Sync = new List<ItemExchange>();
+		[ProtoMember(3)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
 	public partial class C2G_ConnectChatRequest : AMessage, IRequest, IProto
 	{
 		public static C2G_ConnectChatRequest Create(Scene scene)
