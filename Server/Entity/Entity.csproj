@@ -17,4 +17,8 @@
       <PackageReference Include="protobuf-net" Version="3.2.52" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Class1.cs" />
+    </ItemGroup>
+
 </Project>

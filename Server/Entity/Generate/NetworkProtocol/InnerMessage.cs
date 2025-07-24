@@ -1,7 +1,6 @@
 using ProtoBuf;
 
 using System.Collections.Generic;
-using Entity.Handler.Map;
 using MongoDB.Bson.Serialization.Attributes;
 using Fantasy;
 using Fantasy.Network.Interface;

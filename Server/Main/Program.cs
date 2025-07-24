@@ -6,16 +6,16 @@
 //   网络请求：从远程服务器下载配置文件并加载。
 // 如果重复初始化方法会覆盖掉上一次的数据，非常适合热重载时使用
 
-string machineConfigDataPath = @"../../../../../Config/Json/Server/MachineConfigData.Json";
+string machineConfigDataPath = @"../../../../../Config/ServerConfig/Json/Server/MachineConfigData.Json";
 string machineConfigDataJson = File.ReadAllText(machineConfigDataPath);
 
-string processConfigDataPath = @"../../../../../Config/Json/Server/ProcessConfigData.Json";
+string processConfigDataPath = @"../../../../../Config/ServerConfig/Json/Server/ProcessConfigData.Json";
 string processConfigDataJson = File.ReadAllText(processConfigDataPath);
 
-string worldConfigDataPath = @"../../../../../Config/Json/Server/WorldConfigData.Json";
+string worldConfigDataPath = @"../../../../../Config/ServerConfig/Json/Server/WorldConfigData.Json";
 string worldConfigDataJson = File.ReadAllText(worldConfigDataPath);
 
-string sceneConfigDataPath = @"../../../../../Config/Json/Server/SceneConfigData.Json";
+string sceneConfigDataPath = @"../../../../../Config/ServerConfig/Json/Server/SceneConfigData.Json";
 string sceneConfigDataJson = File.ReadAllText(sceneConfigDataPath);
 
 MachineConfigData.Initialize(machineConfigDataJson);
