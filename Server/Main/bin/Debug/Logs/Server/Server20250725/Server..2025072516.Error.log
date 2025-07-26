@@ -1,0 +1,74 @@
+2025-07-25 16:46:13.8548  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MongoDB.Bson.BsonSerializationException: The field 'Id' of type 'Hotfix.Common.Entity.Database.PlayerBaseData' cannot use element name '_id' because it is already being used by property 'Id' of type 'Fantasy.Entitas.Entity'.
+   at MongoDB.Bson.Serialization.BsonClassMap.Freeze()
+   at MongoDB.Bson.Serialization.BsonClassMap.LookupClassMap(Type classType)
+   at Fantasy.Serialize.BsonPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-25 16:48:17.6223  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: No serializer defined for type: Hotfix.Common.Data.Data_SyncPlayerData
+   at ProtoBuf.Internal.ThrowHelper.NoSerializerDefined(Type type) in /_/src/protobuf-net.Core/Internal/ThrowHelper.cs:line 73
+   at ProtoBuf.Meta.ValueMember.BuildSerializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 520
+   at ProtoBuf.Meta.ValueMember.get_Serializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 242
+   at ProtoBuf.Meta.MetaType.BuildSerializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 612
+   at ProtoBuf.Meta.MetaType.get_Serializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 458
+   at ProtoBuf.Meta.MetaType.CompileInPlace() in /_/src/protobuf-net/Meta/MetaType.cs:line 1817
+   at ProtoBuf.Meta.RuntimeTypeModel.CompileInPlace() in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 1072
+   at Fantasy.Serialize.ProtoBufPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-25 16:52:00.1193  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MongoDB.Bson.BsonSerializationException: The field 'Id' of type 'Hotfix.Common.Data.Data_SyncPlayerData' cannot use element name '_id' because it is already being used by property 'Id' of type 'Fantasy.Entitas.Entity'.
+   at MongoDB.Bson.Serialization.BsonClassMap.Freeze()
+   at MongoDB.Bson.Serialization.BsonClassMap.LookupClassMap(Type classType)
+   at Fantasy.Serialize.BsonPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-25 16:52:26.7139  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: No serializer defined for type: Hotfix.Common.Data.Data_SyncPlayerData
+   at ProtoBuf.Internal.ThrowHelper.NoSerializerDefined(Type type) in /_/src/protobuf-net.Core/Internal/ThrowHelper.cs:line 73
+   at ProtoBuf.Meta.ValueMember.BuildSerializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 520
+   at ProtoBuf.Meta.ValueMember.get_Serializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 242
+   at ProtoBuf.Meta.MetaType.BuildSerializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 612
+   at ProtoBuf.Meta.MetaType.get_Serializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 458
+   at ProtoBuf.Meta.MetaType.CompileInPlace() in /_/src/protobuf-net/Meta/MetaType.cs:line 1817
+   at ProtoBuf.Meta.RuntimeTypeModel.CompileInPlace() in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 1072
+   at Fantasy.Serialize.ProtoBufPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-25 16:54:33.4207  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: No serializer defined for type: Hotfix.Common.Data.Data_SyncPlayerData
+   at ProtoBuf.Internal.ThrowHelper.NoSerializerDefined(Type type) in /_/src/protobuf-net.Core/Internal/ThrowHelper.cs:line 73
+   at ProtoBuf.Meta.ValueMember.BuildSerializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 520
+   at ProtoBuf.Meta.ValueMember.get_Serializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 242
+   at ProtoBuf.Meta.MetaType.BuildSerializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 612
+   at ProtoBuf.Meta.MetaType.get_Serializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 458
+   at ProtoBuf.Meta.MetaType.CompileInPlace() in /_/src/protobuf-net/Meta/MetaType.cs:line 1817
+   at ProtoBuf.Meta.RuntimeTypeModel.CompileInPlace() in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 1072
+   at Fantasy.Serialize.ProtoBufPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-25 16:55:51.0784  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: No serializer defined for type: Hotfix.Common.Data.Data_SyncPlayerData
+   at ProtoBuf.Internal.ThrowHelper.NoSerializerDefined(Type type) in /_/src/protobuf-net.Core/Internal/ThrowHelper.cs:line 73
+   at ProtoBuf.Meta.ValueMember.BuildSerializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 520
+   at ProtoBuf.Meta.ValueMember.get_Serializer() in /_/src/protobuf-net/Meta/ValueMember.cs:line 242
+   at ProtoBuf.Meta.MetaType.BuildSerializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 612
+   at ProtoBuf.Meta.MetaType.get_Serializer() in /_/src/protobuf-net/Meta/MetaType.cs:line 458
+   at ProtoBuf.Meta.MetaType.CompileInPlace() in /_/src/protobuf-net/Meta/MetaType.cs:line 1817
+   at ProtoBuf.Meta.RuntimeTypeModel.CompileInPlace() in /_/src/protobuf-net/Meta/RuntimeTypeModel.cs:line 1072
+   at Fantasy.Serialize.ProtoBufPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()

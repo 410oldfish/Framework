@@ -1,0 +1,178 @@
+2025-07-25 19:10:30.4115  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304857191188529152 : Error System.InvalidCastException: Unable to cast object of type 'MongoDB.Driver.CreateIndexOptions`1[Hotfix.Common.Entity.Database.PlayerBaseData]' to type 'MongoDB.Driver.IndexKeysDefinition`1[Hotfix.Common.Entity.Database.PlayerBaseData]'.
+   at Fantasy.DataBase.MongoDataBase.CreateIndex[T](Object[] keys)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 29
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 29
+   at Fantasy.DataBase.MongoDataBase.Exist[T](Expression`1 filter, String collection)
+   at Fantasy.DataBase.MongoDataBase.Count[T](Expression`1 filter, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 19:11:57.2770  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304858703017017344 : Error System.FormatException: An error occurred while deserializing the Id property of class Fantasy.Entitas.Entity: Cannot deserialize a 'Int64' from BsonType 'ObjectId'.
+ ---> System.FormatException: Cannot deserialize a 'Int64' from BsonType 'ObjectId'.
+   at MongoDB.Bson.Serialization.Serializers.Int64Serializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.CreateFirstCursorBatch(BsonDocument cursorDocument)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.CreateCursor(IChannelSourceHandle channelSource, IChannelHandle channel, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 19:19:30.2935  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MongoDB.Bson.BsonSerializationException: The field 'PlayerId' of type 'Hotfix.Common.Entity.Database.PlayerBaseData' cannot use element name '_id' because it is already being used by property 'Id' of type 'Fantasy.Entitas.Entity'.
+   at MongoDB.Bson.Serialization.BsonClassMap.Freeze()
+   at MongoDB.Bson.Serialization.BsonClassMap.LookupClassMap(Type classType)
+   at Fantasy.Serialize.BsonPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-25 19:22:11.0267  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304869251456696320 : Error System.FormatException: An error occurred while deserializing the Id property of class Fantasy.Entitas.Entity: Cannot deserialize a 'Int64' from BsonType 'ObjectId'.
+ ---> System.FormatException: Cannot deserialize a 'Int64' from BsonType 'ObjectId'.
+   at MongoDB.Bson.Serialization.Serializers.Int64Serializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.CreateFirstCursorBatch(BsonDocument cursorDocument)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.CreateCursor(IChannelSourceHandle channelSource, IChannelHandle channel, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 19:23:03.1459  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304870161989763072 : Error System.FormatException: An error occurred while deserializing the Id property of class Fantasy.Entitas.Entity: Cannot deserialize a 'Int64' from BsonType 'ObjectId'.
+ ---> System.FormatException: Cannot deserialize a 'Int64' from BsonType 'ObjectId'.
+   at MongoDB.Bson.Serialization.Serializers.Int64Serializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.CreateFirstCursorBatch(BsonDocument cursorDocument)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.CreateCursor(IChannelSourceHandle channelSource, IChannelHandle channel, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 19:32:47.5808  Fantasy.Timer.TimerComponent Update Error System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Net.WebSockets.WebSocketBase.WebSocketOperation.SendOperation.ShouldContinue(CancellationToken cancellationToken)
+   at System.Net.WebSockets.WebSocketBase.WebSocketOperation.Process(Nullable`1 buffer, CancellationToken cancellationToken)
+   at System.Net.WebSockets.WebSocketBase.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Fantasy.Network.WebSocket.WebSocketServerNetworkChannel.Dispose()
+   at Fantasy.Network.Session.Dispose()
+   at Fantasy.Network.SessionIdleCheckerComponent.Check()
+   at Fantasy.Timer.TimerSchedulerNet.Update()
+   at Fantasy.Entitas.EntityComponent.Update()
+   at Fantasy.Entitas.EntityComponent.Update()
+   at Fantasy.Scene.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 19:39:42.5656  Fantasy.Timer.TimerComponent Update Error System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at System.Net.WebSockets.WebSocketBase.WebSocketOperation.SendOperation.ShouldContinue(CancellationToken cancellationToken)
+   at System.Net.WebSockets.WebSocketBase.WebSocketOperation.Process(Nullable`1 buffer, CancellationToken cancellationToken)
+   at System.Net.WebSockets.WebSocketBase.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Fantasy.Network.WebSocket.WebSocketServerNetworkChannel.Dispose()
+   at Fantasy.Network.Session.Dispose()
+   at Fantasy.Network.SessionIdleCheckerComponent.Check()
+   at Fantasy.Timer.TimerSchedulerNet.Update()
+   at Fantasy.Timer.TimerComponent.Update()
+   at Fantasy.Timer.TimerComponentUpdateSystem.Update(TimerComponent self)
+   at Fantasy.Entitas.Interface.UpdateSystem`1.Invoke(Entity self)
+   at Fantasy.Entitas.EntityComponent.Update()
+   at Fantasy.Entitas.EntityComponent.Update()
+   at Fantasy.Scene.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+

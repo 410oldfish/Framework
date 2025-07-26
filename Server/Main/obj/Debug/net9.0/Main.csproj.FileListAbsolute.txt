@@ -37,7 +37,6 @@ F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\runtimes\osx-x6
 F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\runtimes\win-x64\native\mimalloc-redirect.dll
 F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\runtimes\win-x64\native\mimalloc.dll
 F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Fantasy-Net.dll
-F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Fantasy-Net.pdb
 F:\UnityProject\Framework\Framework\Server\Main\obj\Debug\net9.0\Main.csproj.AssemblyReference.cache
 F:\UnityProject\Framework\Framework\Server\Main\obj\Debug\net9.0\Main.csproj.Up2Date
 F:\UnityProject\Framework\Framework\Server\Main\bin\Debug\net9.0\Fantasy-Net.NLog.dll

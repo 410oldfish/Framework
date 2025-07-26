@@ -1,6 +1,26 @@
 syntax = "proto3";
 package Sining.Message;
 
+
+//-------------通用模块-----------------
+
+//Gate向Center请求建立路由
+message G2Center_BuildRoute_Req // IRouteRequest, Center2G_BuildRoute_Resp
+{
+	int64 GateRouteId = 1;
+	int64 PlayerId = 2;
+}
+
+message Center2G_BuildRoute_Resp // IRouteResponse
+{
+	int64 CenterRouteId = 1;
+	bool IsNewPlayer = 2;
+}
+
+
+
+//------------------------------------
+
 message G2M_ConnectRequest // IRouteRequest, M2G_ConnectResponse
 {
 	int64 GateRouteId = 1;

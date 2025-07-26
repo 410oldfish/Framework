@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Reflection;
+using Cysharp.Threading.Tasks;
 using Fantasy;
 using GameLogic;
 using TEngine;
@@ -34,14 +35,15 @@ public partial class GameApp
         StartGameLogic();
     }
 
-    private static void StartGameLogic()
+    private static async void StartGameLogic()
     {
         framework = GameMgr.Interface;
         //Network
-        GameModule.Network.InitServer(_hotfixAssembly.ToArray());
-            
-        GameEvent.Get<ILoginUI>().ShowLoginUI();
-        GameModule.UI.ShowUIAsync<TestPfb>();
+        await GameModule.Network.InitServer(_hotfixAssembly.ToArray());
+        //开始游戏前自动连接网关
+        GameModule.Network.SessionConnect();
+        
+        GameModule.UI.ShowUI<Pfb_LoginCenterServer>();
     }
     
     private static void Release()

@@ -13,6 +13,7 @@ public static class NetworkProtocolTemplate
                                             using Fantasy.Serialize;
                                             using GameConfig.item;
                                             using Core;
+                                            using Hotfix.Common.Data;
                                             // ReSharper disable InconsistentNaming
                                             // ReSharper disable RedundantUsingDirective
                                             // ReSharper disable RedundantOverriddenMember
@@ -32,6 +33,7 @@ public static class NetworkProtocolTemplate
                                             using Fantasy;
                                             using Fantasy.Network.Interface;
                                             using Fantasy.Serialize;
+                                            using GameConfig.item;
                                             #pragma warning disable CS8618
                                             
                                             namespace Fantasy

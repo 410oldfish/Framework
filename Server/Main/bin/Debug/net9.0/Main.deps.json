@@ -11,8 +11,7 @@
           "Core": "1.0.0",
           "Fantasy-Net": "2024.2.26",
           "Fantasy-Net.NLog": "2024.1.20",
-          "Hotfix": "1.0.0",
-          "Fantasy-Net.Reference": "1.0.0.0"
+          "Hotfix": "1.0.0"
         },
         "runtime": {
           "Main.dll": {}
@@ -34,6 +33,22 @@
           "lib/net5.0/DnsClient.dll": {
             "assemblyVersion": "1.6.1.0",
             "fileVersion": "1.6.1.0"
+          }
+        }
+      },
+      "Fantasy-Net/2024.2.26": {
+        "dependencies": {
+          "CommandLineParser": "2.9.1",
+          "MongoDB.Bson": "3.4.1",
+          "MongoDB.Driver": "3.1.0",
+          "Newtonsoft.Json": "13.0.3",
+          "mimalloc-csharp": "1.0.7",
+          "protobuf-net": "3.3.0-g6785ecbb35"
+        },
+        "runtime": {
+          "lib/net9.0/Fantasy-Net.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -223,21 +238,6 @@
           }
         }
       },
-      "Fantasy-Net/2024.2.26": {
-        "dependencies": {
-          "CommandLineParser": "2.9.1",
-          "MongoDB.Bson": "3.4.1",
-          "MongoDB.Driver": "3.1.0",
-          "Newtonsoft.Json": "13.0.3",
-          "mimalloc-csharp": "1.0.7",
-          "protobuf-net": "3.3.0-g6785ecbb35"
-        },
-        "runtime": {
-          "Fantasy-Net.dll": {
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "Hotfix/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
@@ -247,14 +247,6 @@
         },
         "runtime": {
           "Hotfix.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Fantasy-Net.Reference/1.0.0.0": {
-        "runtime": {
-          "Fantasy-Net.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -281,6 +273,13 @@
       "sha512": "sha512-4H/f2uYJOZ+YObZjpY9ABrKZI+JNw3uizp6oMzTXwDw6F+2qIPhpRl/1t68O/6e98+vqNiYGu+lswmwdYUy3gg==",
       "path": "dnsclient/1.6.1",
       "hashPath": "dnsclient.1.6.1.nupkg.sha512"
+    },
+    "Fantasy-Net/2024.2.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s3paTTHT6TKfT51Uz1fRc2ScwRR/pe6KTXnYP5Bz69IN5Uz0uygOivYNczUTKy/ubT48W5Xczi/mIhLUpka7iQ==",
+      "path": "fantasy-net/2024.2.26",
+      "hashPath": "fantasy-net.2024.2.26.nupkg.sha512"
     },
     "Fantasy-Net.NLog/2024.1.20": {
       "type": "package",
@@ -420,18 +419,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Fantasy-Net/2024.2.26": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Hotfix/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Fantasy-Net.Reference/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

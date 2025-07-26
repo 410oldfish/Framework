@@ -1,0 +1,118 @@
+2025-07-25 18:34:30.4271  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304820185750306816 : Error System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_GetPlayerDataHandler.Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_GetPlayerDataHandler.cs:line 17
+   at Fantasy.DataBase.MongoDataBase.Query[T](Expression`1 filter, Boolean isDeserialize, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 18:36:02.6854  Fantasy.Timer.TimerComponent Update Error System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at System.Net.WebSockets.WebSocketBase.WebSocketOperation.SendOperation.ShouldContinue(CancellationToken cancellationToken)
+   at System.Net.WebSockets.WebSocketBase.WebSocketOperation.Process(Nullable`1 buffer, CancellationToken cancellationToken)
+   at System.Net.WebSockets.WebSocketBase.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Fantasy.Network.WebSocket.WebSocketServerNetworkChannel.Dispose()
+   at Fantasy.Network.Session.Dispose()
+   at Fantasy.Network.SessionIdleCheckerComponent.Check()
+   at Fantasy.Timer.TimerSchedulerNet.Update()
+   at Fantasy.Timer.TimerComponent.Update()
+   at Fantasy.Timer.TimerComponentUpdateSystem.Update(TimerComponent self)
+   at Fantasy.Entitas.Interface.UpdateSystem`1.Invoke(Entity self)
+   at Fantasy.Entitas.EntityComponent.Update()
+   at Fantasy.Entitas.EntityComponent.Update()
+   at Fantasy.Scene.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 18:39:49.1067  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304825408430538752 : Error System.InvalidCastException: Unable to cast object of type 'System.Int64' to type 'MongoDB.Driver.IndexKeysDefinition`1[Hotfix.Common.Entity.Database.PlayerBaseData]'.
+   at Fantasy.DataBase.MongoDataBase.CreateIndex[T](Object[] keys)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 28
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 28
+   at Fantasy.DataBase.MongoDataBase.Exist[T](Expression`1 filter, String collection)
+   at Fantasy.DataBase.MongoDataBase.Count[T](Expression`1 filter, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 18:50:17.4829  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304836231748124672 : Error System.InvalidCastException: Unable to cast object of type 'System.String' to type 'MongoDB.Driver.IndexKeysDefinition`1[Hotfix.Common.Entity.Database.PlayerBaseData]'.
+   at Fantasy.DataBase.MongoDataBase.CreateIndex[T](String collection, Object[] keys)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 28
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 28
+   at Fantasy.DataBase.MongoDataBase.Exist[T](Expression`1 filter, String collection)
+   at Fantasy.DataBase.MongoDataBase.Count[T](Expression`1 filter, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 18:57:15.7279  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304843412933443584 : Error System.InvalidCastException: Unable to cast object of type 'System.ValueTuple`2[System.String,System.Int32]' to type 'MongoDB.Driver.IndexKeysDefinition`1[Hotfix.Common.Entity.Database.PlayerBaseData]'.
+   at Fantasy.DataBase.MongoDataBase.CreateIndex[T](Object[] keys)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 28
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 28
+   at Fantasy.DataBase.MongoDataBase.Exist[T](Expression`1 filter, String collection)
+   at Fantasy.DataBase.MongoDataBase.Count[T](Expression`1 filter, String collection)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+
+2025-07-25 18:59:16.0355  SceneConfigId:1001 ProcessConfigId:1 SceneType:4 EntityId 304845594776829952 : Error System.InvalidCastException: Unable to cast object of type 'System.Int64' to type 'MongoDB.Driver.IClientSessionHandle'.
+   at Fantasy.DataBase.MongoDataBase.Save[T](Object transactionSession, T entity, String collection)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 30
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Fantasy.Network.Interface.RouteRPC`3.Handle(Session session, Entity entity, UInt32 rpcId, Object routeMessage)
+   at Hotfix.Center.Handler.C2Center_SetNickNameHandler.Run(CenterUnit entity, C2Center_SetNickName_Req request, Center2C_SetNickName_Resp response, Action reply) in F:\UnityProject\Framework\Framework\Server\Hotfix\Center\Handler\C2Center_SetNickNameHandler.cs:line 30
+   at Fantasy.DataBase.MongoDataBase.CreateIndex[T](Object[] keys)
+   at Fantasy.ThreadSynchronizationContext.<>c__DisplayClass2_0.<Post>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 32
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+

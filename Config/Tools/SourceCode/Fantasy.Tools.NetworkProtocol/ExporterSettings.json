@@ -9,7 +9,7 @@
             "Comment": "ProtoBuf生成到服务端的文件夹位置"
         },
         "NetworkProtocolClientDirectory": {
-            "Value": "../../../../Client/UnityProject/Assets/Scripts/Hotfix/Generate/NetworkProtocol/",
+            "Value": "../../../../Client/UnityProject/Assets/GameScripts/Hotfix/GameProto/NetworkProtocol/",
             "Comment": "ProtoBuf生成到客户端的文件夹位置"
         },
         "Serializes": {

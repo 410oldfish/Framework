@@ -31,6 +31,29 @@
           }
         }
       },
+      "Fantasy-Net/2024.2.26": {
+        "type": "package",
+        "dependencies": {
+          "CommandLineParser": "2.9.1",
+          "MongoDB.Bson": "3.1.0",
+          "MongoDB.Driver": "3.1.0",
+          "Newtonsoft.Json": "13.0.3",
+          "mimalloc-csharp": "1.0.7",
+          "protobuf-net": "3.2.45"
+        },
+        "compile": {
+          "lib/net9.0/Fantasy-Net.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/Fantasy-Net.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "buildTransitive/Fantasy-Net.targets": {}
+        }
+      },
       "Fantasy-Net.NLog/2024.1.20": {
         "type": "package",
         "dependencies": {
@@ -359,27 +382,6 @@
           "bin/placeholder/Core.dll": {}
         }
       },
-      "Fantasy-Net/2024.2.26": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "CommandLineParser": "2.9.1",
-          "MongoDB.Bson": "3.1.0",
-          "MongoDB.Driver": "3.1.0",
-          "Newtonsoft.Json": "13.0.3",
-          "mimalloc-csharp": "1.0.7",
-          "protobuf-net": "3.2.45"
-        },
-        "compile": {
-          "bin/placeholder/Fantasy-Net.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Fantasy-Net.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Hotfix/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -443,6 +445,23 @@
         "lib/netstandard2.0/DnsClient.xml",
         "lib/netstandard2.1/DnsClient.dll",
         "lib/netstandard2.1/DnsClient.xml"
+      ]
+    },
+    "Fantasy-Net/2024.2.26": {
+      "sha512": "s3paTTHT6TKfT51Uz1fRc2ScwRR/pe6KTXnYP5Bz69IN5Uz0uygOivYNczUTKy/ubT48W5Xczi/mIhLUpka7iQ==",
+      "type": "package",
+      "path": "fantasy-net/2024.2.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "buildTransitive/Fantasy-Net.targets",
+        "fantasy-net.2024.2.26.nupkg.sha512",
+        "fantasy-net.nuspec",
+        "icon.png",
+        "lib/net8.0/Fantasy-Net.dll",
+        "lib/net9.0/Fantasy-Net.dll"
       ]
     },
     "Fantasy-Net.NLog/2024.1.20": {
@@ -954,11 +973,6 @@
       "path": "../Core/Core.csproj",
       "msbuildProject": "../Core/Core.csproj"
     },
-    "Fantasy-Net/2024.2.26": {
-      "type": "project",
-      "path": "../../../../Fantasy/Fantasy/Fantasy.Net/Fantasy.Net/Fantasy.Net.csproj",
-      "msbuildProject": "../../../../Fantasy/Fantasy/Fantasy.Net/Fantasy.Net/Fantasy.Net.csproj"
-    },
     "Hotfix/1.0.0": {
       "type": "project",
       "path": "../Hotfix/Hotfix.csproj",
@@ -1005,9 +1019,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj": {
-              "projectPath": "F:\\UnityProject\\Fantasy\\Fantasy\\Fantasy.Net\\Fantasy.Net\\Fantasy.Net.csproj"
-            },
             "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj": {
               "projectPath": "F:\\UnityProject\\Framework\\Framework\\Server\\Core\\Core.csproj"
             },
@@ -1033,6 +1044,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Fantasy-Net": {
+            "target": "Package",
+            "version": "[2024.2.26, )"
+          },
           "Fantasy-Net.NLog": {
             "target": "Package",
             "version": "[2024.1.20, )"

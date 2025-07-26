@@ -8,11 +8,60 @@ package Fantasy.Network.Message;
 // 在message协议上方添加// Protocol+空格+协议名字
 // 例如:// Protocol ProtoBuf 或 // Protocol MemoryPack
 
+//-----------Data--------------
+message Data_SyncPlayerData
+{
+	 int64 PlayerId;
+     string Name;
+     int32 Lv;
+     int32 Exp;
+}
+
+//------------通用模块--------------------------
+//请求建立中心服路由
+message C2G_BuildCenterRoute_Req // IRequest, G2C_BuildCenterRoute_Resp
+{
+	int64 PlayerId = 1;
+}
+
+message G2C_BuildCenterRoute_Resp // IResponse
+{
+	int64 PlayerId = 1;
+	bool NewPlayer = 2;
+}
+
+//请求修改昵称
+message C2Center_SetNickName_Req // ICustomRouteRequest, Center2C_SetNickName_Resp, CenterRoute
+{
+	string NickName = 1;
+}
+
+message Center2C_SetNickName_Resp // ICustomRouteResponse
+{
+	
+}
+
+//请求获取玩家数据
+message C2Center_GetPlayerData_Req // ICustomRouteRequest, Center2C_GetPlayerData_Resp, CenterRoute
+{
+
+}
+
+message Center2C_GetPlayerData_Resp // ICustomRouteResponse
+{
+	Data_SyncPlayerData PlayerData = 1;
+}
+
+
+
 //------------业务逻辑--------------------------
 
-//------------种田模块 Farmland----------------------------
 
-message C2Center_Farmland_UnlockLand_Req // ICustomRouteMessage, Center2C_Farmland_Resp, CenterRoute
+
+//------------种田模块 Farmland----------------------------
+//请求解锁农田
+
+message C2Center_Farmland_UnlockLand_Req // ICustomRouteRequest, Center2C_Farmland_Resp, CenterRoute
 {
 	int32 LandId = 1;
 }

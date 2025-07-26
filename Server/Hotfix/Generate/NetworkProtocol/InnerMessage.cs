@@ -7,6 +7,7 @@ using Fantasy.Network.Interface;
 using Fantasy.Serialize;
 using GameConfig.item;
 using Core;
+using Hotfix.Common.Data;
 // ReSharper disable InconsistentNaming
 // ReSharper disable RedundantUsingDirective
 // ReSharper disable RedundantOverriddenMember
@@ -19,6 +20,53 @@ using Core;
 
 namespace Fantasy
 {	
+	[ProtoContract]
+	public partial class G2Center_BuildRoute_Req : AMessage, IRouteRequest, IProto
+	{
+		public static G2Center_BuildRoute_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2Center_BuildRoute_Req>();
+		}
+		public override void Dispose()
+		{
+			GateRouteId = default;
+			PlayerId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2Center_BuildRoute_Req>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public Center2G_BuildRoute_Resp ResponseType { get; set; }
+		public uint OpCode() { return InnerOpcode.G2Center_BuildRoute_Req; }
+		[ProtoMember(1)]
+		public long GateRouteId { get; set; }
+		[ProtoMember(2)]
+		public long PlayerId { get; set; }
+	}
+	[ProtoContract]
+	public partial class Center2G_BuildRoute_Resp : AMessage, IRouteResponse, IProto
+	{
+		public static Center2G_BuildRoute_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Center2G_BuildRoute_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			CenterRouteId = default;
+			IsNewPlayer = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Center2G_BuildRoute_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.Center2G_BuildRoute_Resp; }
+		[ProtoMember(1)]
+		public long CenterRouteId { get; set; }
+		[ProtoMember(2)]
+		public bool IsNewPlayer { get; set; }
+		[ProtoMember(3)]
+		public uint ErrorCode { get; set; }
+	}
 	[ProtoContract]
 	public partial class G2M_ConnectRequest : AMessage, IRouteRequest, IProto
 	{

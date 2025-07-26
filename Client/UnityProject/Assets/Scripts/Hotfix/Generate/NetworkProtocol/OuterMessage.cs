@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Fantasy;
 using Fantasy.Network.Interface;
 using Fantasy.Serialize;
+using GameConfig.item;
+
 #pragma warning disable CS8618
 
 namespace Fantasy

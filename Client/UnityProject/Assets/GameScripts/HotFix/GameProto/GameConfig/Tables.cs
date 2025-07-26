@@ -50,6 +50,7 @@ public partial class Tables
     /// 农场田地解锁条件
     /// </summary>
     public site.TbFarmlandUnlock TbFarmlandUnlock {get; }
+    public network.TbErrorCode TbErrorCode {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
@@ -62,6 +63,7 @@ public partial class Tables
         TbSeasoning = new item.TbSeasoning(loader("item_tbseasoning"));
         TbCommonItem = new item.TbCommonItem(loader("item_tbcommonitem"));
         TbFarmlandUnlock = new site.TbFarmlandUnlock(loader("site_tbfarmlandunlock"));
+        TbErrorCode = new network.TbErrorCode(loader("network_tberrorcode"));
         ResolveRef();
     }
     
@@ -76,6 +78,7 @@ public partial class Tables
         TbSeasoning.ResolveRef(this);
         TbCommonItem.ResolveRef(this);
         TbFarmlandUnlock.ResolveRef(this);
+        TbErrorCode.ResolveRef(this);
     }
 	
 	public List<string> GetTableNames()
@@ -91,6 +94,7 @@ public partial class Tables
             "item_tbseasoning",
             "item_tbcommonitem",
             "site_tbfarmlandunlock",
+            "network_tberrorcode",
         };
     }
 }

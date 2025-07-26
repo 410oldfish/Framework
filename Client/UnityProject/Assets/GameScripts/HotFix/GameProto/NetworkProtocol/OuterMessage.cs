@@ -4,36 +4,189 @@ using System.Collections.Generic;
 using Fantasy;
 using Fantasy.Network.Interface;
 using Fantasy.Serialize;
+using GameConfig.item;
 #pragma warning disable CS8618
 
 namespace Fantasy
 {
 	[ProtoContract]
-	public partial class C2Common_Farmland_UnlockLand_Req : AMessage, ICustomRouteMessage, IProto
+	public partial class Data_SyncPlayerData : AMessage, IProto
 	{
-		public static C2Common_Farmland_UnlockLand_Req Create(Scene scene)
+		public static Data_SyncPlayerData Create(Scene scene)
 		{
-			return scene.MessagePoolComponent.Rent<C2Common_Farmland_UnlockLand_Req>();
+			return scene.MessagePoolComponent.Rent<Data_SyncPlayerData>();
+		}
+		public override void Dispose()
+		{
+			PlayerId = default;
+			Name = default;
+			Lv = default;
+			Exp = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Data_SyncPlayerData>(this);
+#endif
+		}
+		[ProtoMember(1)]
+		public long PlayerId { get; set; }
+		[ProtoMember(2)]
+		public string Name { get; set; }
+		[ProtoMember(3)]
+		public int Lv { get; set; }
+		[ProtoMember(4)]
+		public int Exp { get; set; }
+	}
+	[ProtoContract]
+	public partial class C2G_BuildCenterRoute_Req : AMessage, IRequest, IProto
+	{
+		public static C2G_BuildCenterRoute_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2G_BuildCenterRoute_Req>();
+		}
+		public override void Dispose()
+		{
+			PlayerId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<C2G_BuildCenterRoute_Req>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public G2C_BuildCenterRoute_Resp ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2G_BuildCenterRoute_Req; }
+		[ProtoMember(1)]
+		public long PlayerId { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2C_BuildCenterRoute_Resp : AMessage, IResponse, IProto
+	{
+		public static G2C_BuildCenterRoute_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2C_BuildCenterRoute_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			PlayerId = default;
+			NewPlayer = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2C_BuildCenterRoute_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.G2C_BuildCenterRoute_Resp; }
+		[ProtoMember(1)]
+		public long PlayerId { get; set; }
+		[ProtoMember(2)]
+		public bool NewPlayer { get; set; }
+		[ProtoMember(3)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
+	public partial class C2Center_SetNickName_Req : AMessage, ICustomRouteRequest, IProto
+	{
+		public static C2Center_SetNickName_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2Center_SetNickName_Req>();
+		}
+		public override void Dispose()
+		{
+			NickName = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<C2Center_SetNickName_Req>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public Center2C_SetNickName_Resp ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2Center_SetNickName_Req; }
+		[ProtoIgnore]
+		public int RouteType => Fantasy.RouteType.CenterRoute;
+		[ProtoMember(1)]
+		public string NickName { get; set; }
+	}
+	[ProtoContract]
+	public partial class Center2C_SetNickName_Resp : AMessage, ICustomRouteResponse, IProto
+	{
+		public static Center2C_SetNickName_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Center2C_SetNickName_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Center2C_SetNickName_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.Center2C_SetNickName_Resp; }
+		[ProtoMember(1)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
+	public partial class C2Center_GetPlayerData_Req : AMessage, ICustomRouteRequest, IProto
+	{
+		public static C2Center_GetPlayerData_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2Center_GetPlayerData_Req>();
+		}
+		public override void Dispose()
+		{
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<C2Center_GetPlayerData_Req>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public Center2C_GetPlayerData_Resp ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2Center_GetPlayerData_Req; }
+		[ProtoIgnore]
+		public int RouteType => Fantasy.RouteType.CenterRoute;
+	}
+	[ProtoContract]
+	public partial class Center2C_GetPlayerData_Resp : AMessage, ICustomRouteResponse, IProto
+	{
+		public static Center2C_GetPlayerData_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Center2C_GetPlayerData_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			PlayerData = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Center2C_GetPlayerData_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.Center2C_GetPlayerData_Resp; }
+		[ProtoMember(1)]
+		public Data_SyncPlayerData PlayerData { get; set; }
+		[ProtoMember(2)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
+	public partial class C2Center_Farmland_UnlockLand_Req : AMessage, ICustomRouteRequest, IProto
+	{
+		public static C2Center_Farmland_UnlockLand_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2Center_Farmland_UnlockLand_Req>();
 		}
 		public override void Dispose()
 		{
 			LandId = default;
 #if FANTASY_NET || FANTASY_UNITY
-			GetScene().MessagePoolComponent.Return<C2Common_Farmland_UnlockLand_Req>(this);
+			GetScene().MessagePoolComponent.Return<C2Center_Farmland_UnlockLand_Req>(this);
 #endif
 		}
-		public uint OpCode() { return OuterOpcode.C2Common_Farmland_UnlockLand_Req; }
 		[ProtoIgnore]
-		public int RouteType => Fantasy.RouteType.Common2C_Farmland_Resp;
+		public Center2C_Farmland_Resp ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2Center_Farmland_UnlockLand_Req; }
+		[ProtoIgnore]
+		public int RouteType => Fantasy.RouteType.CenterRoute;
 		[ProtoMember(1)]
 		public int LandId { get; set; }
 	}
 	[ProtoContract]
-	public partial class Common2C_Farmland_Resp : AMessage, ICustomRouteResponse, IProto
+	public partial class Center2C_Farmland_Resp : AMessage, ICustomRouteResponse, IProto
 	{
-		public static Common2C_Farmland_Resp Create(Scene scene)
+		public static Center2C_Farmland_Resp Create(Scene scene)
 		{
-			return scene.MessagePoolComponent.Rent<Common2C_Farmland_Resp>();
+			return scene.MessagePoolComponent.Rent<Center2C_Farmland_Resp>();
 		}
 		public override void Dispose()
 		{
@@ -41,10 +194,10 @@ namespace Fantasy
 			Result = default;
 			CostItems_Sync.Clear();
 #if FANTASY_NET || FANTASY_UNITY
-			GetScene().MessagePoolComponent.Return<Common2C_Farmland_Resp>(this);
+			GetScene().MessagePoolComponent.Return<Center2C_Farmland_Resp>(this);
 #endif
 		}
-		public uint OpCode() { return OuterOpcode.Common2C_Farmland_Resp; }
+		public uint OpCode() { return OuterOpcode.Center2C_Farmland_Resp; }
 		[ProtoMember(1)]
 		public bool Result { get; set; }
 		[ProtoMember(2)]

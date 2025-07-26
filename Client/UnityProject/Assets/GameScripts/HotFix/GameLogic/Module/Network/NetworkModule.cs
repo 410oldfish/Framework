@@ -3,27 +3,37 @@ using Fantasy;
 using Fantasy.Async;
 using Fantasy.Network;
 using Fantasy.Network.Interface;
+using GameLogic.GameScripts.HotFix.GameLogic.Common;
+using GameLogic.GameScripts.HotFix.GameLogic.Module.Player;
+using QFramework;
 using TEngine;
 using UnityEngine;
 using Log = TEngine.Log;
 
 namespace GameLogic
 {
-    public sealed class NetworkModule : Singleton<NetworkModule>
+    public sealed class NetworkModule : Singleton<NetworkModule>, ICanGetModel
     {
         Scene _scene;
         public Scene Scene => _scene;
         private Session _session;
-        public async void InitServer(params System.Reflection.Assembly[] assemblies)
+
+        private PlayerModel _playerModel;
+        private PlayerModel PlayerModel => _playerModel ??= this.GetModel<PlayerModel>();
+        
+        public async FTask InitServer(params System.Reflection.Assembly[] assemblies)
         {
             await Fantasy.Platform.Unity.Entry.Initialize(assemblies);
             _scene = await Fantasy.Platform.Unity.Entry.CreateScene();
         }
 
+        /// <summary>
+        /// 玩家登录
+        /// </summary>
         public void SessionConnect()
         {
             _session = _scene.Connect(
-                "127.0.0.1:20000",
+                ServerConfig.ServerIP,
                 NetworkProtocolType.WebSocket,
                 () =>
                 {
@@ -40,13 +50,31 @@ namespace GameLogic
                 false);
         }
 
+        /// <summary>
+        /// 请求建立中心服路由
+        /// </summary>
+        public async FTask<G2C_BuildCenterRoute_Resp> BuildCenterRouteRequest(long playerId)
+        {
+            var res = await this.Call<C2G_BuildCenterRoute_Req, G2C_BuildCenterRoute_Resp>(new C2G_BuildCenterRoute_Req()
+            {
+                PlayerId = playerId
+            });
+            if (res.ErrorCode != 0)
+            {
+                Log.Error("连接中心服失败 : Error " + res.ErrorCode);
+                return null;
+            }
+
+            return res;
+        }
+
         public void Send<TMessage>(TMessage msg)
         where TMessage : IMessage
         {
             _session.Send(msg);
         }
 
-        public async FTask<TResponse> RPC<TRequest, TResponse>(TRequest request)
+        public async FTask<TResponse> Call<TRequest, TResponse>(TRequest request)
             where TRequest : IRequest
             where TResponse : IResponse
         {
@@ -127,6 +155,11 @@ namespace GameLogic
             }
             
             
+        }
+
+        public IArchitecture GetArchitecture()
+        {
+            return GameMgr.Interface;
         }
     }
 }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJv6SkQfWW4=",
+  "dgSpecHash": "Zw898Oqg/2U=",
   "success": true,
   "projectFilePath": "F:\\UnityProject\\Framework\\Framework\\Server\\Main\\Main.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\47230\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\47230\\.nuget\\packages\\fantasy-net\\2024.2.26\\fantasy-net.2024.2.26.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\fantasy-net.nlog\\2024.1.20\\fantasy-net.nlog.2024.1.20.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
@@ -24,8 +25,7 @@
     "C:\\Users\\47230\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\47230\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\47230\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512",
-    "C:\\Users\\47230\\.nuget\\packages\\fantasy-net\\2024.2.26\\fantasy-net.2024.2.26.nupkg.sha512"
+    "C:\\Users\\47230\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
   "logs": []
 }

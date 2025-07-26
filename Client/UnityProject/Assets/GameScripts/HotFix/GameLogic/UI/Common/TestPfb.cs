@@ -97,7 +97,7 @@ namespace GameLogic
         
         private void OnClickRegisterAddressableBtn()
         {
-            GameModule.Network.RPC<C2G_ConnectAddressableRequest, G2C_ConnectAddressableResponse>(new C2G_ConnectAddressableRequest());
+            GameModule.Network.Call<C2G_ConnectAddressableRequest, G2C_ConnectAddressableResponse>(new C2G_ConnectAddressableRequest());
             Log.Debug("注册Addressable成功");
         }
         
@@ -113,12 +113,12 @@ namespace GameLogic
 
         private void OnClickTransMapBtn()
         {
-            GameModule.Network.RPC<C2M_MoveToMapRequest, M2C_MoveToMapResponse>(new C2M_MoveToMapRequest());
+            GameModule.Network.Call<C2M_MoveToMapRequest, M2C_MoveToMapResponse>(new C2M_MoveToMapRequest());
         }
 
         async FTask AddressableRPCTest()
         {
-            var ret = await GameModule.Network.RPC<C2M_HelloRequest, M2C_HelloResponse>(new C2M_HelloRequest()
+            var ret = await GameModule.Network.Call<C2M_HelloRequest, M2C_HelloResponse>(new C2M_HelloRequest()
             {
                 Tag = "Hello Addressable Request"
             });
@@ -127,7 +127,7 @@ namespace GameLogic
 
         async FTask RPCTest()
         {
-            var rep = await GameModule.Network.RPC<C2G_HelloRequest, G2C_HelloResponse>(new C2G_HelloRequest(){Tag = "Fish"});
+            var rep = await GameModule.Network.Call<C2G_HelloRequest, G2C_HelloResponse>(new C2G_HelloRequest(){Tag = "Fish"});
             Debugger.print("get message from server : " + rep.Tag);
         }
 
