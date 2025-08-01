@@ -12,14 +12,10 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class Seasoning : Luban.BeanBase
+public sealed partial class Seasoning : ItemBase
 {
-    public Seasoning(ByteBuf _buf) 
+    public Seasoning(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
-        Price = _buf.ReadInt();
     }
 
     public static Seasoning DeserializeSeasoning(ByteBuf _buf)
@@ -27,28 +23,13 @@ public sealed partial class Seasoning : Luban.BeanBase
         return new Seasoning(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
    
     public const int __ID__ = -472891905;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -58,6 +39,7 @@ public sealed partial class Seasoning : Luban.BeanBase
         + "name:" + Name + ","
         + "quality:" + Quality + ","
         + "price:" + Price + ","
+        + "desc:" + Desc + ","
         + "}";
     }
 }

@@ -1,0 +1,12 @@
+<module name="">	
+	<bean name="Seed" parent="ItemBase" sep=",">
+		<var name="growTime" type="int" />
+		<var name="yieldCount" type="item.ItemExchange" />
+		<var name="leastYieldCount" type="int" />
+		<var name="maxWaterCount" type="int" />
+		<var name="maxFertilizerCount" type="int" />
+		<var name="maxPestCount" type="int" />
+		<var name="mutiHarvestCount" type="int" />
+		<var name="mutiHarvestTime" type="list,int" />
+    </bean>
+</module>

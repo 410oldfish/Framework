@@ -1,0 +1,4 @@
+<module name="">	
+	<bean name="Seasoning" parent="ItemBase" sep=",">
+    </bean>
+</module>

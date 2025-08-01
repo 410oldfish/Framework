@@ -1,0 +1,5 @@
+<module name="">	
+	<bean name="Fry" parent="ItemBase" sep=",">
+		<var name="growTime" type="int" />
+    </bean>
+</module>

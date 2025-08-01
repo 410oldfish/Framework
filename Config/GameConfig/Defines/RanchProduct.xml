@@ -1,0 +1,4 @@
+<module name="">	
+	<bean name="RanchProduct" parent="ItemBase" sep=",">
+    </bean>
+</module>

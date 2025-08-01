@@ -12,13 +12,10 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class CommonItem : Luban.BeanBase
+public sealed partial class CommonItem : ItemBase
 {
-    public CommonItem(ByteBuf _buf) 
+    public CommonItem(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
     }
 
     public static CommonItem DeserializeCommonItem(ByteBuf _buf)
@@ -26,24 +23,13 @@ public sealed partial class CommonItem : Luban.BeanBase
         return new CommonItem(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
    
     public const int __ID__ = -1117321282;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -52,6 +38,8 @@ public sealed partial class CommonItem : Luban.BeanBase
         + "id:" + Id + ","
         + "name:" + Name + ","
         + "quality:" + Quality + ","
+        + "price:" + Price + ","
+        + "desc:" + Desc + ","
         + "}";
     }
 }

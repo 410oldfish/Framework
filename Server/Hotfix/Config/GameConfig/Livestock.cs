@@ -12,18 +12,15 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class Livestock : Luban.BeanBase
+public sealed partial class Livestock : ItemBase
 {
-    public Livestock(ByteBuf _buf) 
+    public Livestock(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
-        Price = _buf.ReadInt();
-        Meat = _buf.ReadInt();
+        MeatId = _buf.ReadInt();
         MeatCount = _buf.ReadInt();
-        Byproduct = _buf.ReadInt();
-        ByproductTime = _buf.ReadInt();
+        ByproductId = _buf.ReadInt();
+        ByproductCount = _buf.ReadInt();
+        {int n0 = System.Math.Min(_buf.ReadSize(), _buf.Size);ByproductTime = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); ByproductTime.Add(_e0);}}
     }
 
     public static Livestock DeserializeLivestock(ByteBuf _buf)
@@ -31,44 +28,18 @@ public sealed partial class Livestock : Luban.BeanBase
         return new Livestock(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
-    /// <summary>
-    /// 宰杀后所得物品
-    /// </summary>
-    public readonly int Meat;
-    /// <summary>
-    /// 宰杀后物品数量
-    /// </summary>
+    public readonly int MeatId;
     public readonly int MeatCount;
-    /// <summary>
-    /// 副产品
-    /// </summary>
-    public readonly int Byproduct;
-    /// <summary>
-    /// 副产品产生时间
-    /// </summary>
-    public readonly int ByproductTime;
+    public readonly int ByproductId;
+    public readonly int ByproductCount;
+    public readonly System.Collections.Generic.List<int> ByproductTime;
    
     public const int __ID__ = -1263527542;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -78,10 +49,12 @@ public sealed partial class Livestock : Luban.BeanBase
         + "name:" + Name + ","
         + "quality:" + Quality + ","
         + "price:" + Price + ","
-        + "meat:" + Meat + ","
+        + "desc:" + Desc + ","
+        + "meatId:" + MeatId + ","
         + "meatCount:" + MeatCount + ","
-        + "byproduct:" + Byproduct + ","
-        + "byproductTime:" + ByproductTime + ","
+        + "byproductId:" + ByproductId + ","
+        + "byproductCount:" + ByproductCount + ","
+        + "byproductTime:" + Luban.StringUtil.CollectionToString(ByproductTime) + ","
         + "}";
     }
 }

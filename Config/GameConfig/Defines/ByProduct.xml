@@ -1,0 +1,4 @@
+<module name="">	
+	<bean name="ByProduct" parent="ItemBase" sep=",">
+    </bean>
+</module>

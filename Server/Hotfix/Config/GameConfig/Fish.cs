@@ -12,14 +12,12 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class Fish : Luban.BeanBase
+public sealed partial class Fish : ItemBase
 {
-    public Fish(ByteBuf _buf) 
+    public Fish(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
-        Price = _buf.ReadInt();
+        MeatId = _buf.ReadInt();
+        MeatCount = _buf.ReadInt();
     }
 
     public static Fish DeserializeFish(ByteBuf _buf)
@@ -27,28 +25,15 @@ public sealed partial class Fish : Luban.BeanBase
         return new Fish(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
+    public readonly int MeatId;
+    public readonly int MeatCount;
    
     public const int __ID__ = 2189944;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -58,6 +43,9 @@ public sealed partial class Fish : Luban.BeanBase
         + "name:" + Name + ","
         + "quality:" + Quality + ","
         + "price:" + Price + ","
+        + "desc:" + Desc + ","
+        + "meatId:" + MeatId + ","
+        + "meatCount:" + MeatCount + ","
         + "}";
     }
 }

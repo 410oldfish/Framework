@@ -1,0 +1,7 @@
+<module name="">	
+	<bean name="Cub" parent="ItemBase" sep=",">
+		<var name="growTime" type="int" />
+		<var name="meatId" type="int" />
+		<var name="meatCount" type="int" />
+    </bean>
+</module>

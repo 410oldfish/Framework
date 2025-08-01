@@ -18,9 +18,8 @@ public sealed partial class Worker : Luban.BeanBase
     {
         Id = _buf.ReadInt();
         Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
+        Quality = _buf.ReadInt();
         Desc = _buf.ReadString();
-        Price = _buf.ReadInt();
         Mgmt = _buf.ReadInt();
         Cook = _buf.ReadInt();
         Research = _buf.ReadInt();
@@ -34,49 +33,15 @@ public sealed partial class Worker : Luban.BeanBase
         return new Worker(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
     public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
     public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 描述
-    /// </summary>
+    public readonly int Quality;
     public readonly string Desc;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
-    /// <summary>
-    /// 经营
-    /// </summary>
     public readonly int Mgmt;
-    /// <summary>
-    /// 烹饪
-    /// </summary>
     public readonly int Cook;
-    /// <summary>
-    /// 研发
-    /// </summary>
     public readonly int Research;
-    /// <summary>
-    /// 种植
-    /// </summary>
     public readonly int Farm;
-    /// <summary>
-    /// 畜牧
-    /// </summary>
     public readonly int Ranch;
-    /// <summary>
-    /// 钓鱼
-    /// </summary>
     public readonly int Fishing;
    
     public const int __ID__ = -1698218082;
@@ -93,7 +58,6 @@ public sealed partial class Worker : Luban.BeanBase
         + "name:" + Name + ","
         + "quality:" + Quality + ","
         + "desc:" + Desc + ","
-        + "price:" + Price + ","
         + "mgmt:" + Mgmt + ","
         + "cook:" + Cook + ","
         + "research:" + Research + ","

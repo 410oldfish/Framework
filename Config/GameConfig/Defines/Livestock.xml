@@ -1,0 +1,9 @@
+<module name="">	
+	<bean name="Livestock" parent="ItemBase" sep=",">
+		<var name="meatId" type="int" />
+		<var name="meatCount" type="int" />
+		<var name="byproductId" type="int" />
+		<var name="byproductCount" type="int" />
+		<var name="byproductTime" type="list,int" />
+    </bean>
+</module>

@@ -18,6 +18,43 @@ public partial class Tables
     /// 全局
     /// </summary>
     public global.TbGlobal TbGlobal {get; }
+    public item.TbItemBase TbItemBase {get; }
+    /// <summary>
+    /// 通用道具
+    /// </summary>
+    public item.TbCommonItem TbCommonItem {get; }
+    public site.TbFarmlandChangeType TbFarmlandChangeType {get; }
+    /// <summary>
+    /// 农场田地解锁条件
+    /// </summary>
+    public site.TbFarmlandUnlock TbFarmlandUnlock {get; }
+    public network.TbErrorCode TbErrorCode {get; }
+    public common.TbModule TbModule {get; }
+    /// <summary>
+    /// 农作物
+    /// </summary>
+    public item.TbCrops TbCrops {get; }
+    public item.TbSeed TbSeed {get; }
+    public item.TbCub TbCub {get; }
+    /// <summary>
+    /// 牲畜
+    /// </summary>
+    public item.TbLivestock TbLivestock {get; }
+    /// <summary>
+    /// 牧场产物(肉类和副产品)
+    /// </summary>
+    public item.TbRanchProduct TbRanchProduct {get; }
+    public item.TbByProduct TbByProduct {get; }
+    public item.TbFry TbFry {get; }
+    /// <summary>
+    /// 鱼类
+    /// </summary>
+    public item.TbFish TbFish {get; }
+    public item.TbFishProduct TbFishProduct {get; }
+    /// <summary>
+    /// 调味品
+    /// </summary>
+    public item.TbSeasoning TbSeasoning {get; }
     /// <summary>
     /// 雇员
     /// </summary>
@@ -26,71 +63,52 @@ public partial class Tables
     /// 家具
     /// </summary>
     public item.TbForniture TbForniture {get; }
-    /// <summary>
-    /// 农作物
-    /// </summary>
-    public item.TbCrops TbCrops {get; }
-    /// <summary>
-    /// 牲畜
-    /// </summary>
-    public item.TbLivestock TbLivestock {get; }
-    /// <summary>
-    /// 鱼类
-    /// </summary>
-    public item.TbFish TbFish {get; }
-    /// <summary>
-    /// 牧场产物(肉类和副产品)
-    /// </summary>
-    public item.TbRanchProduct TbRanchProduct {get; }
-    /// <summary>
-    /// 调味品
-    /// </summary>
-    public item.TbSeasoning TbSeasoning {get; }
-    /// <summary>
-    /// 通用道具
-    /// </summary>
-    public item.TbCommonItem TbCommonItem {get; }
-    /// <summary>
-    /// 农场田地解锁条件
-    /// </summary>
-    public site.TbFarmlandUnlock TbFarmlandUnlock {get; }
-    public network.TbErrorCode TbErrorCode {get; }
-    public common.TbModule TbModule {get; }
-    public site.TbFarmlandChangeType TbFarmlandChangeType {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
         TbGlobal = new global.TbGlobal(loader("global_tbglobal"));
-        TbWorker = new character.TbWorker(loader("character_tbworker"));
-        TbForniture = new item.TbForniture(loader("item_tbforniture"));
-        TbCrops = new item.TbCrops(loader("item_tbcrops"));
-        TbLivestock = new item.TbLivestock(loader("item_tblivestock"));
-        TbFish = new item.TbFish(loader("item_tbfish"));
-        TbRanchProduct = new item.TbRanchProduct(loader("item_tbranchproduct"));
-        TbSeasoning = new item.TbSeasoning(loader("item_tbseasoning"));
+        TbItemBase = new item.TbItemBase(loader("item_tbitembase"));
         TbCommonItem = new item.TbCommonItem(loader("item_tbcommonitem"));
+        TbFarmlandChangeType = new site.TbFarmlandChangeType(loader("site_tbfarmlandchangetype"));
         TbFarmlandUnlock = new site.TbFarmlandUnlock(loader("site_tbfarmlandunlock"));
         TbErrorCode = new network.TbErrorCode(loader("network_tberrorcode"));
         TbModule = new common.TbModule(loader("common_tbmodule"));
-        TbFarmlandChangeType = new site.TbFarmlandChangeType(loader("site_tbfarmlandchangetype"));
+        TbCrops = new item.TbCrops(loader("item_tbcrops"));
+        TbSeed = new item.TbSeed(loader("item_tbseed"));
+        TbCub = new item.TbCub(loader("item_tbcub"));
+        TbLivestock = new item.TbLivestock(loader("item_tblivestock"));
+        TbRanchProduct = new item.TbRanchProduct(loader("item_tbranchproduct"));
+        TbByProduct = new item.TbByProduct(loader("item_tbbyproduct"));
+        TbFry = new item.TbFry(loader("item_tbfry"));
+        TbFish = new item.TbFish(loader("item_tbfish"));
+        TbFishProduct = new item.TbFishProduct(loader("item_tbfishproduct"));
+        TbSeasoning = new item.TbSeasoning(loader("item_tbseasoning"));
+        TbWorker = new character.TbWorker(loader("character_tbworker"));
+        TbForniture = new item.TbForniture(loader("item_tbforniture"));
         ResolveRef();
     }
     
     private void ResolveRef()
     {
         TbGlobal.ResolveRef(this);
-        TbWorker.ResolveRef(this);
-        TbForniture.ResolveRef(this);
-        TbCrops.ResolveRef(this);
-        TbLivestock.ResolveRef(this);
-        TbFish.ResolveRef(this);
-        TbRanchProduct.ResolveRef(this);
-        TbSeasoning.ResolveRef(this);
+        TbItemBase.ResolveRef(this);
         TbCommonItem.ResolveRef(this);
+        TbFarmlandChangeType.ResolveRef(this);
         TbFarmlandUnlock.ResolveRef(this);
         TbErrorCode.ResolveRef(this);
         TbModule.ResolveRef(this);
-        TbFarmlandChangeType.ResolveRef(this);
+        TbCrops.ResolveRef(this);
+        TbSeed.ResolveRef(this);
+        TbCub.ResolveRef(this);
+        TbLivestock.ResolveRef(this);
+        TbRanchProduct.ResolveRef(this);
+        TbByProduct.ResolveRef(this);
+        TbFry.ResolveRef(this);
+        TbFish.ResolveRef(this);
+        TbFishProduct.ResolveRef(this);
+        TbSeasoning.ResolveRef(this);
+        TbWorker.ResolveRef(this);
+        TbForniture.ResolveRef(this);
     }
 	
 	public List<string> GetTableNames()
@@ -98,18 +116,24 @@ public partial class Tables
         return new List<string>
         {
             "global_tbglobal",
-            "character_tbworker",
-            "item_tbforniture",
-            "item_tbcrops",
-            "item_tblivestock",
-            "item_tbfish",
-            "item_tbranchproduct",
-            "item_tbseasoning",
+            "item_tbitembase",
             "item_tbcommonitem",
+            "site_tbfarmlandchangetype",
             "site_tbfarmlandunlock",
             "network_tberrorcode",
             "common_tbmodule",
-            "site_tbfarmlandchangetype",
+            "item_tbcrops",
+            "item_tbseed",
+            "item_tbcub",
+            "item_tblivestock",
+            "item_tbranchproduct",
+            "item_tbbyproduct",
+            "item_tbfry",
+            "item_tbfish",
+            "item_tbfishproduct",
+            "item_tbseasoning",
+            "character_tbworker",
+            "item_tbforniture",
         };
     }
 }

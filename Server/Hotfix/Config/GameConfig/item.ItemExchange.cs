@@ -25,13 +25,7 @@ public sealed partial class ItemExchange : Luban.BeanBase
         return new item.ItemExchange(_buf);
     }
 
-    /// <summary>
-    /// 道具id
-    /// </summary>
     public readonly int Id;
-    /// <summary>
-    /// 道具数量
-    /// </summary>
     public readonly int Count;
    
     public const int __ID__ = 1814660465;
@@ -44,8 +38,8 @@ public sealed partial class ItemExchange : Luban.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "id:" + Id + ","
-        + "count:" + Count + ","
+        + "Id:" + Id + ","
+        + "Count:" + Count + ","
         + "}";
     }
 }

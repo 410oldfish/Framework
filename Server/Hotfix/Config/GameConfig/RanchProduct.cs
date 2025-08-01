@@ -12,14 +12,10 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class RanchProduct : Luban.BeanBase
+public sealed partial class RanchProduct : ItemBase
 {
-    public RanchProduct(ByteBuf _buf) 
+    public RanchProduct(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
-        Price = _buf.ReadInt();
     }
 
     public static RanchProduct DeserializeRanchProduct(ByteBuf _buf)
@@ -27,28 +23,13 @@ public sealed partial class RanchProduct : Luban.BeanBase
         return new RanchProduct(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
    
     public const int __ID__ = -1277895765;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -58,6 +39,7 @@ public sealed partial class RanchProduct : Luban.BeanBase
         + "name:" + Name + ","
         + "quality:" + Quality + ","
         + "price:" + Price + ","
+        + "desc:" + Desc + ","
         + "}";
     }
 }

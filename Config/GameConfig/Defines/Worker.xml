@@ -1,0 +1,15 @@
+<module name="">	
+	<bean name="Worker" sep=",">
+		<var name="id" type="int" />
+		<var name="name" type="string" />
+		<var name="quality" type="int" />
+		<var name="desc" type="string" />
+		
+		<var name="mgmt" type="int" />
+		<var name="cook" type="int" />
+		<var name="research" type="int" />
+		<var name="farm" type="int" />
+		<var name="ranch" type="int" />
+		<var name="fishing" type="int" />
+    </bean>
+</module>

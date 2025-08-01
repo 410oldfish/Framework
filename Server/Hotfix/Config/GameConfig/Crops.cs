@@ -12,15 +12,10 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class Crops : Luban.BeanBase
+public sealed partial class Crops : ItemBase
 {
-    public Crops(ByteBuf _buf) 
+    public Crops(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
-        Kind = (item.ECropsType)_buf.ReadInt();
-        Price = _buf.ReadInt();
     }
 
     public static Crops DeserializeCrops(ByteBuf _buf)
@@ -28,32 +23,13 @@ public sealed partial class Crops : Luban.BeanBase
         return new Crops(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 农作物类型
-    /// </summary>
-    public readonly item.ECropsType Kind;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
    
     public const int __ID__ = 65382339;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -62,8 +38,8 @@ public sealed partial class Crops : Luban.BeanBase
         + "id:" + Id + ","
         + "name:" + Name + ","
         + "quality:" + Quality + ","
-        + "kind:" + Kind + ","
         + "price:" + Price + ","
+        + "desc:" + Desc + ","
         + "}";
     }
 }

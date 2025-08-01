@@ -1,0 +1,4 @@
+<module name="">	
+	<bean name="CommonItem" parent="ItemBase" sep=",">
+    </bean>
+</module>
