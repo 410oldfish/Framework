@@ -12,16 +12,11 @@ using Luban;
 
 namespace GameConfig
 {
-public sealed partial class Forniture : Luban.BeanBase
+public sealed partial class Forniture : ItemBase
 {
-    public Forniture(ByteBuf _buf) 
+    public Forniture(ByteBuf _buf)  : base(_buf) 
     {
-        Id = _buf.ReadInt();
-        Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
         Kind = (item.EFornitureType)_buf.ReadInt();
-        Desc = _buf.ReadString();
-        Price = _buf.ReadInt();
     }
 
     public static Forniture DeserializeForniture(ByteBuf _buf)
@@ -29,36 +24,14 @@ public sealed partial class Forniture : Luban.BeanBase
         return new Forniture(_buf);
     }
 
-    /// <summary>
-    /// 这是id
-    /// </summary>
-    public readonly int Id;
-    /// <summary>
-    /// 名字
-    /// </summary>
-    public readonly string Name;
-    /// <summary>
-    /// 品质
-    /// </summary>
-    public readonly item.EQuality Quality;
-    /// <summary>
-    /// 家具类型
-    /// </summary>
     public readonly item.EFornitureType Kind;
-    /// <summary>
-    /// 描述
-    /// </summary>
-    public readonly string Desc;
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public readonly int Price;
    
     public const int __ID__ = -443389288;
     public override int GetTypeId() => __ID__;
 
-    public  void ResolveRef(Tables tables)
+    public override void ResolveRef(Tables tables)
     {
+        base.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -67,9 +40,9 @@ public sealed partial class Forniture : Luban.BeanBase
         + "id:" + Id + ","
         + "name:" + Name + ","
         + "quality:" + Quality + ","
-        + "kind:" + Kind + ","
-        + "desc:" + Desc + ","
         + "price:" + Price + ","
+        + "desc:" + Desc + ","
+        + "kind:" + Kind + ","
         + "}";
     }
 }

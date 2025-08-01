@@ -222,7 +222,7 @@ namespace QFramework
     #region System
 
     public interface ISystem : IBelongToArchitecture, ICanSetArchitecture, ICanGetModel, ICanGetUtility,
-        ICanRegisterEvent, ICanSendEvent, ICanGetSystem, ICanInit
+        ICanRegisterEvent, ICanSendEvent, ICanGetSystem, ICanInit, ICanSendCommand
     {
     }
 
@@ -490,6 +490,11 @@ namespace QFramework
             mOnUnRegister.Invoke();
             mOnUnRegister = null;
         }
+    }
+
+    public struct CustomUnRegisterList : IUnRegisterList
+    {
+        public List<IUnRegister> UnregisterList { get; }
     }
 
 #if UNITY_5_6_OR_NEWER

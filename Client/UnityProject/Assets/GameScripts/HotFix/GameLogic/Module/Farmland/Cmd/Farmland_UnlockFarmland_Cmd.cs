@@ -1,6 +1,6 @@
 using QFramework;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Farmland.Cmd
+namespace GameLogic
 {
     public class Farmland_UnlockFarmland_Cmd : AbstractCommand
     {

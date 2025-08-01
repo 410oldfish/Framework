@@ -1,10 +1,8 @@
 using GameConfig;
-using GameLogic.GameScripts.HotFix.GameLogic.Common;
-using GameLogic.GameScripts.HotFix.GameLogic.Module.Player;
 using QFramework;
 using TEngine;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Farmland
+namespace GameLogic
 {
     //农场的控制器
     public class FarmlandCtrl : AbstractSystem, ICanSendCommand
@@ -42,9 +40,9 @@ namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Farmland
             var costArr = unlockCfg.Cost;
             foreach (var cost in costArr)
             {
-                if(inventoryCtrl.GetItemCount(cost.Id) < cost.Num)
+                if(inventoryCtrl.GetItemCount(cost.Id) < cost.Count)
                 {
-                    GameEvent.Send(EventID.UI_COMMON_MSG, "道具不足,需要消耗 " + cost.Num + " 个 " + cost.Id);
+                    GameEvent.Send(EventID.UI_COMMON_MSG, "道具不足,需要消耗 " + cost.Count + " 个 " + cost.Id);
                     return false;
                 }
             }

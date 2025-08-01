@@ -1,5 +1,3 @@
-using GameLogic.GameScripts.HotFix.GameLogic.Common;
-using GameLogic.GameScripts.HotFix.GameLogic.Module.Login.Cmd;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +7,7 @@ using TMPro;
 namespace GameLogic
 {
     [Window(UILayer.UI)]
-    class Pfb_LoginCenterServer : UIWindow, ICanSendCommand
+    class Pfb_LoginCenterServer : UIWindow
     {
         #region 脚本工具生成的代码
         private TMP_InputField _tInputPlayerId;
@@ -52,7 +50,7 @@ namespace GameLogic
         
         private void OnClickSubmitNickNameBtn()
         {
-            this.SendCommand(new Cmd_SetNickNameRequest()
+            this.SendCommand(new Cmd_CreatePlayer_Request()
             {
                 nickName = _tInputNickName.text
             });
@@ -66,10 +64,5 @@ namespace GameLogic
         }
         
         #endregion
-
-        public IArchitecture GetArchitecture()
-        {
-            return GameMgr.Interface;
-        }
     }
 }

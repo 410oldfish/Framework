@@ -1,4 +1,4 @@
-namespace GameLogic.GameScripts.HotFix.GameLogic
+namespace GameLogic
 {
     struct GridXY
     {
@@ -12,8 +12,9 @@ namespace GameLogic.GameScripts.HotFix.GameLogic
         }
     }
     
-    public class Misc
+    public static class Misc
     {
-
+        public const int GOLD_ID = 1000001;
+        public const int DIAMOND_ID = 1000002;
     }
 }

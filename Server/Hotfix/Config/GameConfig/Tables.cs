@@ -15,6 +15,10 @@ namespace GameConfig
 public partial class Tables
 {
     /// <summary>
+    /// 全局
+    /// </summary>
+    public global.TbGlobal TbGlobal {get; }
+    /// <summary>
     /// 雇员
     /// </summary>
     public character.TbWorker TbWorker {get; }
@@ -50,9 +54,13 @@ public partial class Tables
     /// 农场田地解锁条件
     /// </summary>
     public site.TbFarmlandUnlock TbFarmlandUnlock {get; }
+    public network.TbErrorCode TbErrorCode {get; }
+    public common.TbModule TbModule {get; }
+    public site.TbFarmlandChangeType TbFarmlandChangeType {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
+        TbGlobal = new global.TbGlobal(loader("global_tbglobal"));
         TbWorker = new character.TbWorker(loader("character_tbworker"));
         TbForniture = new item.TbForniture(loader("item_tbforniture"));
         TbCrops = new item.TbCrops(loader("item_tbcrops"));
@@ -62,11 +70,15 @@ public partial class Tables
         TbSeasoning = new item.TbSeasoning(loader("item_tbseasoning"));
         TbCommonItem = new item.TbCommonItem(loader("item_tbcommonitem"));
         TbFarmlandUnlock = new site.TbFarmlandUnlock(loader("site_tbfarmlandunlock"));
+        TbErrorCode = new network.TbErrorCode(loader("network_tberrorcode"));
+        TbModule = new common.TbModule(loader("common_tbmodule"));
+        TbFarmlandChangeType = new site.TbFarmlandChangeType(loader("site_tbfarmlandchangetype"));
         ResolveRef();
     }
     
     private void ResolveRef()
     {
+        TbGlobal.ResolveRef(this);
         TbWorker.ResolveRef(this);
         TbForniture.ResolveRef(this);
         TbCrops.ResolveRef(this);
@@ -76,12 +88,16 @@ public partial class Tables
         TbSeasoning.ResolveRef(this);
         TbCommonItem.ResolveRef(this);
         TbFarmlandUnlock.ResolveRef(this);
+        TbErrorCode.ResolveRef(this);
+        TbModule.ResolveRef(this);
+        TbFarmlandChangeType.ResolveRef(this);
     }
 	
 	public List<string> GetTableNames()
     {
         return new List<string>
         {
+            "global_tbglobal",
             "character_tbworker",
             "item_tbforniture",
             "item_tbcrops",
@@ -91,6 +107,9 @@ public partial class Tables
             "item_tbseasoning",
             "item_tbcommonitem",
             "site_tbfarmlandunlock",
+            "network_tberrorcode",
+            "common_tbmodule",
+            "site_tbfarmlandchangetype",
         };
     }
 }

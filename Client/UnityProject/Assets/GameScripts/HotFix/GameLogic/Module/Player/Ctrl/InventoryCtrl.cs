@@ -1,6 +1,6 @@
 using QFramework;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Player
+namespace GameLogic
 {
     public class InventoryCtrl : AbstractSystem
     {

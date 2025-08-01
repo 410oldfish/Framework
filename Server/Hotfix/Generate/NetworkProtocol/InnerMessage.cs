@@ -5,9 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using Fantasy;
 using Fantasy.Network.Interface;
 using Fantasy.Serialize;
-using GameConfig.item;
-using Core;
-using Hotfix.Common.Data;
+
 // ReSharper disable InconsistentNaming
 // ReSharper disable RedundantUsingDirective
 // ReSharper disable RedundantOverriddenMember
@@ -66,6 +64,24 @@ namespace Fantasy
 		public bool IsNewPlayer { get; set; }
 		[ProtoMember(3)]
 		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2Center_DisposeCenterUnit_Msg : AMessage, IRouteMessage, IProto
+	{
+		public static G2Center_DisposeCenterUnit_Msg Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<G2Center_DisposeCenterUnit_Msg>();
+		}
+		public override void Dispose()
+		{
+			CenterRouteId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<G2Center_DisposeCenterUnit_Msg>(this);
+#endif
+		}
+		public uint OpCode() { return InnerOpcode.G2Center_DisposeCenterUnit_Msg; }
+		[ProtoMember(1)]
+		public long CenterRouteId { get; set; }
 	}
 	[ProtoContract]
 	public partial class G2M_ConnectRequest : AMessage, IRouteRequest, IProto
@@ -354,7 +370,6 @@ namespace Fantasy
 		}
 		public override void Dispose()
 		{
-			user = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<M2M_SendUnitRequest>(this);
 #endif
@@ -362,7 +377,9 @@ namespace Fantasy
 		[BsonIgnore]
 		public M2M_SendUnitResponse ResponseType { get; set; }
 		public uint OpCode() { return InnerOpcode.M2M_SendUnitRequest; }
-		public MapUser user { get; set; }
+		///<summary>
+		///  MapUser user = 1;
+		///</summary>
 	}
 	public partial class M2M_SendUnitResponse : AMessage, IRouteResponse
 	{

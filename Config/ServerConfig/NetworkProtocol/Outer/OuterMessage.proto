@@ -8,13 +8,26 @@ package Fantasy.Network.Message;
 // 在message协议上方添加// Protocol+空格+协议名字
 // 例如:// Protocol ProtoBuf 或 // Protocol MemoryPack
 
-//-----------Data--------------
-message Data_SyncPlayerData
+//--------------数据模块------------------------
+message ItemProto
 {
-	 int64 PlayerId;
-     string Name;
-     int32 Lv;
-     int32 Exp;
+	int32 Id = 1;
+	int32 Count = 2;
+}
+
+message LandProto
+{
+	int32 landId = 1;
+	int32 landType = 2;
+	int32 seedId = 3;
+	int64 startTime = 4;
+	int32 gainCount = 5;
+	int64 lastGainTime = 6;
+	int64 nextWaterTime = 7;
+	int32 waterCount = 8;
+	repeated int32 fertilizerId = 9;
+	int64 nextPestTime = 10;
+	int32 dePestCount = 11;
 }
 
 //------------通用模块--------------------------
@@ -30,13 +43,13 @@ message G2C_BuildCenterRoute_Resp // IResponse
 	bool NewPlayer = 2;
 }
 
-//请求修改昵称
-message C2Center_SetNickName_Req // ICustomRouteRequest, Center2C_SetNickName_Resp, CenterRoute
+//请求创建角色
+message C2Center_CreatePlayer_Req // ICustomRouteRequest, Center2C_CreatePlayer_Resp, CenterRoute
 {
 	string NickName = 1;
 }
 
-message Center2C_SetNickName_Resp // ICustomRouteResponse
+message Center2C_CreatePlayer_Resp // ICustomRouteResponse
 {
 	
 }
@@ -49,28 +62,203 @@ message C2Center_GetPlayerData_Req // ICustomRouteRequest, Center2C_GetPlayerDat
 
 message Center2C_GetPlayerData_Resp // ICustomRouteResponse
 {
-	Data_SyncPlayerData PlayerData = 1;
+	int64 PlayerId;
+    string Name;
+    int32 Lv;
+    int32 Exp;
 }
 
+//请求解锁模块，创建模块数据
+message C2Center_OpenModule_Req // ICustomRouteRequest, Center2C_OpenModule_Resp, CenterRoute
+{
+	int32 ModuleId = 1;
+}
 
+message Center2C_OpenModule_Resp // ICustomRouteResponse
+{
+
+}
 
 //------------业务逻辑--------------------------
 
+//-----------仓库模块 Inventory----------------------------
+//获取仓库数据
+message C2Center_Inventory_GetInventoryData_Req // ICustomRouteRequest, Center2C_Inventory_GetInventoryData_Resp, CenterRoute
+{
 
+}
+
+message Center2C_Inventory_GetInventoryData_Resp // ICustomRouteResponse
+{
+	repeated ItemProto Items = 1;
+}
+
+//获取道具 Test
+message C2Center_Inventory_GetItems_Req // ICustomRouteRequest, Center2C_Inventory_GetItems_Resp, CenterRoute
+{
+	repeated ItemProto Items = 1;
+}
+
+message Center2C_Inventory_GetItems_Resp // ICustomRouteResponse
+{
+	repeated ItemProto CurItems = 1;
+}
+
+//消耗道具 Test
+message C2Center_Inventory_CostItems_Req // ICustomRouteRequest, Center2C_Inventory_CostItems_Resp, CenterRoute
+{
+	repeated ItemProto Items = 1;
+}
+
+message Center2C_Inventory_CostItems_Resp // ICustomRouteResponse
+{
+	repeated ItemProto CurItems = 1;
+}
 
 //------------种田模块 Farmland----------------------------
-//请求解锁农田
 
-message C2Center_Farmland_UnlockLand_Req // ICustomRouteRequest, Center2C_Farmland_Resp, CenterRoute
+//请求农田信息
+
+message C2Center_Farmland_GetFarmlandData_Req // ICustomRouteRequest, Center2C_Farmland_GetFarmlandData_Resp, CenterRoute
+{
+
+}
+
+message Center2C_Farmland_GetFarmlandData_Resp // ICustomRouteResponse
+{
+	repeated LandProto FarmlandData = 1;
+}
+
+//请求农田被偷信息
+message C2Center_Farmland_GetStealInfo_Req // ICustomRouteRequest, Center2C_Farmland_GetStealInfo_Resp, CenterRoute
+{
+
+}
+
+message Center2C_Farmland_GetStealInfo_Resp // ICustomRouteResponse
+{
+	repeated int64 PlayerId = 1;
+	repeated int64 StealTime = 2;
+	repeated int32 ItemId = 3;
+	repeated int32 ItemCount = 4;
+}
+
+//请求解锁田地
+
+message C2Center_Farmland_UnlockLand_Req // ICustomRouteRequest, Center2C_Farmland_UnlockLand_Resp, CenterRoute
 {
 	int32 LandId = 1;
 }
 
-message Center2C_Farmland_Resp // ICustomRouteResponse
+message Center2C_Farmland_UnlockLand_Resp // ICustomRouteResponse
 {
-	bool Result = 1;
-	repeated ItemExchange CostItems_Sync = 2;
+	int64 UnlockStartTime = 1;
+	repeated ItemProto CurItems = 2;
 }
+
+//请求修改农田类型
+message C2Center_Farmland_ChangeLandType_Req // ICustomRouteRequest, Center2C_Farmland_ChangeLandType_Resp, CenterRoute
+{
+	int32 LandId = 1;
+	int32 LandType = 2;
+}
+
+message Center2C_Farmland_ChangeLandType_Resp // ICustomRouteResponse
+{
+	repeated ItemProto CurItems = 1;
+}
+
+//请求种植
+message C2Center_Farmland_Seed_Req // ICustomRouteRequest, Center2C_Farmland_Seed_Resp, CenterRoute
+{
+	int32 LandId = 1;
+	int32 SeedId = 2;
+}
+
+message Center2C_Farmland_Seed_Resp // ICustomRouteResponse
+{
+	int64 StartTime = 1;//开始种植时间戳
+	ItemProto CurItem = 2;
+}
+
+//请求收获
+message C2Center_Farmland_GainYield_Req // ICustomRouteRequest, Center2C_Farmland_GainYield_Resp, CenterRoute
+{
+	repeated int32 LandId = 1;
+}
+
+message Center2C_Farmland_GainYield_Resp // ICustomRouteResponse
+{
+	repeated int32 GainCount = 1;
+	repeated int64 LastGainTime = 2;
+	repeated int32 CurItemId = 3;
+	repeated int32 CurItemCount = 4;
+	repeated int32 DelItemId = 5;
+	repeated int32 DelItemCount = 6;
+}
+
+//请求铲除作物
+message C2Center_Farmland_RemoveCrop_Req // ICustomRouteRequest, Center2C_Farmland_RemoveCrop_Resp, CenterRoute
+{
+	int32 LandId = 1;
+}
+
+message Center2C_Farmland_RemoveCrop_Resp // ICustomRouteResponse
+{
+
+}
+
+//请求偷菜
+message C2Center_Farmland_StealYield_Req // ICustomRouteRequest, Center2C_Farmland_StealYield_Resp, CenterRoute
+{
+	int64 StealedPlayerId = 1; // 被偷的玩家ID
+	repeated int32 LandId = 2;
+}
+
+message Center2C_Farmland_StealYield_Resp // ICustomRouteResponse
+{
+	repeated int32 CurItemId = 1;
+	repeated int32 CurItemCount = 2;
+	repeated int32 DelItemId = 3;
+	repeated int32 DelItemCount = 4;
+}
+
+//请求浇水
+message C2Center_Farmland_Water_Req // ICustomRouteRequest, Center2C_Farmland_Water_Resp, CenterRoute
+{
+	int32 LandId = 1;
+}
+
+message Center2C_Farmland_Water_Resp // ICustomRouteResponse
+{
+	int64 NextWaterTime = 1;
+}
+
+//请求施肥
+message C2Center_Farmland_Fertilizer_Req // ICustomRouteRequest, Center2C_Farmland_Fertilizer_Resp, CenterRoute
+{
+	int32 LandId = 1;
+	int32 FertilizerId = 2;
+}
+
+message Center2C_Farmland_Fertilizer_Resp // ICustomRouteResponse
+{
+	int32 FertilizerCount = 1;
+}
+
+//请求除虫
+message C2Center_Farmland_DePest_Req // ICustomRouteRequest, Center2C_Farmland_DePest_Resp, CenterRoute
+{
+	int32 LandId = 1;
+}
+
+message Center2C_Farmland_DePest_Resp // ICustomRouteResponse
+{
+	int64 NextPestTime = 1;
+	repeated int32 CurItemId = 2;
+	repeated int32 CurItemCount = 3;
+}
+
 
 //------------------------------------------------
 

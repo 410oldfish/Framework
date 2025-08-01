@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fantasy.Tools.NetworkProtocol")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0176f69ca735f92451f19f2a7501601748b5181")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+281503876e97d213073791f06ee22e6f20e72ac9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fantasy.Tools.NetworkProtocol")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fantasy.Tools.NetworkProtocol")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,6 +15,10 @@ namespace GameConfig
 public partial class Tables
 {
     /// <summary>
+    /// 全局
+    /// </summary>
+    public global.TbGlobal TbGlobal {get; }
+    /// <summary>
     /// 雇员
     /// </summary>
     public character.TbWorker TbWorker {get; }
@@ -51,9 +55,13 @@ public partial class Tables
     /// </summary>
     public site.TbFarmlandUnlock TbFarmlandUnlock {get; }
     public network.TbErrorCode TbErrorCode {get; }
+    public common.TbModule TbModule {get; }
+    public site.TbFarmlandChangeType TbFarmlandChangeType {get; }
+    public item.TbItemBase TbItemBase {get; }
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
+        TbGlobal = new global.TbGlobal(loader("global_tbglobal"));
         TbWorker = new character.TbWorker(loader("character_tbworker"));
         TbForniture = new item.TbForniture(loader("item_tbforniture"));
         TbCrops = new item.TbCrops(loader("item_tbcrops"));
@@ -64,11 +72,15 @@ public partial class Tables
         TbCommonItem = new item.TbCommonItem(loader("item_tbcommonitem"));
         TbFarmlandUnlock = new site.TbFarmlandUnlock(loader("site_tbfarmlandunlock"));
         TbErrorCode = new network.TbErrorCode(loader("network_tberrorcode"));
+        TbModule = new common.TbModule(loader("common_tbmodule"));
+        TbFarmlandChangeType = new site.TbFarmlandChangeType(loader("site_tbfarmlandchangetype"));
+        TbItemBase = new item.TbItemBase(loader("item_tbitembase"));
         ResolveRef();
     }
     
     private void ResolveRef()
     {
+        TbGlobal.ResolveRef(this);
         TbWorker.ResolveRef(this);
         TbForniture.ResolveRef(this);
         TbCrops.ResolveRef(this);
@@ -79,12 +91,16 @@ public partial class Tables
         TbCommonItem.ResolveRef(this);
         TbFarmlandUnlock.ResolveRef(this);
         TbErrorCode.ResolveRef(this);
+        TbModule.ResolveRef(this);
+        TbFarmlandChangeType.ResolveRef(this);
+        TbItemBase.ResolveRef(this);
     }
 	
 	public List<string> GetTableNames()
     {
         return new List<string>
         {
+            "global_tbglobal",
             "character_tbworker",
             "item_tbforniture",
             "item_tbcrops",
@@ -95,6 +111,9 @@ public partial class Tables
             "item_tbcommonitem",
             "site_tbfarmlandunlock",
             "network_tberrorcode",
+            "common_tbmodule",
+            "site_tbfarmlandchangetype",
+            "item_tbitembase",
         };
     }
 }

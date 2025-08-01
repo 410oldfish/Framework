@@ -17,7 +17,7 @@ public sealed partial class ItemExchange : Luban.BeanBase
     public ItemExchange(ByteBuf _buf) 
     {
         Id = _buf.ReadInt();
-        Num = _buf.ReadInt();
+        Count = _buf.ReadInt();
     }
 
     public static ItemExchange DeserializeItemExchange(ByteBuf _buf)
@@ -32,7 +32,7 @@ public sealed partial class ItemExchange : Luban.BeanBase
     /// <summary>
     /// 道具数量
     /// </summary>
-    public readonly int Num;
+    public readonly int Count;
    
     public const int __ID__ = 1814660465;
     public override int GetTypeId() => __ID__;
@@ -45,7 +45,7 @@ public sealed partial class ItemExchange : Luban.BeanBase
     {
         return "{ "
         + "id:" + Id + ","
-        + "num:" + Num + ","
+        + "count:" + Count + ","
         + "}";
     }
 }

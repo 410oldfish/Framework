@@ -1,4 +1,6 @@
-using GameLogic.GameScripts.HotFix.GameLogic.Module.Player;
+
+using GameLogic;
+using GameLogic.GameScripts.HotFix.GameLogic.Module.Ranchland;
 
 namespace QFramework
 {
@@ -8,8 +10,13 @@ namespace QFramework
         {
             //Model
             this.RegisterModel(new PlayerModel());
+            this.RegisterModel(new InventoryModel());
+            this.RegisterModel(new FarmlandModel());
+            this.RegisterModel(new RanchlandModel());
+            this.RegisterModel(new FishlandModel());
             
             //System
+            this.RegisterSystem(new PlayerCtrl());
         }
     }
 }

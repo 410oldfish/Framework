@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using QFramework;
 using TEngine;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ using Object = UnityEngine.Object;
 
 namespace GameLogic
 {
-    public abstract class UIWindow : UIBase
+    public abstract class UIWindow : UIBase, ICanGetModel, ICanGetSystem, ICanSendCommand
     {
         #region Propreties
 
@@ -451,6 +452,11 @@ namespace GameLogic
                 ModuleSystem.GetModule<ITimerModule>().RemoveTimer(HideTimerId);
                 HideTimerId = 0;
             }
+        }
+
+        public IArchitecture GetArchitecture()
+        {
+            return GameMgr.Interface;
         }
     }
 }

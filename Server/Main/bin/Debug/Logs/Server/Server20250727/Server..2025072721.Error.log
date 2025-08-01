@@ -1,0 +1,31 @@
+2025-07-27 21:01:17.7190  Hotfix.Config.ConfigHelper Error System.IO.FileNotFoundException: Could not find file 'F:\UnityProject\Framework\Framework\Server\GameConfig\global_tbglobal'.
+File name: 'F:\UnityProject\Framework\Framework\Server\GameConfig\global_tbglobal'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.ReadAllBytes(String path)
+   at Hotfix.Config.ConfigHelper.LoadByteBuf(String file) in F:\UnityProject\Framework\Framework\Server\Hotfix\Config\ConfigHelper.cs:line 55
+   at GameConfig.Tables..ctor(Func`2 loader) in F:\UnityProject\Framework\Framework\Server\Hotfix\Config\GameConfig\Tables.cs:line 62
+   at Hotfix.Config.ConfigHelper.Load() in F:\UnityProject\Framework\Framework\Server\Hotfix\Config\ConfigHelper.cs:line 43
+   at Hotfix.Config.OnSceneAwakeSystem.Awake(ConfigHelper self) in F:\UnityProject\Framework\Framework\Server\Hotfix\Config\ConfigHelper.cs:line 15
+   at Fantasy.Entitas.Interface.AwakeSystem`1.Invoke(Entity self)
+   at Fantasy.Entitas.EntityComponent.Awake(Entity entity)
+   at Fantasy.Entitas.EntityComponent.Awake(Entity entity)
+   at Fantasy.Entitas.Entity.AddComponent[T](Boolean isPool)
+   at OnCreateScene_Init.Handler(OnCreateScene self) in F:\UnityProject\Framework\Framework\Server\Hotfix\Event\OnCreateScene_Init.cs:line 18
+   at OnCreateScene_Init.Handler(OnCreateScene self)
+   at Fantasy.Event.AsyncEventSystem`1.InvokeAsync(Object self)
+   at Fantasy.Event.AsyncEventSystem`1.InvokeAsync(Object self)
+   at Fantasy.Event.EventComponent.PublishAsync[TEventData](TEventData eventData)
+   at Fantasy.Event.EventComponent.PublishAsync[TEventData](TEventData eventData)
+   at Fantasy.Scene.<>c__DisplayClass96_0.<Create>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()
+   at Fantasy.MainScheduler.Update()
+   at Fantasy.ThreadScheduler.Update()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Fantasy.Platform.Net.Entry.Start()
+   at Program.<Main>$(String[] args) in F:\UnityProject\Framework\Framework\Server\Main\Program.cs:line 33
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Program.<Main>$(String[] args)
+   at Program.<Main>(String[] args)
+

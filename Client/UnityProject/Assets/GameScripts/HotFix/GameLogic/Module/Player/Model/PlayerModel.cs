@@ -1,41 +1,39 @@
-
-using Fantasy;
+using TEngine;
 using QFramework;
-using Log = TEngine.Log;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Player
+namespace GameLogic
 {
     public class PlayerModel : AbstractModel
     {
-        BindableProperty<long> playerId = new BindableProperty<long>();
-        public long PlayerId => playerId.Value;
+        long playerId;
+        public long PlayerId => playerId;
         public void SetPlayerId(long id)
         {
-            playerId.Value = id;
+            playerId = id;
             Log.Debug("客户端数据更改 ： PlayerId = " + id);
         }
         
-        BindableProperty<string> playerName = new BindableProperty<string>();
-        public string PlayerName => playerName.Value;
+        string playerName;
+        public string PlayerName => playerName;
         public void SetPlayerName(string name)
         {
-            playerName.Value = name;
+            playerName = name;
             Log.Debug("客户端数据更改 ： PlayerName = " + name);
         }
         
-        BindableProperty<int> playerLevel = new BindableProperty<int>();
-        public int PlayerLevel => playerLevel.Value;
+        int playerLevel;
+        public int PlayerLevel => playerLevel;
         public void SetPlayerLevel(int level)
         {
-            playerLevel.Value = level;
+            playerLevel = level;
             Log.Debug("客户端数据更改 ： PlayerLevel = " + level);
         }
         
-        BindableProperty<int> playerExp = new BindableProperty<int>();
-        public int PlayerExp => playerExp.Value;
+        int playerExp;
+        public int PlayerExp => playerExp;
         public void SetPlayerExp(int exp)
         {
-            playerExp.Value = exp;
+            playerExp = exp;
             Log.Debug("客户端数据更改 ： PlayerExp = " + exp);
         }
         

@@ -1,0 +1,9 @@
+<module name="">	
+	<bean name="ItemBase" sep=",">
+        <var name="id" type="int" />
+		<var name="name" type="string" />
+		<var name="quality" type="int" />
+		<var name="price" type="int" />
+		<var name="desc" type="string" />
+    </bean>
+</module>

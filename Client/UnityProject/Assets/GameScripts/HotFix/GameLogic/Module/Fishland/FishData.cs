@@ -1,4 +1,4 @@
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Fishland
+namespace GameLogic
 {
     public class FishData : ItemDataBase
     {

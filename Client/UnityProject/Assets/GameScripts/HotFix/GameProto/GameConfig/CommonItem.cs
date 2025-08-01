@@ -18,7 +18,8 @@ public sealed partial class CommonItem : Luban.BeanBase
     {
         Id = _buf.ReadInt();
         Name = _buf.ReadString();
-        Quality = (item.EQuality)_buf.ReadInt();
+        Quality = _buf.ReadInt();
+        Price = _buf.ReadInt();
         Desc = _buf.ReadString();
     }
 
@@ -38,7 +39,11 @@ public sealed partial class CommonItem : Luban.BeanBase
     /// <summary>
     /// 品质
     /// </summary>
-    public readonly item.EQuality Quality;
+    public readonly int Quality;
+    /// <summary>
+    /// 价格
+    /// </summary>
+    public readonly int Price;
     /// <summary>
     /// 描述
     /// </summary>
@@ -57,6 +62,7 @@ public sealed partial class CommonItem : Luban.BeanBase
         + "id:" + Id + ","
         + "name:" + Name + ","
         + "quality:" + Quality + ","
+        + "price:" + Price + ","
         + "desc:" + Desc + ","
         + "}";
     }

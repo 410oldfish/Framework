@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using QFramework;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Fishland
+namespace GameLogic
 {
     public class FishlandModel : AbstractModel
     {

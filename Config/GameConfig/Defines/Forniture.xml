@@ -1,0 +1,5 @@
+<module name="">	
+	<bean name="Forniture" parent="ItemBase" sep=",">
+        <var name="kind" type="item.EFornitureType" />
+    </bean>
+</module>

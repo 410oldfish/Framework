@@ -1,4 +1,4 @@
-namespace GameLogic.GameScripts.HotFix.GameLogic.Common
+namespace GameLogic
 {
     public class ServerConfig
     {

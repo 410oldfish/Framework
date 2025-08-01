@@ -1,0 +1,25 @@
+2025-07-31 18:55:32.0661 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2589028834640658432 CenterRouteId : 2589033249867038720
+2025-07-31 18:55:41.6693 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589044244983316480
+2025-07-31 18:55:41.7867 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:55:41.7867 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 18:55:41.7867 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589044244983316481
+2025-07-31 18:55:46.7980 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:55:46.7980 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 18:55:46.7980 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589044244983316481
+2025-07-31 18:55:51.7990 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:55:56.8132 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:56:01.8271 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:56:06.8389 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:56:09.0002 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-07-31 18:56:09.0002 (PlayerBaseDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-07-31 18:56:09.0002 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2589033249867038720
+2025-07-31 18:56:27.6791 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2589127790687158272 CenterRouteId : 2589156395169349632
+2025-07-31 18:56:32.7430 (PlayerBaseDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2589156395169349633
+2025-07-31 18:56:32.7430 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:56:32.7457 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 18:56:32.7457 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589156395169349634
+2025-07-31 18:56:37.7457 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:56:42.7457 (InventoryDataEntity.cs:42) 1111
+2025-07-31 18:56:42.9870 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-07-31 18:56:42.9870 (PlayerBaseDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-07-31 18:56:42.9870 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2589156395169349632

@@ -1,10 +1,7 @@
-
-using GameLogic.GameScripts.HotFix.GameLogic.Common;
 using QFramework;
 using TEngine;
-using Log = TEngine.Log;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Login.Cmd
+namespace GameLogic
 {
     public class Cmd_BuildCenterRouteRequest : ICommand
     {
@@ -34,7 +31,7 @@ namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Login.Cmd
             }
             else //如果是老玩家，请求完整玩家数据
             {
-                this.SendCommand(new Cmd_GetPlayerDataRequest());
+                this.GetSystem<PlayerCtrl>().RequestAllModuleData();
             }
         }
     }

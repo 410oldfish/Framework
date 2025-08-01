@@ -1,0 +1,24 @@
+2025-07-31 13:44:40.5941  初始化序列化器成功，数量为：2
+2025-07-31 13:44:41.5320  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-31 13:44:41.5569  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-31 13:44:41.9557  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-31 13:44:42.3399  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-31 13:44:42.3399  Process:1 Startup Complete SceneCount:3
+2025-07-31 13:55:45.0864  初始化序列化器成功，数量为：2
+2025-07-31 13:55:45.9498  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-31 13:55:45.9498  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-31 13:55:46.3505  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-31 13:55:46.7382  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-31 13:55:46.7382  Process:1 Startup Complete SceneCount:3
+2025-07-31 13:57:21.1106  初始化序列化器成功，数量为：2
+2025-07-31 13:57:22.1548  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-31 13:57:22.1548  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-31 13:57:22.5830  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-31 13:57:22.9844  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-31 13:57:22.9844  Process:1 Startup Complete SceneCount:3
+2025-07-31 13:58:16.6924  初始化序列化器成功，数量为：2
+2025-07-31 13:58:17.9227  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-31 13:58:17.9348  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-31 13:58:18.4205  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-31 13:58:18.8988  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-31 13:58:18.8988  Process:1 Startup Complete SceneCount:3

@@ -9,6 +9,7 @@
 
 using Luban;
 
+
 namespace GameConfig.character
 {
 /// <summary>

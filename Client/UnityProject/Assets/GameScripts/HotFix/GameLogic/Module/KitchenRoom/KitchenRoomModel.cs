@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using QFramework;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.KitchenRoom
+namespace GameLogic
 {
     public class KitchenRoomModel : AbstractModel
     {

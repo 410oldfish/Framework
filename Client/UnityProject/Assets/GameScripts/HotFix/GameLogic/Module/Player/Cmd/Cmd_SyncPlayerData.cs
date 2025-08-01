@@ -1,8 +1,6 @@
-
-using Fantasy;
 using QFramework;
 
-namespace GameLogic.GameScripts.HotFix.GameLogic.Module.Player.Cmd
+namespace GameLogic
 {
     public class Cmd_SyncPlayerData : ICommand
     {

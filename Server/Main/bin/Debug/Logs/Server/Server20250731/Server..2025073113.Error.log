@@ -1,0 +1,26 @@
+2025-07-31 13:54:41.3875  System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MongoDB.Bson.BsonSerializationException: There is already a serializer registered for type Object.
+   at MongoDB.Bson.Serialization.BsonSerializerRegistry.RegisterSerializer(Type type, IBsonSerializer serializer)
+   at MongoDB.Bson.Serialization.BsonSerializer.RegisterSerializer(Type type, IBsonSerializer serializer)
+   at MongoDB.Bson.Serialization.BsonSerializer.RegisterSerializer[T](IBsonSerializer`1 serializer)
+   at Fantasy.Serialize.BsonPackHelper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at Fantasy.Serialize.SerializerManager.Initialize()
+2025-07-31 13:58:38.5565  System.Net.WebSockets.WebSocketException (0x80004005): The WebSocket is in an invalid state ('Aborted') for this operation. Valid states are: 'Open, CloseReceived'
+   at System.Net.WebSockets.WebSocket.ThrowOnInvalidState(WebSocketState state, WebSocketState[] validStates)
+   at System.Net.WebSockets.WebSocketBase.SendAsyncCore(ArraySegment`1 buffer, WebSocketMessageType messageType, Boolean endOfMessage, CancellationToken cancellationToken)
+   at Fantasy.Network.WebSocket.WebSocketServerNetworkChannel.Send()
+   at Fantasy.Async.FTask.InnerCoroutine()
+   at Fantasy.Async.FTask.InnerCoroutine()
+   at Fantasy.Network.WebSocket.WebSocketServerNetworkChannel.Send(UInt32 rpcId, Int64 routeId, MemoryStreamBuffer memoryStream, IMessage message)
+   at Fantasy.Network.Session.Send(IMessage message, UInt32 rpcId, Int64 routeId)
+   at Fantasy.Scheduler.OuterMessageScheduler.Scheduler(Session session, APackInfo packInfo)
+   at Fantasy.Async.FTask.InnerCoroutine()
+   at Fantasy.Async.FTask.InnerCoroutine()
+   at Fantasy.Scheduler.OuterMessageScheduler.Scheduler(Session session, APackInfo packInfo)
+   at Fantasy.Scheduler.NetworkMessagingComponent.CallInnerRoute(Int64 routeId, Type requestType, APackInfo packInfo)
+   at Fantasy.Scheduler.NetworkMessagingComponent.ResponseHandler(UInt32 rpcId, IResponse response)
+   at Fantasy.Scheduler.ProcessScheduler.<>c__DisplayClass1_1.<Scheduler>b__0()
+   at Fantasy.ThreadSynchronizationContext.Update()

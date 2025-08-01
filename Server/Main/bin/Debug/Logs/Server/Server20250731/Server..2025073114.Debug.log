@@ -1,0 +1,36 @@
+2025-07-31 14:00:09.0883 (InventoryDataEntity.cs:52)  Dirty : False
+2025-07-31 14:00:09.0883 (InventoryDataEntity.cs:53) Auto Save InventoryDataEntity: 2589015657680994305
+2025-07-31 14:00:09.0914 (InventoryDataEntity.cs:47) 1111
+2025-07-31 14:00:14.0923 (InventoryDataEntity.cs:47) 1111
+2025-07-31 14:26:51.8495 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589020038547636224 CenterRouteId : 2589033249867038720
+2025-07-31 14:26:58.4506 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589037647913549824
+2025-07-31 14:51:59.8099 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589031033663913984 CenterRouteId : 2589035448890294272
+2025-07-31 14:52:06.8116 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589039846936805376
+2025-07-31 14:52:06.9304 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:06.9304 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 14:52:06.9304 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589039846936805377
+2025-07-31 14:52:11.9361 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:11.9361 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 14:52:11.9361 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589039846936805377
+2025-07-31 14:52:16.9432 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:21.9501 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:26.9614 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:26.9614 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 14:52:26.9643 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589039846936805377
+2025-07-31 14:52:31.9725 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:36.9839 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:39.3238 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589121193617391616 CenterRouteId : 2589121210797260800
+2025-07-31 14:52:41.9877 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:44.3993 (PlayerBaseDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2589121210797260801
+2025-07-31 14:52:44.4111 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:44.4111 (InventoryDataEntity.cs:47)  Dirty : False
+2025-07-31 14:52:44.4111 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589121210797260802
+2025-07-31 14:52:46.9875 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:49.4141 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:51.9887 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:54.4149 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:56.9897 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:52:59.4156 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:53:01.9892 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:53:04.4151 (InventoryDataEntity.cs:42) 1111
+2025-07-31 14:53:06.9899 (InventoryDataEntity.cs:42) 1111

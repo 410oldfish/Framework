@@ -1,4 +1,5 @@
-namespace GameLogic.GameScripts.HotFix.GameLogic.Common
+// ReSharper disable All
+namespace GameLogic
 {
     public static class ErrorCodeDesc
     {

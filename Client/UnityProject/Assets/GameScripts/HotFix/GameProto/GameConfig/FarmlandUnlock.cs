@@ -19,7 +19,7 @@ public sealed partial class FarmlandUnlock : Luban.BeanBase
         Id = _buf.ReadInt();
         Name = _buf.ReadString();
         NeedLv = _buf.ReadInt();
-        {int __n0 = System.Math.Min(_buf.ReadSize(), _buf.Size);Cost = new item.ItemExchange[__n0];for(var __index0 = 0 ; __index0 < __n0 ; __index0++) { item.ItemExchange __e0;__e0 = item.ItemExchange.DeserializeItemExchange(_buf); Cost[__index0] = __e0;}}
+        {int n0 = System.Math.Min(_buf.ReadSize(), _buf.Size);Cost = new System.Collections.Generic.List<item.ItemExchange>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { item.ItemExchange _e0;  _e0 = item.ItemExchange.DeserializeItemExchange(_buf); Cost.Add(_e0);}}
         Time = _buf.ReadInt();
     }
 
@@ -43,7 +43,7 @@ public sealed partial class FarmlandUnlock : Luban.BeanBase
     /// <summary>
     /// 价格
     /// </summary>
-    public readonly item.ItemExchange[] Cost;
+    public readonly System.Collections.Generic.List<item.ItemExchange> Cost;
     /// <summary>
     /// 解锁需要的时间 S
     /// </summary>

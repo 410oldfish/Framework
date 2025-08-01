@@ -1,0 +1,318 @@
+2025-07-31 11:06:56.9621 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589044227803447296 CenterRouteId : 2589048643029827584
+2025-07-31 11:07:05.0993 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589057439122849792
+2025-07-31 11:07:05.2348 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:05.2348 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:07:05.2348 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589057439122849793
+2025-07-31 11:07:10.2432 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:15.2533 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:15.2533 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:07:15.2533 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589057439122849793
+2025-07-31 11:07:20.2576 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:25.2675 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:30.2699 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:35.2838 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:40.2943 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:45.3016 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:07:50.3021 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:11:33.0803 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589033232687169536 CenterRouteId : 2589037647913549824
+2025-07-31 11:11:40.8981 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589044244983316480
+2025-07-31 11:11:40.9833 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:11:40.9833 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:11:40.9833 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589044244983316481
+2025-07-31 11:11:45.9830 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:11:50.9837 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:11:50.9837 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:11:50.9837 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589044244983316481
+2025-07-31 11:11:55.9835 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:00.9838 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:05.9836 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:10.9844 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:15.9842 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:15.9842 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:12:15.9842 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589044244983316481
+2025-07-31 11:12:20.9862 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:25.9864 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:30.9884 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:35.9882 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:40.9954 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:46.0100 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:51.0182 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:12:56.0221 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:01.0355 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:06.0408 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:11.0462 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:16.0471 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:21.0475 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:26.0476 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:31.0484 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:36.0496 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:41.0497 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:46.0496 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:51.0505 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:13:56.0510 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:01.0510 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:06.0519 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:11.0522 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:16.0520 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:21.0523 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:26.0522 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:31.0531 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:36.0544 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:41.0566 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:14:46.0565 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:17.1215 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589020038547636224 CenterRouteId : 2589024453774016512
+2025-07-31 11:20:25.2785 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589033249867038720
+2025-07-31 11:20:25.3619 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:25.3619 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:20:25.3619 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589033249867038721
+2025-07-31 11:20:30.3615 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:30.3615 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:20:30.3615 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589033249867038721
+2025-07-31 11:20:35.3625 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:40.3628 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:45.3624 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:50.3636 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:20:55.3644 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:22:50.6415 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589026635617402880 CenterRouteId : 2589031050843783168
+2025-07-31 11:22:58.7396 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589039846936805376
+2025-07-31 11:22:58.8563 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:22:58.8563 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:22:58.8563 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589039846936805377
+2025-07-31 11:23:03.8588 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:03.8588 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:23:03.8588 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589039846936805377
+2025-07-31 11:23:08.8653 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:13.8730 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:18.8836 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:23.8833 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:28.8842 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:33.8843 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:38.8851 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:43.8862 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:48.8860 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:53.8869 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:23:58.8863 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:03.8863 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:08.8869 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:13.8884 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:18.8884 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:23.8884 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:28.8894 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:33.8897 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:38.8900 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:43.8918 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:48.8927 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:53.8924 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:24:58.8932 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:25:03.8943 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:25:08.8931 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:25:28.7187 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589031033663913984 CenterRouteId : 2589033249867038720
+2025-07-31 11:25:36.8423 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589042045960060928
+2025-07-31 11:25:36.8423 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:25:36.8423 (InventoryDataEntity.cs:49)  Dirty : False
+2025-07-31 11:25:36.8423 (InventoryDataEntity.cs:50) Auto Save InventoryDataEntity: 2589042045960060929
+2025-07-31 11:25:41.8445 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:25:46.8458 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:25:51.8454 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:25:56.8469 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:01.8471 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:06.8570 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:11.8588 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:16.8602 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:21.8624 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:26.8633 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:26:53.5266 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589020038547636224 CenterRouteId : 2589026652797272064
+2025-07-31 11:27:01.3321 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589031050843783168
+2025-07-31 11:27:01.3502 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:01.3502 (InventoryDataEntity.cs:49)  Dirty : False
+2025-07-31 11:27:01.3502 (InventoryDataEntity.cs:50) Auto Save InventoryDataEntity: 2589031050843783169
+2025-07-31 11:27:06.3561 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:11.3713 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:11.3713 (InventoryDataEntity.cs:49)  Dirty : False
+2025-07-31 11:27:11.3713 (InventoryDataEntity.cs:50) Auto Save InventoryDataEntity: 2589031050843783169
+2025-07-31 11:27:16.3807 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:21.3900 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:26.3971 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:31.4083 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:36.4212 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:41.4217 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:46.4213 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:51.4224 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:27:56.4228 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:01.4240 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:06.4250 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:11.4271 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:16.4285 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:21.4357 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:26.4364 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:31.4524 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:36.4656 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:41.4763 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:46.4766 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:51.4805 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:28:56.4863 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:01.4936 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:06.5060 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:11.5138 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:16.5156 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:21.5175 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:26.5211 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:31.5216 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:36.5216 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:41.5248 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:46.5371 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:51.5403 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:29:56.5455 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:01.5460 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:06.5602 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:11.5634 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:16.5710 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:21.5759 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:26.5831 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:31.5903 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:36.5946 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:41.5962 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:46.6060 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:51.6145 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:30:56.6193 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:01.6285 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:06.6416 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:11.6550 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:16.6690 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:21.6700 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:26.6829 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:31.6840 (InventoryDataEntity.cs:44) 1111
+2025-07-31 11:31:36.6871  1111
+2025-07-31 11:31:41.6983  1111
+2025-07-31 11:31:46.7055  1111
+2025-07-31 11:31:51.7122  1111
+2025-07-31 11:31:56.7174  1111
+2025-07-31 11:32:01.7199  1111
+2025-07-31 11:32:06.7242  1111
+2025-07-31 11:32:11.7310  1111
+2025-07-31 11:32:16.7362  1111
+2025-07-31 11:32:21.7455  1111
+2025-07-31 11:32:26.7548  1111
+2025-07-31 11:32:31.7587  1111
+2025-07-31 11:32:36.7587  1111
+2025-07-31 11:32:41.7616  1111
+2025-07-31 11:32:46.7743  1111
+2025-07-31 11:32:51.7825  1111
+2025-07-31 11:32:56.7945  1111
+2025-07-31 11:33:01.7962  1111
+2025-07-31 11:33:06.8034  1111
+2025-07-31 11:33:11.8170  1111
+2025-07-31 11:33:16.8182  1111
+2025-07-31 11:33:21.8209  1111
+2025-07-31 11:33:26.8343  1111
+2025-07-31 11:33:31.8469  1111
+2025-07-31 11:33:36.8471  1111
+2025-07-31 11:33:41.8611  1111
+2025-07-31 11:33:46.8714  1111
+2025-07-31 11:33:51.8755  1111
+2025-07-31 11:33:56.8793  1111
+2025-07-31 11:34:01.8812  1111
+2025-07-31 11:34:06.8893  1111
+2025-07-31 11:34:11.8960  1111
+2025-07-31 11:34:16.8981  1111
+2025-07-31 11:34:21.9035  1111
+2025-07-31 11:34:26.9066  1111
+2025-07-31 11:34:31.9179  1111
+2025-07-31 11:34:36.9176  1111
+2025-07-31 11:34:41.9176  1111
+2025-07-31 11:34:46.9176  1111
+2025-07-31 11:34:51.9238  1111
+2025-07-31 11:35:56.0609 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589017839524380672 CenterRouteId : 2589024453774016512
+2025-07-31 11:36:03.0356 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589028851820527616
+2025-07-31 11:36:03.1539 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:03.1539 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:36:03.1539 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589028851820527617
+2025-07-31 11:36:08.1661 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:13.1803 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:18.1901 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:18.1901 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:36:18.1901 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589028851820527617
+2025-07-31 11:36:23.1938 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:23.1938 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:36:23.1938 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589028851820527617
+2025-07-31 11:36:28.1948 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:33.1949 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:38.1948 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:43.1953 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:48.1956 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:53.1953 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:36:58.1953 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:37:03.1955 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:37:08.1956 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:37:13.1968 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:37:18.1962 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:37:59.5442 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589035431710425088 CenterRouteId : 2589039846936805376
+2025-07-31 11:38:04.7377 (PlayerBaseDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2589039846936805377
+2025-07-31 11:38:04.7377 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:06.7049 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:38:06.7049 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589039846936805378
+2025-07-31 11:38:09.7402 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:14.7474 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:19.7505 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:39.3926 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:38:39.3926 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589039846936805378
+2025-07-31 11:38:39.4030 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:44.4067 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:49.4080 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:54.4205 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:38:59.4211 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:04.4211 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:09.4289 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:14.4347 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:19.4364 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:24.4422 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:29.4421 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:34.4428 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:39.4436 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:44.4431 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:49.4432 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:54.4495 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:39:59.4636 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:04.4747 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:09.4847 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:14.4890 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:19.4913 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:24.4927 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:29.4981 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:34.5112 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:39.5272 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:44.5419 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:49.5522 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:54.5552 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:40:59.5665 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:04.5803 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:09.5820 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:14.5832 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:19.5835 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:24.5835 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:29.5831 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:34.5944 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:39.6062 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:44.6102 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:49.6109 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:54.6103 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:41:59.6117 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:04.6118 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:09.6123 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:14.6127 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:19.6138 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:24.6136 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:29.6144 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:34.6140 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:39.6158 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:42:44.6169 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:43:09.5966 (C2G_BuildCenterRouteHandler.cs:38) 建立到中心服的路由成功: 2589017839524380672 CenterRouteId : 2589020055727505408
+2025-07-31 11:43:16.4936 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589024453774016512
+2025-07-31 11:43:16.5958 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:43:16.5958 (InventoryDataEntity.cs:48)  Dirty : False
+2025-07-31 11:43:16.5958 (InventoryDataEntity.cs:49) Auto Save InventoryDataEntity: 2589024453774016513
+2025-07-31 11:43:21.5996 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:43:26.5995 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:43:31.6006 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:43:36.6022 (InventoryDataEntity.cs:43) 1111
+2025-07-31 11:43:41.6022 (InventoryDataEntity.cs:43) 1111

@@ -17,6 +17,10 @@ message Center2G_BuildRoute_Resp // IRouteResponse
 	bool IsNewPlayer = 2;
 }
 
+message G2Center_DisposeCenterUnit_Msg // IRouteMessage
+{
+	int64 CenterRouteId = 1;
+}
 
 
 //------------------------------------
@@ -89,7 +93,7 @@ message Chat2G_CreateRouteResponse // IRouteResponse
 // Protocol Bson
 message M2M_SendUnitRequest // IRouteRequest,M2M_SendUnitResponse
 {
-	MapUser user = 1;
+	// MapUser user = 1;
 }
 // Protocol Bson
 message M2M_SendUnitResponse // IRouteResponse

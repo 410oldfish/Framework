@@ -1,0 +1,18 @@
+2025-07-30 22:14:04.8936  初始化序列化器成功，数量为：2
+2025-07-30 22:14:05.8427  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-30 22:14:05.8677  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-30 22:14:06.2778  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-30 22:14:06.6591  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-30 22:14:06.6591  Process:1 Startup Complete SceneCount:3
+2025-07-30 22:15:30.1254  初始化序列化器成功，数量为：2
+2025-07-30 22:15:31.0846  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-30 22:15:31.0949  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-30 22:15:31.5220  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-30 22:15:31.9363  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-30 22:15:31.9363  Process:1 Startup Complete SceneCount:3
+2025-07-30 22:19:26.4102  初始化序列化器成功，数量为：2
+2025-07-30 22:19:27.3928  SceneConfigId = 1001 networkTarget = Inner TCPServer Listen 127.0.0.1:11001
+2025-07-30 22:19:27.4017  SceneConfigId = 1001 WebSocketServer Listen http://127.0.0.1:20000/
+2025-07-30 22:19:27.8005  SceneConfigId = 1002 networkTarget = Inner TCPServer Listen 127.0.0.1:11002
+2025-07-30 22:19:28.2110  SceneConfigId = 1003 networkTarget = Inner TCPServer Listen 127.0.0.1:11003
+2025-07-30 22:19:28.2110  Process:1 Startup Complete SceneCount:3

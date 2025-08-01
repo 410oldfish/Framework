@@ -28,12 +28,13 @@ public class C2G_BuildCenterRouteHandler : MessageRPC<C2G_BuildCenterRoute_Req, 
         {
             Log.Error($"建立到中心服的路由失败: {session.RuntimeId} ErrorCode : {routeResponse.ErrorCode}");
             response.ErrorCode = (int)C2G_BuildCenterRoute_ErrorCode.FailToBuildRouteInCenter;
-            reply?.Invoke();
             return;
         }
 
         var routeComponent = session.GetOrAddComponent<RouteComponent>();
         routeComponent.AddAddress((int)RouteType.CenterRoute, routeResponse.CenterRouteId);
+        var lifeComponent = routeComponent.GetOrAddComponent<RouteLifeComponent>();
+        lifeComponent.centerRouteId = routeResponse.CenterRouteId;
         
         Log.Debug($"建立到中心服的路由成功: {session.RuntimeId} CenterRouteId : {routeResponse.CenterRouteId}");
 
