@@ -1,0 +1,10 @@
+<module name="">	
+	<enum name="EQuality">
+		<var name="WHITE" alias="白" value="0"/>
+		<var name="GREEN" alias="绿" value="1"/>
+		<var name="BLUE" alias="蓝" value="2"/>
+		<var name="PURPLE" alias="紫" value="3"/>
+		<var name="YELLOW" alias="黄" value="4"/>
+		<var name="RED" alias="红" value="5"/>
+	</enum>
+</module>

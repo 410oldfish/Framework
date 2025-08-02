@@ -23,7 +23,7 @@ public partial class Tables
     /// 通用道具
     /// </summary>
     public item.TbCommonItem TbCommonItem {get; }
-    public site.TbFarmlandChangeType TbFarmlandChangeType {get; }
+    public site.TbFarmlandType TbFarmlandType {get; }
     /// <summary>
     /// 农场田地解锁条件
     /// </summary>
@@ -35,6 +35,8 @@ public partial class Tables
     /// </summary>
     public item.TbCrops TbCrops {get; }
     public item.TbSeed TbSeed {get; }
+    public item.TbFertilizer TbFertilizer {get; }
+    public item.TbDepester TbDepester {get; }
     public item.TbCub TbCub {get; }
     /// <summary>
     /// 牲畜
@@ -69,12 +71,14 @@ public partial class Tables
         TbGlobal = new global.TbGlobal(loader("global_tbglobal"));
         TbItemBase = new item.TbItemBase(loader("item_tbitembase"));
         TbCommonItem = new item.TbCommonItem(loader("item_tbcommonitem"));
-        TbFarmlandChangeType = new site.TbFarmlandChangeType(loader("site_tbfarmlandchangetype"));
+        TbFarmlandType = new site.TbFarmlandType(loader("site_tbfarmlandtype"));
         TbFarmlandUnlock = new site.TbFarmlandUnlock(loader("site_tbfarmlandunlock"));
         TbErrorCode = new network.TbErrorCode(loader("network_tberrorcode"));
         TbModule = new common.TbModule(loader("common_tbmodule"));
         TbCrops = new item.TbCrops(loader("item_tbcrops"));
         TbSeed = new item.TbSeed(loader("item_tbseed"));
+        TbFertilizer = new item.TbFertilizer(loader("item_tbfertilizer"));
+        TbDepester = new item.TbDepester(loader("item_tbdepester"));
         TbCub = new item.TbCub(loader("item_tbcub"));
         TbLivestock = new item.TbLivestock(loader("item_tblivestock"));
         TbRanchProduct = new item.TbRanchProduct(loader("item_tbranchproduct"));
@@ -93,12 +97,14 @@ public partial class Tables
         TbGlobal.ResolveRef(this);
         TbItemBase.ResolveRef(this);
         TbCommonItem.ResolveRef(this);
-        TbFarmlandChangeType.ResolveRef(this);
+        TbFarmlandType.ResolveRef(this);
         TbFarmlandUnlock.ResolveRef(this);
         TbErrorCode.ResolveRef(this);
         TbModule.ResolveRef(this);
         TbCrops.ResolveRef(this);
         TbSeed.ResolveRef(this);
+        TbFertilizer.ResolveRef(this);
+        TbDepester.ResolveRef(this);
         TbCub.ResolveRef(this);
         TbLivestock.ResolveRef(this);
         TbRanchProduct.ResolveRef(this);
@@ -118,12 +124,14 @@ public partial class Tables
             "global_tbglobal",
             "item_tbitembase",
             "item_tbcommonitem",
-            "site_tbfarmlandchangetype",
+            "site_tbfarmlandtype",
             "site_tbfarmlandunlock",
             "network_tberrorcode",
             "common_tbmodule",
             "item_tbcrops",
             "item_tbseed",
+            "item_tbfertilizer",
+            "item_tbdepester",
             "item_tbcub",
             "item_tblivestock",
             "item_tbranchproduct",

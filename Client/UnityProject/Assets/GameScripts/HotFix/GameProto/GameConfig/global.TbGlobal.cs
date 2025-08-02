@@ -38,6 +38,18 @@ public partial class TbGlobal
     /// 玩家初始经验
     /// </summary>
      public int PlayerInitExp => _data.PlayerInitExp;
+    /// <summary>
+    /// 土地类型友好的产量增益
+    /// </summary>
+     public int FriendlyLandYieldCountBuff => _data.FriendlyLandYieldCountBuff;
+    /// <summary>
+    /// 土地类型不友好的产量增益
+    /// </summary>
+     public int HostileLandYieldCountBuff => _data.HostileLandYieldCountBuff;
+    /// <summary>
+    /// 浇水加快生长时间S
+    /// </summary>
+     public int WaterSpeedUpGrowTime => _data.WaterSpeedUpGrowTime;
     
     public void ResolveRef(Tables tables)
     {

@@ -15,6 +15,7 @@ public class C2Center_Farmland_Seed_Handler : RouteRPC<CenterUnit, C2Center_Farm
         LandNotUnlocked = 1, //土地未解锁
         SeedNotEnough = 2, //种子不存在
         LandAlreadyHasCrop = 3, //土地上已有作物
+        UnknownError = 4, //未知错误
     }
     
     protected override async FTask Run(CenterUnit entity, C2Center_Farmland_Seed_Req request, Center2C_Farmland_Seed_Resp response, Action reply)
@@ -43,8 +44,17 @@ public class C2Center_Farmland_Seed_Handler : RouteRPC<CenterUnit, C2Center_Farm
         }
         
         // 扣除种子
-         inventory.RemoveItem(seedId, 1);
+         var curItem = inventory.RemoveItem(seedId, 1);
         
          // 种植作物
+         var landProto = farmland.Seed(landId, seedId);
+         if (landProto == null)
+         {
+             response.ErrorCode = (int)ErrorCode.UnknownError;
+             return;
+         }
+
+         response.LandData = landProto;
+         response.CurItem = curItem;
     }
 }

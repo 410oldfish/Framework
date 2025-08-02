@@ -51,13 +51,13 @@ namespace Fantasy
 			landType = default;
 			seedId = default;
 			startTime = default;
+			harvestTime = default;
+			yieldCount = default;
 			gainCount = default;
-			lastGainTime = default;
 			nextWaterTime = default;
-			waterCount = default;
-			fertilizerId.Clear();
+			fertilizerCount = default;
+			maxFertilizerCount = default;
 			nextPestTime = default;
-			dePestCount = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<LandProto>(this);
 #endif
@@ -71,19 +71,39 @@ namespace Fantasy
 		[ProtoMember(4)]
 		public long startTime { get; set; }
 		[ProtoMember(5)]
-		public int gainCount { get; set; }
+		public long harvestTime { get; set; }
 		[ProtoMember(6)]
-		public long lastGainTime { get; set; }
+		public int yieldCount { get; set; }
 		[ProtoMember(7)]
-		public long nextWaterTime { get; set; }
+		public int gainCount { get; set; }
 		[ProtoMember(8)]
-		public int waterCount { get; set; }
+		public long nextWaterTime { get; set; }
 		[ProtoMember(9)]
-		public List<int> fertilizerId = new List<int>();
+		public int fertilizerCount { get; set; }
 		[ProtoMember(10)]
-		public long nextPestTime { get; set; }
+		public int maxFertilizerCount { get; set; }
 		[ProtoMember(11)]
-		public int dePestCount { get; set; }
+		public long nextPestTime { get; set; }
+	}
+	[ProtoContract]
+	public partial class GainProto : AMessage, IProto
+	{
+		public static GainProto Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<GainProto>();
+		}
+		public override void Dispose()
+		{
+			fromId = default;
+			items.Clear();
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<GainProto>(this);
+#endif
+		}
+		[ProtoMember(1)]
+		public int fromId { get; set; }
+		[ProtoMember(2)]
+		public List<ItemProto> items = new List<ItemProto>();
 	}
 	[ProtoContract]
 	public partial class C2G_BuildCenterRoute_Req : AMessage, IRequest, IProto
@@ -600,7 +620,7 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
-			StartTime = default;
+			LandData = default;
 			CurItem = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_Seed_Resp>(this);
@@ -608,7 +628,7 @@ namespace Fantasy
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_Seed_Resp; }
 		[ProtoMember(1)]
-		public long StartTime { get; set; }
+		public LandProto LandData { get; set; }
 		[ProtoMember(2)]
 		public ItemProto CurItem { get; set; }
 		[ProtoMember(3)]
@@ -646,30 +666,21 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
-			GainCount.Clear();
-			LastGainTime.Clear();
-			CurItemId.Clear();
-			CurItemCount.Clear();
-			DelItemId.Clear();
-			DelItemCount.Clear();
+			LandDatas.Clear();
+			CurItems.Clear();
+			GainItems.Clear();
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_GainYield_Resp>(this);
 #endif
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_GainYield_Resp; }
 		[ProtoMember(1)]
-		public List<int> GainCount = new List<int>();
+		public List<LandProto> LandDatas = new List<LandProto>();
 		[ProtoMember(2)]
-		public List<long> LastGainTime = new List<long>();
+		public List<ItemProto> CurItems = new List<ItemProto>();
 		[ProtoMember(3)]
-		public List<int> CurItemId = new List<int>();
+		public List<GainProto> GainItems = new List<GainProto>();
 		[ProtoMember(4)]
-		public List<int> CurItemCount = new List<int>();
-		[ProtoMember(5)]
-		public List<int> DelItemId = new List<int>();
-		[ProtoMember(6)]
-		public List<int> DelItemCount = new List<int>();
-		[ProtoMember(7)]
 		public uint ErrorCode { get; set; }
 	}
 	[ProtoContract]
@@ -704,12 +715,15 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
+			LandData = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_RemoveCrop_Resp>(this);
 #endif
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_RemoveCrop_Resp; }
 		[ProtoMember(1)]
+		public LandProto LandData { get; set; }
+		[ProtoMember(2)]
 		public uint ErrorCode { get; set; }
 	}
 	[ProtoContract]
@@ -799,14 +813,14 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
-			NextWaterTime = default;
+			LandData = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_Water_Resp>(this);
 #endif
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_Water_Resp; }
 		[ProtoMember(1)]
-		public long NextWaterTime { get; set; }
+		public LandProto LandData { get; set; }
 		[ProtoMember(2)]
 		public uint ErrorCode { get; set; }
 	}
@@ -866,6 +880,7 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			LandId = default;
+			DePesterId = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<C2Center_Farmland_DePest_Req>(this);
 #endif
@@ -877,6 +892,8 @@ namespace Fantasy
 		public int RouteType => Fantasy.RouteType.CenterRoute;
 		[ProtoMember(1)]
 		public int LandId { get; set; }
+		[ProtoMember(2)]
+		public int DePesterId { get; set; }
 	}
 	[ProtoContract]
 	public partial class Center2C_Farmland_DePest_Resp : AMessage, ICustomRouteResponse, IProto
@@ -888,21 +905,18 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
-			NextPestTime = default;
-			CurItemId.Clear();
-			CurItemCount.Clear();
+			LandData = default;
+			CurItem = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_DePest_Resp>(this);
 #endif
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_DePest_Resp; }
 		[ProtoMember(1)]
-		public long NextPestTime { get; set; }
+		public LandProto LandData { get; set; }
 		[ProtoMember(2)]
-		public List<int> CurItemId = new List<int>();
+		public ItemProto CurItem { get; set; }
 		[ProtoMember(3)]
-		public List<int> CurItemCount = new List<int>();
-		[ProtoMember(4)]
 		public uint ErrorCode { get; set; }
 	}
 	[ProtoContract]

@@ -2,6 +2,7 @@
 using Fantasy.Entitas;
 using Fantasy.Entitas.Interface;
 using GameConfig;
+using GameConfig.item;
 using GameConfig.site;
 using global::GameConfig.global;
 using Luban;
@@ -59,5 +60,9 @@ public class ConfigHelper : Entity
     //快速访问
     public TbGlobal GlobalConfig => Tables.TbGlobal;
     public TbFarmlandUnlock FarmlandUnlockConfig => Tables.TbFarmlandUnlock;
-    public TbFarmlandChangeType FarmlandChangeTypeConfig => Tables.TbFarmlandChangeType;
+    public TbFarmlandType FarmlandTypeConfig => Tables.TbFarmlandType;
+    
+    public TbSeed SeedConfig => Tables.TbSeed;
+    public TbFertilizer FertilizerConfig => Tables.TbFertilizer;
+    public TbDepester DepesterConfig => Tables.TbDepester;
 }

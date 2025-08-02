@@ -1,6 +1,7 @@
 ﻿using Fantasy;
 using Fantasy.Async;
 using Fantasy.Network.Interface;
+using GameConfig;
 using GameConfig.common;
 using Hotfix.Center.Entity;
 using Hotfix.Common.Entity.Database;
@@ -16,7 +17,7 @@ public class C2Center_OpenModuleHandler : RouteRPC< CenterUnit,C2Center_OpenModu
     protected override async FTask Run(CenterUnit centerUnit, C2Center_OpenModule_Req request, Center2C_OpenModule_Resp response, Action reply)
     {
         int moduleId = request.ModuleId;
-        if (moduleId == (int)EModule.Farmland)
+        if (moduleId == (int)EGameModule.Farmland)
         {
             if (centerUnit.HasComponent<FarmlandDataEntity>())
             {

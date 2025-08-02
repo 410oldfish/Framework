@@ -1,0 +1,7 @@
+<module name="item">	
+	<bean name="ItemExchangeRange" sep=",">
+		<var name="Id" type="int" />
+		<var name="MinCount" type="int" />
+		<var name="MaxCount" type="int" />
+    </bean>
+</module>

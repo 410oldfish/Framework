@@ -16,35 +16,47 @@ namespace GameConfig.farm
         /// <summary>
         /// 未解锁
         /// </summary>
-        LOCK = 0,
+        Lock = 0,
         /// <summary>
         /// 解锁中
         /// </summary>
-        UNLOCKING = 1,
+        Unlocking = 1,
         /// <summary>
         /// 普通
         /// </summary>
-        NORMAL = 2,
+        Normal = 2,
         /// <summary>
         /// 黑土地
         /// </summary>
-        BLACK = 3,
+        Black = 3,
         /// <summary>
         /// 红土地
         /// </summary>
-        RED = 4,
+        Red = 4,
         /// <summary>
         /// 黄土地
         /// </summary>
-        YELLOW = 5,
+        Yellow = 5,
         /// <summary>
         /// 水田地
         /// </summary>
-        WATER = 6,
+        Paddy = 6,
         /// <summary>
         /// 盐碱地
         /// </summary>
-        SALT = 7,
+        Saline = 7,
+        /// <summary>
+        /// 壤土
+        /// </summary>
+        Loam = 8,
+        /// <summary>
+        /// 沙土地
+        /// </summary>
+        Sandy = 9,
+        /// <summary>
+        /// 碎石地
+        /// </summary>
+        Rocky = 10,
     }
 
 } 

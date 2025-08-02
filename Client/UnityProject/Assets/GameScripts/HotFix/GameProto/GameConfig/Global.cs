@@ -18,6 +18,9 @@ public sealed partial class Global : Luban.BeanBase
     {
         PlayerInitLv = _buf.ReadInt();
         PlayerInitExp = _buf.ReadInt();
+        FriendlyLandYieldCountBuff = _buf.ReadInt();
+        HostileLandYieldCountBuff = _buf.ReadInt();
+        WaterSpeedUpGrowTime = _buf.ReadInt();
     }
 
     public static Global DeserializeGlobal(ByteBuf _buf)
@@ -33,6 +36,18 @@ public sealed partial class Global : Luban.BeanBase
     /// 玩家初始经验
     /// </summary>
     public readonly int PlayerInitExp;
+    /// <summary>
+    /// 土地类型友好的产量增益
+    /// </summary>
+    public readonly int FriendlyLandYieldCountBuff;
+    /// <summary>
+    /// 土地类型不友好的产量增益
+    /// </summary>
+    public readonly int HostileLandYieldCountBuff;
+    /// <summary>
+    /// 浇水加快生长时间S
+    /// </summary>
+    public readonly int WaterSpeedUpGrowTime;
    
     public const int __ID__ = 2135814083;
     public override int GetTypeId() => __ID__;
@@ -46,6 +61,9 @@ public sealed partial class Global : Luban.BeanBase
         return "{ "
         + "PlayerInitLv:" + PlayerInitLv + ","
         + "PlayerInitExp:" + PlayerInitExp + ","
+        + "FriendlyLandYieldCountBuff:" + FriendlyLandYieldCountBuff + ","
+        + "HostileLandYieldCountBuff:" + HostileLandYieldCountBuff + ","
+        + "WaterSpeedUpGrowTime:" + WaterSpeedUpGrowTime + ","
         + "}";
     }
 }

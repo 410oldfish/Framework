@@ -1,10 +1,8 @@
 ﻿using Fantasy.Entitas.Interface;
 using GameConfig.farm;
 using Hotfix.Common.Misc.CustomClass;
-using Hotfix.Common.Misc.Interface;
-using Hotfix.Common.Misc.Tool;
 
-namespace Hotfix.Common.Entity.Database;
+namespace Hotfix;
 
 public class Farm_LandData
 {
@@ -42,6 +40,37 @@ public class Farm_LandData
         get => _startTime;
         set => _startTime = value;
     }
+    
+    private long _harvestTime;
+    public long HarvestTime
+    {
+        get => _harvestTime;
+        set => _harvestTime = value;
+    }
+
+    private int _yieldCount;
+    public int YieldCount
+    {
+        get => _yieldCount;
+        set => _yieldCount = value;
+    }
+
+    private float _rareRate;
+    public float RareRate
+    {
+        get => _rareRate;
+        set => _rareRate = value;
+    }
+    
+    /// <summary>
+    /// 产量倍率，只给稀有收获使用
+    /// </summary>
+    private float _yieldRate;
+    public float YieldRate
+    {
+        get => _yieldRate;
+        set => _yieldRate = value;
+    }
 
     private readonly List<long> _gainTimeList = new();
     public List<long> GainTimeList
@@ -55,10 +84,11 @@ public class Farm_LandData
         get => _stealPlayerList;
     }
 
-    private readonly int _stealYieldCount;
+    private int _stealYieldCount;
     public int StealYieldCount
     {
         get => _stealYieldCount;
+        set => _stealYieldCount = value;
     }
 
     private long _nextWaterTime;
@@ -74,12 +104,26 @@ public class Farm_LandData
         get => _waterCount;
         set => _waterCount = value;
     }
-
-    private List<int> _fertilizerIdList = new();
-    public List<int> FertilizerIdList
+    
+    private int _maxWaterCount;
+    public int MaxWaterCount
     {
-        get => _fertilizerIdList;
-        set => _fertilizerIdList = value;
+        get => _maxWaterCount;
+        set => _maxWaterCount = value;
+    }
+
+    private int _fertilizerCount;
+    public int FertilizerCount
+    {
+        get => _fertilizerCount;
+        set => _fertilizerCount = value;
+    }
+    
+    private int _maxFertilizerCount;
+    public int MaxFertilizerCount
+    {
+        get => _maxFertilizerCount;
+        set => _maxFertilizerCount = value;
     }
 
     private long _nextPestTime;
@@ -89,11 +133,18 @@ public class Farm_LandData
         set => _nextPestTime = value;
     }
 
-    private int _dePestCount;
-    public int DePestCount
+    private int _pestCount;
+    public int PestCount
     {
-        get => _dePestCount;
-        set => _dePestCount = value;
+        get => _pestCount;
+        set => _pestCount = value;
+    }
+    
+    private int _maxPestCount;
+    public int MaxPestCount
+    {
+        get => _maxPestCount;
+        set => _maxPestCount = value;
     }
 }
 

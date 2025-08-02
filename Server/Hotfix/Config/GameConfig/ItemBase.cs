@@ -31,6 +31,8 @@ public abstract partial class ItemBase : Luban.BeanBase
             case CommonItem.__ID__: return new CommonItem(_buf);
             case Crops.__ID__: return new Crops(_buf);
             case Cub.__ID__: return new Cub(_buf);
+            case item.Depester.__ID__: return new item.Depester(_buf);
+            case item.Fertilizer.__ID__: return new item.Fertilizer(_buf);
             case Fish.__ID__: return new Fish(_buf);
             case FishProduct.__ID__: return new FishProduct(_buf);
             case Forniture.__ID__: return new Forniture(_buf);

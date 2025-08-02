@@ -1,0 +1,6 @@
+<module name="item">	
+	<bean name="Depester" parent="ItemBase" sep=",">
+		<var name="rareRateBuff" type="int" />
+		<var name="pestRateBuff" type="int" />
+    </bean>
+</module>

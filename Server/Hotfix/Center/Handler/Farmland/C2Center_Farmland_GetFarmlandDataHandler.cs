@@ -33,7 +33,7 @@ public class C2Center_Farmland_GetFarmlandDataHandler : RouteRPC<CenterUnit, C2C
 
         var farmlandDataComponent = centerUnit.GetComponent<FarmlandDataEntity>();
 
-        var landProtoData = farmlandDataComponent.GetLandData();
+        var landProtoData = farmlandDataComponent.GetLandDataList();
 
         response.FarmlandData = landProtoData;
     }

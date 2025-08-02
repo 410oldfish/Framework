@@ -1,0 +1,27 @@
+Item
+100XXXX CommonItem
+	
+	farmland ABCDDDD A:Item类 1 B:Farmland相关 2 C:种子 0  成品 1 D：具体编号
+110XXXX Seed
+111XXXX Crops
+112XXXX fertilizer 肥料
+113XXXX DePester 杀虫剂
+
+	ranchland
+		livestock
+120XXXX 幼崽
+121XXXX 成年
+122XXXX 产品
+123XXXX 副产品
+
+
+	fishland
+130XXXX 鱼苗
+131XXXX 成年
+132XXXX 产品
+
+Role
+200XXXX 雇员
+
+Forniture
+300XXXX 家具

@@ -1,0 +1,7 @@
+<module name="item">	
+	<bean name="Fertilizer" parent="ItemBase" sep=",">
+		<var name="growTimeBuff" type="int" />
+		<var name="yieldCountBuff" type="int" />
+		<var name="rareBuff" type="int" />
+    </bean>
+</module>

@@ -1,0 +1,15 @@
+<module name="farm">	
+	<enum name="ELandType">
+		<var name="Lock" alias="未解锁" value="0"/>
+		<var name="Unlocking" alias="解锁中" value="1"/>
+		<var name="Normal" alias="普通" value="2"/>
+		<var name="Black" alias="黑土地" value="3"/>
+		<var name="Red" alias="红土地" value="4"/>
+		<var name="Yellow" alias="黄土地" value="5"/>
+		<var name="Paddy" alias="水田地" value="6"/>
+		<var name="Saline" alias="盐碱地" value="7"/>
+		<var name="Loam" alias="壤土" value="8"/>
+		<var name="Sandy" alias="沙土地" value="9"/>
+		<var name="Rocky" alias="碎石地" value="10"/>
+	</enum>
+</module>

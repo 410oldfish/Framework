@@ -24,7 +24,7 @@ public class C2Center_Farmland_ChangeLandTypeHandler : RouteRPC<CenterUnit, C2Ce
         var landId = request.LandId;
         var changeLandType = request.LandType;
         ConfigHelper configHelper = entity.Scene.GetComponent<ConfigHelper>();
-        var costConfig = configHelper.FarmlandChangeTypeConfig.Get((ELandType)changeLandType);
+        var costConfig = configHelper.FarmlandTypeConfig.Get((ELandType)changeLandType);
         if(costConfig == null)
         {
             response.ErrorCode = (int)ErrorCode.InvalidConfig;

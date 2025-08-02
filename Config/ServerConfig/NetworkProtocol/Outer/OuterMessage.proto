@@ -21,13 +21,19 @@ message LandProto
 	int32 landType = 2;
 	int32 seedId = 3;
 	int64 startTime = 4;
-	int32 gainCount = 5;
-	int64 lastGainTime = 6;
-	int64 nextWaterTime = 7;
-	int32 waterCount = 8;
-	repeated int32 fertilizerId = 9;
-	int64 nextPestTime = 10;
-	int32 dePestCount = 11;
+	int64 harvestTime = 5;
+	int32 yieldCount = 6;
+	int32 gainCount = 7;
+	int64 nextWaterTime = 8;
+	int32 fertilizerCount = 9;
+	int32 maxFertilizerCount = 10;
+	int64 nextPestTime = 11;
+}
+
+message GainProto
+{
+	int32 fromId = 1;	//从哪里获得
+	repeated ItemProto items = 2;	//获得道具列表
 }
 
 //------------通用模块--------------------------
@@ -177,7 +183,7 @@ message C2Center_Farmland_Seed_Req // ICustomRouteRequest, Center2C_Farmland_See
 
 message Center2C_Farmland_Seed_Resp // ICustomRouteResponse
 {
-	int64 StartTime = 1;//开始种植时间戳
+	LandProto LandData = 1;//开始种植时间戳
 	ItemProto CurItem = 2;
 }
 
@@ -189,12 +195,9 @@ message C2Center_Farmland_GainYield_Req // ICustomRouteRequest, Center2C_Farmlan
 
 message Center2C_Farmland_GainYield_Resp // ICustomRouteResponse
 {
-	repeated int32 GainCount = 1;
-	repeated int64 LastGainTime = 2;
-	repeated int32 CurItemId = 3;
-	repeated int32 CurItemCount = 4;
-	repeated int32 DelItemId = 5;
-	repeated int32 DelItemCount = 6;
+	repeated LandProto LandDatas = 1;
+	repeated ItemProto CurItems = 2;
+	repeated GainProto GainItems = 3;
 }
 
 //请求铲除作物
@@ -205,7 +208,7 @@ message C2Center_Farmland_RemoveCrop_Req // ICustomRouteRequest, Center2C_Farmla
 
 message Center2C_Farmland_RemoveCrop_Resp // ICustomRouteResponse
 {
-
+	LandProto LandData = 1;
 }
 
 //请求偷菜
@@ -231,7 +234,7 @@ message C2Center_Farmland_Water_Req // ICustomRouteRequest, Center2C_Farmland_Wa
 
 message Center2C_Farmland_Water_Resp // ICustomRouteResponse
 {
-	int64 NextWaterTime = 1;
+	LandProto LandData = 1;
 }
 
 //请求施肥
@@ -250,13 +253,13 @@ message Center2C_Farmland_Fertilizer_Resp // ICustomRouteResponse
 message C2Center_Farmland_DePest_Req // ICustomRouteRequest, Center2C_Farmland_DePest_Resp, CenterRoute
 {
 	int32 LandId = 1;
+	int32 DePesterId = 2;
 }
 
 message Center2C_Farmland_DePest_Resp // ICustomRouteResponse
 {
-	int64 NextPestTime = 1;
-	repeated int32 CurItemId = 2;
-	repeated int32 CurItemCount = 3;
+	LandProto LandData = 1;
+	ItemProto CurItem = 2;
 }
 
 

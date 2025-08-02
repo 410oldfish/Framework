@@ -1,0 +1,12 @@
+<module name="farm">	
+	<enum name="ESeedType">
+		<var name="Normal" alias="通常作物" value="0"/>
+		<var name="Paddy" alias="水田作物" value="1"/>
+		<var name="Dry" alias="旱地作物" value="2"/>
+		<var name="Saline" alias="盐碱地作物" value="3"/>
+		<var name="Rich" alias="高营养作物" value="4"/>
+		<var name="Acid" alias="耐酸作物" value="5"/>
+		<var name="Special" alias="特殊作物" value="6"/>
+		<var name="Medicinal" alias="药用作物" value="7"/>
+	</enum>
+</module>

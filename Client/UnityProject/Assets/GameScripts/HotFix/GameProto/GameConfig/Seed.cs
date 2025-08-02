@@ -16,14 +16,20 @@ public sealed partial class Seed : ItemBase
 {
     public Seed(ByteBuf _buf)  : base(_buf) 
     {
+        SeedType = (farm.ESeedType)_buf.ReadInt();
         GrowTime = _buf.ReadInt();
-        YieldCount = item.ItemExchange.DeserializeItemExchange(_buf);
+        YieldCount = item.ItemExchangeRange.DeserializeItemExchangeRange(_buf);
+        RareRate = _buf.ReadInt();
+        RareYieldCount = item.ItemExchangeRange.DeserializeItemExchangeRange(_buf);
         LeastYieldCount = _buf.ReadInt();
+        {int n0 = System.Math.Min(_buf.ReadSize(), _buf.Size);NeedWaterTime = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); NeedWaterTime.Add(_e0);}}
         MaxWaterCount = _buf.ReadInt();
         MaxFertilizerCount = _buf.ReadInt();
+        PestRate = _buf.ReadInt();
         MaxPestCount = _buf.ReadInt();
         MutiHarvestCount = _buf.ReadInt();
         {int n0 = System.Math.Min(_buf.ReadSize(), _buf.Size);MutiHarvestTime = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); MutiHarvestTime.Add(_e0);}}
+        {int n0 = System.Math.Min(_buf.ReadSize(), _buf.Size);MutiHarvestYieldCountChangeRate = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); MutiHarvestYieldCountChangeRate.Add(_e0);}}
     }
 
     public static Seed DeserializeSeed(ByteBuf _buf)
@@ -31,14 +37,20 @@ public sealed partial class Seed : ItemBase
         return new Seed(_buf);
     }
 
+    public readonly farm.ESeedType SeedType;
     public readonly int GrowTime;
-    public readonly item.ItemExchange YieldCount;
+    public readonly item.ItemExchangeRange YieldCount;
+    public readonly int RareRate;
+    public readonly item.ItemExchangeRange RareYieldCount;
     public readonly int LeastYieldCount;
+    public readonly System.Collections.Generic.List<int> NeedWaterTime;
     public readonly int MaxWaterCount;
     public readonly int MaxFertilizerCount;
+    public readonly int PestRate;
     public readonly int MaxPestCount;
     public readonly int MutiHarvestCount;
     public readonly System.Collections.Generic.List<int> MutiHarvestTime;
+    public readonly System.Collections.Generic.List<int> MutiHarvestYieldCountChangeRate;
    
     public const int __ID__ = 2572945;
     public override int GetTypeId() => __ID__;
@@ -47,6 +59,7 @@ public sealed partial class Seed : ItemBase
     {
         base.ResolveRef(tables);
         YieldCount?.ResolveRef(tables);
+        RareYieldCount?.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -57,14 +70,20 @@ public sealed partial class Seed : ItemBase
         + "quality:" + Quality + ","
         + "price:" + Price + ","
         + "desc:" + Desc + ","
+        + "seedType:" + SeedType + ","
         + "growTime:" + GrowTime + ","
         + "yieldCount:" + YieldCount + ","
+        + "rareRate:" + RareRate + ","
+        + "rareYieldCount:" + RareYieldCount + ","
         + "leastYieldCount:" + LeastYieldCount + ","
+        + "needWaterTime:" + Luban.StringUtil.CollectionToString(NeedWaterTime) + ","
         + "maxWaterCount:" + MaxWaterCount + ","
         + "maxFertilizerCount:" + MaxFertilizerCount + ","
+        + "PestRate:" + PestRate + ","
         + "maxPestCount:" + MaxPestCount + ","
         + "mutiHarvestCount:" + MutiHarvestCount + ","
         + "mutiHarvestTime:" + Luban.StringUtil.CollectionToString(MutiHarvestTime) + ","
+        + "mutiHarvestYieldCountChangeRate:" + Luban.StringUtil.CollectionToString(MutiHarvestYieldCountChangeRate) + ","
         + "}";
     }
 }

@@ -182,7 +182,27 @@ public class InventoryDataEntity : PlayerDataBase
         }
 
         SetDirty();
-        return curItems; // 返回每个物品的添加数量
+        return curItems; // 返回每个物品的添加后数量
+    }
+    
+    public List<ItemProto> AddItems(List<GainProto> gains)
+    {
+        List<ItemProto> curItems = new List<ItemProto>();
+        if(gains.Count == 0)
+        {
+            return curItems; // 如果没有物品，返回空列表
+        }
+        foreach (var gain in gains)
+        {
+            foreach (var item in gain.items)
+            {
+                int itemId = item.Id;
+                curItems.Add(AddItem(itemId, item.Count, false)); // 成功添加，记录数量
+            }
+        }
+
+        SetDirty();
+        return curItems; // 返回每个物品的添加后数量
     }
     
     /// <summary>

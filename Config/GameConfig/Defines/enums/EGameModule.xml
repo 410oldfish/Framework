@@ -1,0 +1,7 @@
+<module name="">	
+	<enum name="EGameModule">
+		<var name="Farmland" alias="农场模块" value="1"/>
+		<var name="Ranchland" alias="牧场模块" value="2"/>
+		<var name="Fishland" alias="渔场模块" value="3"/>
+	</enum>
+</module>
