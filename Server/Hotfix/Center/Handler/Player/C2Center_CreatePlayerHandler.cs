@@ -16,7 +16,7 @@ public class C2Center_CreatePlayerHandler : RouteRPC<CenterUnit, C2Center_Create
     }
     protected override async FTask Run(CenterUnit centerUnit, C2Center_CreatePlayer_Req request, Center2C_CreatePlayer_Resp response, Action reply)
     {
-        if (centerUnit.HasComponent<PlayerCoreDataEntity>())
+        if (centerUnit.HasComponent<GameCoreDataEntity>())
         {
             response.ErrorCode = (int)ErrorCode.PlayerDataExists; //玩家数据已存在
             return;
@@ -29,7 +29,7 @@ public class C2Center_CreatePlayerHandler : RouteRPC<CenterUnit, C2Center_Create
         int lv = configHelper.GlobalConfig.PlayerInitLv;
         int exp = configHelper.GlobalConfig.PlayerInitExp;
         
-        var playerCoreData = centerUnit.AddComponent<PlayerCoreDataEntity>();
+        var playerCoreData = centerUnit.AddComponent<GameCoreDataEntity>();
         playerCoreData.SetPlayerData(playerId, nickName, lv, exp);
         
         //Inventory

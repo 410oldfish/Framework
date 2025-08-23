@@ -20,7 +20,7 @@ Item
 131XXXX 成年
 132XXXX 产品
 
-Role
+Worker
 200XXXX 雇员
 
 Forniture

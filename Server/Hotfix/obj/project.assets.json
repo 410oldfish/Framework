@@ -154,7 +154,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.4.1": {
+      "MongoDB.Bson/3.4.2": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -529,10 +529,10 @@
         "runtimes/win-x64/native/mimalloc.dll"
       ]
     },
-    "MongoDB.Bson/3.4.1": {
-      "sha512": "ps1fU/Bv2f6D1yBAuXm3O0sH/TvpfChaU6/xtQ1uxNHrfJ7KIGyxc180QHWNrTjxNf16l7LNiY7SH9CL5U/bmg==",
+    "MongoDB.Bson/3.4.2": {
+      "sha512": "FubVWPnefWjGa3aE0U/b3fn0p9S1KPIZwLAA4PguwYHNybzesaEPglscpY9YGVN72ggGeig1e88G9D5jCnY70w==",
       "type": "package",
-      "path": "mongodb.bson/3.4.1",
+      "path": "mongodb.bson/3.4.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -543,7 +543,7 @@
         "lib/net6.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.3.4.1.nupkg.sha512",
+        "mongodb.bson.3.4.2.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
@@ -893,7 +893,7 @@
     "net9.0": [
       "Core >= 1.0.0",
       "Fantasy-Net >= 2024.2.26",
-      "MongoDB.Bson >= 3.4.1",
+      "MongoDB.Bson >= 3.4.2",
       "protobuf-net >= 3.3.0-g6785ecbb35"
     ]
   },
@@ -957,7 +957,7 @@
           },
           "MongoDB.Bson": {
             "target": "Package",
-            "version": "[3.4.1, )"
+            "version": "[3.4.2, )"
           },
           "protobuf-net": {
             "target": "Package",

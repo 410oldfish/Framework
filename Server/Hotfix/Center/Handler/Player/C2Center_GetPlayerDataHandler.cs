@@ -17,11 +17,11 @@ public class C2Center_GetPlayerDataHandler : RouteRPC<CenterUnit, C2Center_GetPl
     protected override async FTask Run(CenterUnit centerUnit, C2Center_GetPlayerData_Req request, Center2C_GetPlayerData_Resp response,
         Action reply)
     {
-        if (!centerUnit.HasComponent<PlayerCoreDataEntity>())
+        if (!centerUnit.HasComponent<GameCoreDataEntity>())
         {
             //尝试从数据库中查询玩家数据
             var worldDataBase = centerUnit.Scene.World.DataBase;
-            var playerDataList = await worldDataBase.Query<PlayerCoreDataEntity>(d => d.PlayerId == centerUnit.PlayerId);
+            var playerDataList = await worldDataBase.Query<GameCoreDataEntity>(d => d.PlayerId == centerUnit.PlayerId);
             if (playerDataList.Count == 0) //玩家数据不存在
             {
                 response.ErrorCode = (int)ErrorCode.NoFoundData;
@@ -32,7 +32,7 @@ public class C2Center_GetPlayerDataHandler : RouteRPC<CenterUnit, C2Center_GetPl
             centerUnit.AddComponent(playerData);
         }
         
-        var playerCoreData = centerUnit.GetComponent<PlayerCoreDataEntity>();
+        var playerCoreData = centerUnit.GetComponent<GameCoreDataEntity>();
         response.PlayerId = playerCoreData.PlayerId;
         response.Name = playerCoreData.NickName;
         response.Lv = playerCoreData.Lv;

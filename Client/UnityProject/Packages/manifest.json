@@ -3,6 +3,7 @@
     "com.fantasy.unity": "file:F:/UnityProject/Fantasy/Fantasy/Fantasy.Unity/Fantasy.Unity",
     "com.qq.weixin.minigame": "https://github.com/wechat-miniprogram/minigame-tuanjie-transform-sdk.git",
     "com.unity.ai.navigation": "1.1.5",
+    "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.34",
     "com.unity.ide.visualstudio": "2.0.22",
     "com.unity.ide.vscode": "1.2.5",

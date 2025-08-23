@@ -1,5 +1,6 @@
 using Fantasy;
 using QFramework;
+using TEngine;
 
 namespace GameLogic
 {
@@ -27,8 +28,10 @@ namespace GameLogic
 
             if (res.ErrorCode == (int)ErrorCode.NoFoundData)
             {
-                
+                Log.Error("没有找到农田数据");
             }
+            
+            
         }
     }
 }

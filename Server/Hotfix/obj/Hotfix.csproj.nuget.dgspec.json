@@ -125,7 +125,7 @@
             },
             "MongoDB.Bson": {
               "target": "Package",
-              "version": "[3.4.1, )"
+              "version": "[3.4.2, )"
             },
             "protobuf-net": {
               "target": "Package",

@@ -58,6 +58,7 @@ namespace Fantasy
 			fertilizerCount = default;
 			maxFertilizerCount = default;
 			nextPestTime = default;
+			unlockTime = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<LandProto>(this);
 #endif
@@ -84,6 +85,8 @@ namespace Fantasy
 		public int maxFertilizerCount { get; set; }
 		[ProtoMember(11)]
 		public long nextPestTime { get; set; }
+		[ProtoMember(12)]
+		public long unlockTime { get; set; }
 	}
 	[ProtoContract]
 	public partial class GainProto : AMessage, IProto

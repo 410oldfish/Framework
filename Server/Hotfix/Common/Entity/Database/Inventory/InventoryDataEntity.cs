@@ -59,7 +59,7 @@ public sealed class On_InventoryDataEntity_Dispose : DestroySystem<InventoryData
     }
 }
 
-public class InventoryDataEntity : PlayerDataBase
+public class InventoryDataEntity : GameDataEntityBase
 {
     [BsonDictionaryOptions(DictionaryRepresentation.Document)]
     private Dictionary<string, int> ItemDictionary { get; set; } = new();

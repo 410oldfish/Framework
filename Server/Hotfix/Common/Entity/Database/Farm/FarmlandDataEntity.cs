@@ -12,7 +12,19 @@ public sealed class On_FarmlandDataEntity_AwakeSystem : AwakeSystem<FarmlandData
 {
     protected override void Awake(FarmlandDataEntity self)
     {
+        var worldDataBase = self.Scene.World.DataBase;
+        //开启自动存库任务
+        var timerId = self.Scene.TimerComponent.Net.RepeatedTimer(1000 * GameHelper.AUTO_SAVE_INTERVAL, () =>
+        {
+            if (self.IsDirty)
+            {
+                worldDataBase.Save<FarmlandDataEntity>(self);
+                self.ClearDirty(); // 清除脏标记
+                Log.Debug("Auto Save FarmlandDataEntityEntity: {0}", self.RuntimeId);
+            }
+        });
         
+        self.SetSaveTaskId(timerId);
     }
 }
 
@@ -20,11 +32,32 @@ public sealed class On_FarmlandDataEntity_Deserialize : DeserializeSystem<Farmla
 {
     protected override void Deserialize(FarmlandDataEntity self)
     {
+        var worldDataBase = self.Scene.World.DataBase;
+        //开启自动存库任务
+        var timerId = self.Scene.TimerComponent.Net.RepeatedTimer(1000 * GameHelper.AUTO_SAVE_INTERVAL, () =>
+        {
+            if (self.IsDirty)
+            {
+                worldDataBase.Save<FarmlandDataEntity>(self);
+                self.ClearDirty(); // 清除脏标记
+                Log.Debug("Auto Save FarmlandDataEntityEntity: {0}", self.RuntimeId);
+            }
+        });
         
+        self.SetSaveTaskId(timerId);
     }
 }
 
-public class FarmlandDataEntity : PlayerDataBase
+public sealed class On_PlayerCoreDataEntity_Dispose : DestroySystem<FarmlandDataEntity>
+{
+    protected override void Destroy(FarmlandDataEntity self)
+    {
+        self.Scene.TimerComponent.Net.Remove(self.SaveTaskId);
+        Log.Debug( "Dispose FarmlandDataEntityEntity: {0}", self.RuntimeId);
+    }
+}
+
+public class FarmlandDataEntity : GameDataEntityBase
 {
     enum ELandFriend
     {

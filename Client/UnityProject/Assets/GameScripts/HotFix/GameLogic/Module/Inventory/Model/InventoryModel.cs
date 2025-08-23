@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Fantasy;
+using GameConfig;
 using QFramework;
 using TEngine;
 
@@ -31,7 +32,26 @@ namespace GameLogic
         }
 
         Dictionary<int, int> inventoryData = new Dictionary<int, int>();
-        
+        public IReadOnlyDictionary<int, int> InventoryData
+        {
+            get => inventoryData;
+        }
+
+        public List<ItemProto> GetItemsByType(EItemType itemType)
+        {
+            var idRange = Misc.ItemTypeConfigIdRangeMap[itemType];
+            List<ItemProto> items = new List<ItemProto>();
+            foreach (var kvp in inventoryData)
+            {
+                if (kvp.Key >= idRange.Min && kvp.Key <= idRange.Max)
+                {
+                    items.Add(new ItemProto { Id = kvp.Key, Count = kvp.Value });
+                }
+            }
+
+            return items;
+        }
+
         public int GetItemCount(int itemId)
         {
             if (itemId == Misc.GOLD_ID) return Gold;

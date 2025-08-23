@@ -1,0 +1,148 @@
+2025-08-23 18:28:17.3552 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592377947058864128 CenterRouteId : 2592424143727099904
+2025-08-23 18:28:32.3396 (PlayerBaseDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2592446133959655424
+2025-08-23 18:28:32.4677 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:28:32.4699 (InventoryDataEntityEntity.cs:47)  Dirty : False
+2025-08-23 18:28:32.4699 (InventoryDataEntityEntity.cs:48) Auto Save InventoryDataEntity: 2592446133959655425
+2025-08-23 18:28:35.5294 (InventoryDataEntityEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-23 18:28:35.5294 (PlayerBaseDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:28:35.5294 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2592424143727099904
+2025-08-23 18:29:44.3891 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592615441570463744 CenterRouteId : 2592615458750332928
+2025-08-23 18:29:49.4732 (PlayerBaseDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2592615458750332929
+2025-08-23 18:29:49.4873 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:29:49.4873 (InventoryDataEntityEntity.cs:47)  Dirty : False
+2025-08-23 18:29:49.4873 (InventoryDataEntityEntity.cs:48) Auto Save InventoryDataEntity: 2592615458750332930
+2025-08-23 18:29:54.4990 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:29:59.5050 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:04.5175 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:09.5200 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:14.5204 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:19.5322 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:24.5425 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:29.5469 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:34.5583 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:39.5711 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:44.5759 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:49.5769 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:54.5840 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:30:59.5948 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:31:04.5944 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:31:09.5963 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:31:12.7472 (InventoryDataEntityEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-23 18:31:12.7472 (PlayerBaseDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:31:12.7547 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2592615458750332928
+2025-08-23 18:31:46.5733 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592877125337874432 CenterRouteId : 2592883739587510272
+2025-08-23 18:31:51.6318 (PlayerBaseDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2592883739587510273
+2025-08-23 18:31:51.6455 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:31:51.6455 (InventoryDataEntityEntity.cs:47)  Dirty : False
+2025-08-23 18:31:51.6455 (InventoryDataEntityEntity.cs:48) Auto Save InventoryDataEntity: 2592883739587510274
+2025-08-23 18:31:56.6493 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:01.6503 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:06.6543 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:11.6675 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:16.6767 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:21.6786 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:26.6865 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:32:31.5536 (InventoryDataEntityEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-23 18:32:31.5536 (PlayerBaseDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:32:31.5536 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2592883739587510272
+2025-08-23 18:33:44.1648 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2593143207151796224 CenterRouteId : 2593143224331665408
+2025-08-23 18:33:49.2255 (PlayerBaseDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2593143224331665409
+2025-08-23 18:33:49.2405 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:33:49.2405 (InventoryDataEntityEntity.cs:47)  Dirty : False
+2025-08-23 18:33:49.2405 (InventoryDataEntityEntity.cs:48) Auto Save InventoryDataEntity: 2593143224331665410
+2025-08-23 18:33:54.2516 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:33:59.2512 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:04.2593 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:09.2594 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:14.2600 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:19.2614 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:24.2614 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:29.2618 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:34.2617 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:39.2628 (InventoryDataEntityEntity.cs:42) 1111
+2025-08-23 18:34:44.2625  1111
+2025-08-23 18:34:49.2625  1111
+2025-08-23 18:34:52.5008  Dispose InventoryDataEntity: 0
+2025-08-23 18:34:52.5008  Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:34:52.5008  Dispose CenterUnit: 2593143224331665408
+2025-08-23 18:39:04.1903  建立到中心服的路由成功: 2593844695570317312 CenterRouteId : 2593846911773442048
+2025-08-23 18:39:09.2149  Auto Save PlayerCoreDataEntity: 2593846911773442049
+2025-08-23 18:39:09.2222  1111
+2025-08-23 18:39:09.2222   Dirty : False
+2025-08-23 18:39:09.2222  Auto Save InventoryDataEntity: 2593846911773442050
+2025-08-23 18:39:14.2173  1111
+2025-08-23 18:39:19.2186  1111
+2025-08-23 18:39:24.2181  1111
+2025-08-23 18:39:24.2251   Dirty : False
+2025-08-23 18:39:24.2251  Auto Save InventoryDataEntity: 2593846911773442050
+2025-08-23 18:39:29.2191  1111
+2025-08-23 18:39:34.2190  1111
+2025-08-23 18:39:39.2197  1111
+2025-08-23 18:39:44.2201  1111
+2025-08-23 18:39:49.2201  1111
+2025-08-23 18:39:54.2208  1111
+2025-08-23 18:39:59.2211  1111
+2025-08-23 18:40:04.2214  1111
+2025-08-23 18:40:09.2229  1111
+2025-08-23 18:40:14.2242  1111
+2025-08-23 18:40:14.2242   Dirty : False
+2025-08-23 18:40:14.2242  Auto Save InventoryDataEntity: 2593846911773442050
+2025-08-23 18:40:19.2246  1111
+2025-08-23 18:40:24.2246  1111
+2025-08-23 18:40:29.2242  1111
+2025-08-23 18:40:34.2258  1111
+2025-08-23 18:40:39.2288  1111
+2025-08-23 18:40:44.2290  1111
+2025-08-23 18:40:49.2283  1111
+2025-08-23 18:40:54.2296  1111
+2025-08-23 18:40:54.5893  Dispose InventoryDataEntity: 0
+2025-08-23 18:40:54.5893  Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:40:54.5893  Dispose CenterUnit: 2593846911773442048
+2025-08-23 18:41:02.1767  建立到中心服的路由成功: 2594104180314472448 CenterRouteId : 2594106396517597184
+2025-08-23 18:41:07.2066  Auto Save PlayerCoreDataEntity: 2594106396517597185
+2025-08-23 18:41:07.2066  1111
+2025-08-23 18:41:07.2066   Dirty : False
+2025-08-23 18:41:07.2066  Auto Save InventoryDataEntity: 2594106396517597186
+2025-08-23 18:41:12.2135  1111
+2025-08-23 18:41:17.2144  1111
+2025-08-23 18:41:22.2145  1111
+2025-08-23 18:41:27.2150  1111
+2025-08-23 18:41:30.8442  Dispose InventoryDataEntity: 0
+2025-08-23 18:41:30.8442  Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:41:30.8442  Dispose CenterUnit: 2594106396517597184
+2025-08-23 18:41:38.4186  建立到中心服的路由成功: 2594181146128416768 CenterRouteId : 2594185561354797056
+2025-08-23 18:41:45.1105  Auto Save PlayerCoreDataEntity: 2594189959401308160
+2025-08-23 18:41:45.1105  1111
+2025-08-23 18:41:45.1105   Dirty : False
+2025-08-23 18:41:45.1105  Auto Save InventoryDataEntity: 2594189959401308161
+2025-08-23 18:41:50.1129  1111
+2025-08-23 18:41:55.1127  1111
+2025-08-23 18:45:19.7702 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2589059620966236160 CenterRouteId : 2589061837169360896
+2025-08-23 18:45:26.3776 (GameCoreDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2589064036192616448
+2025-08-23 18:45:26.4857 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:45:26.4857 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-23 18:45:26.4857 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589064036192616449
+2025-08-23 18:45:31.4846 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:45:36.4848 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:45:41.4855 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:45:46.4873 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:45:46.4873 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-23 18:45:46.4873 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589064036192616449
+2025-08-23 18:45:51.4877 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:45:56.4880 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:01.4903 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:06.4909 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:11.4908 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:16.4901 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:21.4915 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:26.4918 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:31.4930 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:36.4933 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:41.4938 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:46.4939 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:51.4939 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:46:56.4937 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:47:01.4937 (InventoryDataEntity.cs:42) 1111
+2025-08-23 18:47:03.6403 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-23 18:47:03.6408 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-23 18:47:03.6408 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2589061837169360896

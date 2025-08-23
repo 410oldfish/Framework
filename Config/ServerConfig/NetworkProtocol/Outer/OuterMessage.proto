@@ -28,6 +28,7 @@ message LandProto
 	int32 fertilizerCount = 9;
 	int32 maxFertilizerCount = 10;
 	int64 nextPestTime = 11;
+	int64 unlockTime = 12;
 }
 
 message GainProto

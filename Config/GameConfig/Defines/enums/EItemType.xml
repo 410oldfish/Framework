@@ -1,0 +1,23 @@
+<module name="">	
+	<enum name="EItemType">
+		<var name="Common" alias="通用道具" value="0"/>
+		
+		<var name="Seed" alias="种子" value="1"/>
+		<var name="Crop" alias="农作物" value="2"/>
+		<var name="Fertilizer" alias="肥料" value="3"/>
+		<var name="DePester" alias="杀虫剂" value="4"/>
+		
+		<var name="Cub" alias="幼崽" value="5"/>
+		<var name="Livestock" alias="牲畜" value="6"/>
+		<var name="RanchProduct" alias="牧场产品" value="7"/>
+		<var name="RanchByProduct" alias="牧场副产品" value="8"/>
+		
+		<var name="Fry" alias="鱼苗" value="9"/>
+		<var name="Fish" alias="鱼" value="10"/>
+		<var name="FishProduct" alias="渔场产品" value="11"/>
+		
+		<var name="Worker" alias="雇员" value="12"/>
+		
+		<var name="Forniture" alias="家具" value="13"/>
+	</enum>
+</module>

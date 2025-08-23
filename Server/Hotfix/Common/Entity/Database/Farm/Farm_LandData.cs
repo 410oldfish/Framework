@@ -4,6 +4,29 @@ using Hotfix.Common.Misc.CustomClass;
 
 namespace Hotfix;
 
+
+/// <summary>
+/// landId 唯一标识一个土地
+/// landType 土地类型
+/// landUnlockTime 土地解锁时间
+/// seedId 种子ID
+/// startTime 种植开始时间
+/// harvestTime 收获时间
+/// yieldCount 产量
+/// rareRate 稀有率
+/// yieldRate 产量倍率
+/// gainTimeList 收获时间列表
+/// stealPlayerList 偷菜玩家列表
+/// stealYieldCount 偷菜产量
+/// nextWaterTime 下次浇水时间
+/// waterCount 浇水次数
+/// maxWaterCount 最大浇水次数
+/// fertilizerCount 施肥次数
+/// maxFertilizerCount 最大施肥次数
+/// nextPestTime 下次除虫时间
+/// pestCount 除虫次数
+/// maxPestCount 最大除虫次数
+/// </summary>
 public class Farm_LandData
 {
     private int _landId;

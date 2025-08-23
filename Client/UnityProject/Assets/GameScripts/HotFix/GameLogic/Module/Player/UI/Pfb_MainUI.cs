@@ -1,3 +1,4 @@
+using GameConfig;
 using GameLogic.GameScripts.HotFix.GameLogic;
 using QFramework;
 using UnityEngine;
@@ -19,6 +20,8 @@ namespace GameLogic
         private TMP_InputField _tInputItemIdInput;
         private TMP_InputField _tInputItemCountInput;
 
+        private Button _btnBag;
+
         private InventoryModel _inventoryModel;
         protected override void ScriptGenerator()
         {
@@ -29,6 +32,12 @@ namespace GameLogic
             _btnCostItems = FindChildComponent<Button>("m_btnCostItems");
             _tInputItemIdInput = FindChildComponent<TMP_InputField>("m_tInputItemIdInput");
             _tInputItemCountInput = FindChildComponent<TMP_InputField>("m_tInputItemCountInput");
+            _btnBag = FindChildComponent<Button>("m_btn_Bag");
+            
+            _btnBag.onClick.AddListener(() =>
+            {
+                GameModule.UI.ShowUI<Pfb_Bag>(EGameModule.Farmland);
+            });
             _btnGetItems.onClick.AddListener(OnClickGetItemsBtn);
             _btnCostItems.onClick.AddListener(OnClickCostItemsBtn);
         }

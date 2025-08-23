@@ -59,7 +59,7 @@ public class C2Center_Farmland_UnlockLandHandler : RouteRPC<CenterUnit, C2Center
         
         //检查等级
         int unlockLevel = configHelper.FarmlandUnlockConfig.Get(request.LandId).NeedLv;
-        var playerCoreData = centerUnit.GetComponent<PlayerCoreDataEntity>();
+        var playerCoreData = centerUnit.GetComponent<GameCoreDataEntity>();
         if(playerCoreData.Lv < unlockLevel)
         {
             response.ErrorCode = 5; // 等级不足

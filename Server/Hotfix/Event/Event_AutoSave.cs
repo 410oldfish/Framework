@@ -2,7 +2,7 @@
 
 namespace Hotfix;
 
-public struct Event_AutoSave<T>  where T : PlayerDataBase
+public struct Event_AutoSave<T>  where T : GameDataEntityBase
 {
     public T Data;
 

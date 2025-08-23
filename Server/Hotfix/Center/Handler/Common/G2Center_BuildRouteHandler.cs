@@ -17,7 +17,7 @@ public class G2Center_BuildRouteHandler : RouteRPC<Scene, G2Center_BuildRoute_Re
         response.CenterRouteId = centerUnit.RuntimeId;
         // 获得操作DB的接口
         var worldDataBase = entity.World.DataBase;
-        bool existPlayer = await worldDataBase.Exist<PlayerCoreDataEntity>(d => d.PlayerId == request.PlayerId);
+        bool existPlayer = await worldDataBase.Exist<GameCoreDataEntity>(d => d.PlayerId == request.PlayerId);
         response.IsNewPlayer = !existPlayer;
         await FTask.CompletedTask;
     }
