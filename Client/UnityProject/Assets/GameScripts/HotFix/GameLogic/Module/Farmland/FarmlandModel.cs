@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using Fantasy;
 using GameConfig.farm;
 using QFramework;
+using TEngine;
 
 namespace GameLogic
 {
@@ -28,6 +29,22 @@ namespace GameLogic
             {
                 var landData = new Farm_LandData(proto);
                 _landDataDic[landData.LandId] = landData;
+            }
+            GameEvent.Send(EventID.FARMLAND_LAND_UPDATE_DATA_ALL);
+        }
+
+        public void UpdateLandData(LandProto proto)
+        {
+            var landData = new Farm_LandData(proto);
+            _landDataDic[landData.LandId] = landData;
+            GameEvent.Send(EventID.FARMLAND_LAND_UPDATE_DATA, proto.landId);
+        }
+
+        public void UpdateLandType(int landId, ELandType landType)
+        {
+            if (_landDataDic.TryGetValue(landId, out var landData))
+            {
+                landData.LandType = landType;
             }
         }
     }

@@ -64,7 +64,7 @@ namespace GameLogic
             return inventoryData[itemId];
         }
         
-        public void SetItemCount(int itemId, int count, bool sendEvent = true)
+        private void SetItemCount(int itemId, int count)
         {
             if(itemId == Misc.GOLD_ID)
             {
@@ -90,14 +90,9 @@ namespace GameLogic
             {
                 inventoryData[itemId] = count;
             }
-            
-            if(sendEvent)
-            {
-                GameEvent.Send(EventID.INVENTORY_ITEM_COUNT_CHANGE, new List<int>{itemId}, new List<int>{count});
-            }
         }
         
-        public void SetItemCounts(List<ItemProto> items)
+        public void UpdateAllItems(List<ItemProto> items)
         {
             if(items.Count == 0)
             {
@@ -106,12 +101,18 @@ namespace GameLogic
 
             foreach (var item in items)
             {
-                SetItemCount(item.Id, item.Count, false);
+                SetItemCount(item.Id, item.Count);
             }
 
-            GameEvent.Send(EventID.INVENTORY_ITEM_COUNT_CHANGE, items);
+            GameEvent.Send(EventID.INVENTORY_ITEM_UPDATE_ALL);
         }
-        
+
+        public void UpdateItem(ItemProto proto)
+        {
+            SetItemCount(proto.Id, proto.Count);
+            GameEvent.Send(EventID.INVENTORY_ITEM_UPDATE, proto.Id);
+        }
+
         protected override void OnInit()
         {
             

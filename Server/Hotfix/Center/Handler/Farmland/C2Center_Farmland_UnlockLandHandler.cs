@@ -23,7 +23,7 @@ public class C2Center_Farmland_UnlockLandHandler : RouteRPC<CenterUnit, C2Center
         var farmlandData = centerUnit.GetComponent<FarmlandDataEntity>();
 
         // 检查地块是否已解锁
-        if (farmlandData.IsLandUnlocked(request.LandId))
+        if (farmlandData.IsLandExist(request.LandId))
         {
             response.ErrorCode = 2; // 地块已解锁
             return;

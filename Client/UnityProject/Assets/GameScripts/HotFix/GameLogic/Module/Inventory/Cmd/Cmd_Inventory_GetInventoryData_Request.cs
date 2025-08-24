@@ -26,7 +26,7 @@ namespace GameLogic
                 return false;
             }
             
-            this.GetModel<InventoryModel>().SetItemCounts(res.Items);
+            this.GetModel<InventoryModel>().UpdateAllItems(res.Items);
             return true;
         }
     }

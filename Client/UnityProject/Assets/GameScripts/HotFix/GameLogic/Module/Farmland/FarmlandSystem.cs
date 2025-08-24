@@ -5,7 +5,7 @@ using TEngine;
 namespace GameLogic
 {
     //农场的控制器
-    public class FarmlandCtrl : AbstractSystem, ICanSendCommand
+    public class FarmlandSystem : AbstractSystem, ICanSendCommand
     {
         protected override void OnInit()
         {

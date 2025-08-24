@@ -24,7 +24,7 @@ public class C2Center_Farmland_GainYieldHandler : RouteRPC<CenterUnit, C2Center_
         //土地检查
         foreach (var landId in landIds)
         {
-            if (!farmlandComponent.IsLandUnlocked(landId))
+            if (!farmlandComponent.IsLandExist(landId))
             {
                 response.ErrorCode = (int)ErrorCode.LandNotUnlocked;
                 return;

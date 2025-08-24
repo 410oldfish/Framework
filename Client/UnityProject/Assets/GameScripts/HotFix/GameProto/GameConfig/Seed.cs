@@ -18,6 +18,7 @@ public sealed partial class Seed : ItemBase
     {
         SeedType = (farm.ESeedType)_buf.ReadInt();
         GrowTime = _buf.ReadInt();
+        StageTime = _buf.ReadInt();
         YieldCount = item.ItemExchangeRange.DeserializeItemExchangeRange(_buf);
         RareRate = _buf.ReadInt();
         RareYieldCount = item.ItemExchangeRange.DeserializeItemExchangeRange(_buf);
@@ -39,6 +40,7 @@ public sealed partial class Seed : ItemBase
 
     public readonly farm.ESeedType SeedType;
     public readonly int GrowTime;
+    public readonly int StageTime;
     public readonly item.ItemExchangeRange YieldCount;
     public readonly int RareRate;
     public readonly item.ItemExchangeRange RareYieldCount;
@@ -72,6 +74,7 @@ public sealed partial class Seed : ItemBase
         + "desc:" + Desc + ","
         + "seedType:" + SeedType + ","
         + "growTime:" + GrowTime + ","
+        + "stageTime:" + StageTime + ","
         + "yieldCount:" + YieldCount + ","
         + "rareRate:" + RareRate + ","
         + "rareYieldCount:" + RareYieldCount + ","

@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using GameConfig;
+using GameConfig.farm;
+using GameConfig.site;
+using UnityEngine;
 
 namespace GameLogic
 {
@@ -287,6 +290,42 @@ namespace GameLogic
                 default:
                     return "Unknown Item Type";
             }
+        }
+
+        public static string GetLandTypeImgPath(ELandType landType)
+        {
+            return "img_landtype_" + (int)landType;
+        }
+        
+        public static string GetSeedImgPath(int seedId, int stage)
+        {
+            return "img_seed_" + seedId.ToString()+ "_" + stage.ToString();
+        }
+        
+        /// <summary>
+        /// 秒数转换为时分秒格式的字符串
+        /// </summary>
+        /// <param name="second"></param>
+        /// <returns></returns>
+        public static string SecondToTimeString(long second)
+        {
+            // 将秒数转换为时分秒格式的字符串
+            long hours = second / 3600;
+            long minutes = (second % 3600) / 60;
+            long seconds = second % 60;
+            return $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+        }
+        
+        /// <summary>
+        ///  将世界坐标转换为屏幕坐标
+        /// </summary>
+        /// <param name="worldPosition"></param>
+        /// <returns></returns>
+        public static Vector2 GetScreenPositionByWorldPosition(Vector3 worldPosition)
+        {
+            // 将世界坐标转换为屏幕坐标
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
+            return new Vector2(screenPos.x, screenPos.y);
         }
     }
 }

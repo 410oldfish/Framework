@@ -543,6 +543,49 @@ namespace Fantasy
 		public uint ErrorCode { get; set; }
 	}
 	[ProtoContract]
+	public partial class C2Center_Farmland_FinishUnlockLand_Req : AMessage, ICustomRouteRequest, IProto
+	{
+		public static C2Center_Farmland_FinishUnlockLand_Req Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<C2Center_Farmland_FinishUnlockLand_Req>();
+		}
+		public override void Dispose()
+		{
+			LandId = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<C2Center_Farmland_FinishUnlockLand_Req>(this);
+#endif
+		}
+		[ProtoIgnore]
+		public Center2C_Farmland_FinishUnlockLand_Resp ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2Center_Farmland_FinishUnlockLand_Req; }
+		[ProtoIgnore]
+		public int RouteType => Fantasy.RouteType.CenterRoute;
+		[ProtoMember(1)]
+		public int LandId { get; set; }
+	}
+	[ProtoContract]
+	public partial class Center2C_Farmland_FinishUnlockLand_Resp : AMessage, ICustomRouteResponse, IProto
+	{
+		public static Center2C_Farmland_FinishUnlockLand_Resp Create(Scene scene)
+		{
+			return scene.MessagePoolComponent.Rent<Center2C_Farmland_FinishUnlockLand_Resp>();
+		}
+		public override void Dispose()
+		{
+			ErrorCode = default;
+			LandType = default;
+#if FANTASY_NET || FANTASY_UNITY
+			GetScene().MessagePoolComponent.Return<Center2C_Farmland_FinishUnlockLand_Resp>(this);
+#endif
+		}
+		public uint OpCode() { return OuterOpcode.Center2C_Farmland_FinishUnlockLand_Resp; }
+		[ProtoMember(1)]
+		public int LandType { get; set; }
+		[ProtoMember(2)]
+		public uint ErrorCode { get; set; }
+	}
+	[ProtoContract]
 	public partial class C2Center_Farmland_ChangeLandType_Req : AMessage, ICustomRouteRequest, IProto
 	{
 		public static C2Center_Farmland_ChangeLandType_Req Create(Scene scene)

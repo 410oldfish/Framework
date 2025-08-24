@@ -24,7 +24,7 @@ public class C2Center_Farmland_Seed_Handler : RouteRPC<CenterUnit, C2Center_Farm
         int seedId = request.SeedId;
         
         var farmland = entity.GetComponent<FarmlandDataEntity>();
-        if (!farmland.IsLandUnlocked(landId))
+        if (!farmland.IsLandExist(landId))
         {
             response.ErrorCode = (int)ErrorCode.LandNotUnlocked;
             return;

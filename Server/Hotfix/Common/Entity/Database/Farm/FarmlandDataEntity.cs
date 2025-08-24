@@ -75,6 +75,13 @@ public class FarmlandDataEntity : GameDataEntityBase
         if (!_landDataDic.ContainsKey(landIdStr)) return null;
         return _landDataDic[landIdStr];
     }
+    
+    public ELandType GetLandType(int landId)
+    {
+        var landData = GetLandData(landId);
+        if (landData == null) return ELandType.Lock;
+        return landData.LandType;
+    }
 
     public List<LandProto> GetLandDataList()
     {
@@ -122,7 +129,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     }
 
     //是否解锁，包括解锁中状态也算解锁
-    public bool IsLandUnlocked(int landId)
+    public bool IsLandExist(int landId)
     {
         string landIdStr = landId.ToString();
         return _landDataDic.ContainsKey(landIdStr);
@@ -131,7 +138,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     public long UnlockLand(int landId)
     {
         string landIdStr = landId.ToString();
-        if (IsLandUnlocked(landId))
+        if (IsLandExist(landId))
         {
             return -1; // 地块已解锁
         }
@@ -147,12 +154,36 @@ public class FarmlandDataEntity : GameDataEntityBase
         SetDirty();
         return currentTime; // 成功解锁地块
     }
+    
+    public bool FinishUnlockLand(int landId)
+    {
+        if(!IsLandExist(landId))
+        {
+            return false; // 地块不存在
+        }
+        var landData = GetLandData(landId);
+        if(landData.LandType != ELandType.Unlocking)
+        {
+            return false; // 地块未处于解锁中状态
+        }
+        var configHelper = this.Scene.GetComponent<ConfigHelper>();
+        var landConfig = configHelper.FarmlandUnlockConfig.Get(landId);
+        var unlockNeedTime = landConfig.Time;
+        var unlockTime = landData.LandUnlockTime + unlockNeedTime;
+        if(TimeHelper.Now < unlockTime)
+        {
+            return false; // 解锁时间未到
+        }
+        landData.LandType = ELandType.Normal; // 设置为正常状态
+        return true;
+    }
+    
     //修改土地类型
     public bool ChangeLandType(int landId, ELandType landType)
     {
-        if(!IsLandUnlocked(landId))
+        if(!IsLandExist(landId))
         {
-            return false; // 地块未解锁
+            return false; // 地块不存在
         }
 
         var landData = GetLandData(landId);
@@ -170,7 +201,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     //土地是否空闲(已完成解锁，并且没有种植作物)
     public bool IsLandFree(int landId)
     {
-        if (!IsLandUnlocked(landId)) return false;
+        if (!IsLandExist(landId)) return false;
         
         Farm_LandData landData = GetLandData(landId);
         if(landData == null || landData.LandType <= ELandType.Unlocking)
@@ -457,7 +488,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     /// <returns></returns>
     public LandProto? ClearSeed(int landId)
     {
-        if(!IsLandUnlocked(landId)) return null;
+        if(!IsLandExist(landId)) return null;
         if(IsLandFree(landId)) return null; // 地块未种植作物
         var landData = GetLandData(landId);
         if(landData == null) return null;
@@ -490,7 +521,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     /// <returns></returns>
     private bool ResetMutiHarvest(int landId)
     {
-        if(!IsLandUnlocked(landId)) return false;
+        if(!IsLandExist(landId)) return false;
         if(IsLandFree(landId)) return false; // 地块未种植作物
         var landData = GetLandData(landId);
         if(landData == null) return false;
@@ -571,7 +602,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     /// <returns></returns>
     private GainProto? Gain(int landId)
     {
-        if (!IsLandUnlocked(landId)) return null;
+        if (!IsLandExist(landId)) return null;
         if(!CanHarvest(landId)) return null;
         var landData = GetLandData(landId);
         if(landData == null) return null;
@@ -653,7 +684,7 @@ public class FarmlandDataEntity : GameDataEntityBase
     /// <returns></returns>
     private bool CanLandOperate(int landId)
     {
-        if(!IsLandUnlocked(landId)) return false; // 土地未解锁
+        if(!IsLandExist(landId)) return false; // 土地未解锁
         var landData = GetLandData(landId);
         if(landData == null) return false; // 土地数据不存在
         if(landData.LandType <= ELandType.Unlocking) return false; // 土地未解锁或解锁中

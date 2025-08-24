@@ -32,7 +32,7 @@ public class C2Center_Farmland_ChangeLandTypeHandler : RouteRPC<CenterUnit, C2Ce
         }
         
         var farmlandComponent = entity.GetComponent<FarmlandDataEntity>();
-        if (!farmlandComponent.IsLandUnlocked(landId))
+        if (!farmlandComponent.IsLandExist(landId))
         {
             response.ErrorCode = (int)ErrorCode.InvalidLandId;
             return;

@@ -2,6 +2,7 @@
 	<bean name="Seed" parent="ItemBase" sep=",">
 		<var name="seedType" type="farm.ESeedType" />
 		<var name="growTime" type="int" />
+		<var name="stageTime" type="int" />
 		<var name="yieldCount" type="item.ItemExchangeRange" />
 		<var name="rareRate" type="int" />
 		<var name="rareYieldCount" type="item.ItemExchangeRange" />

@@ -1,0 +1,15 @@
+2025-08-24 14:17:14.2985 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2589024436594147328 CenterRouteId : 2589116812750749696
+2025-08-24 14:17:19.4788 (GameCoreDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2589119011774005248
+2025-08-24 14:17:19.4788 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:19.4788 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-24 14:17:19.4788 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2589119011774005249
+2025-08-24 14:17:24.4811 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:29.4817 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:34.4818 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:39.4817 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:44.4830 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:49.4850 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:54.4840 (InventoryDataEntity.cs:42) 1111
+2025-08-24 14:17:55.7509 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-24 14:17:55.7509 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-24 14:17:55.7509 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2589116812750749696

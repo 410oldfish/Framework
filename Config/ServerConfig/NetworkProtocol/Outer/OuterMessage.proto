@@ -163,6 +163,17 @@ message Center2C_Farmland_UnlockLand_Resp // ICustomRouteResponse
 	repeated ItemProto CurItems = 2;
 }
 
+//请求完成解锁
+message C2Center_Farmland_FinishUnlockLand_Req // ICustomRouteRequest, Center2C_Farmland_FinishUnlockLand_Resp, CenterRoute
+{
+	int32 LandId = 1;
+}
+
+message Center2C_Farmland_FinishUnlockLand_Resp // ICustomRouteResponse
+{
+	int32 LandType = 1;
+}
+
 //请求修改农田类型
 message C2Center_Farmland_ChangeLandType_Req // ICustomRouteRequest, Center2C_Farmland_ChangeLandType_Resp, CenterRoute
 {
