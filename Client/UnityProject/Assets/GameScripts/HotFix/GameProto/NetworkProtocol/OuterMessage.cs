@@ -518,7 +518,7 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
-			UnlockStartTime = default;
+			LandData = default;
 			CurItems.Clear();
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_UnlockLand_Resp>(this);
@@ -526,7 +526,7 @@ namespace Fantasy
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_UnlockLand_Resp; }
 		[ProtoMember(1)]
-		public long UnlockStartTime { get; set; }
+		public LandProto LandData { get; set; }
 		[ProtoMember(2)]
 		public List<ItemProto> CurItems = new List<ItemProto>();
 		[ProtoMember(3)]
@@ -895,14 +895,14 @@ namespace Fantasy
 		public override void Dispose()
 		{
 			ErrorCode = default;
-			FertilizerCount = default;
+			LandData = default;
 #if FANTASY_NET || FANTASY_UNITY
 			GetScene().MessagePoolComponent.Return<Center2C_Farmland_Fertilizer_Resp>(this);
 #endif
 		}
 		public uint OpCode() { return OuterOpcode.Center2C_Farmland_Fertilizer_Resp; }
 		[ProtoMember(1)]
-		public int FertilizerCount { get; set; }
+		public LandProto LandData { get; set; }
 		[ProtoMember(2)]
 		public uint ErrorCode { get; set; }
 	}

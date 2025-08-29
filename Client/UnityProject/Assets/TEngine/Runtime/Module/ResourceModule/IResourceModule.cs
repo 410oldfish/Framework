@@ -254,6 +254,13 @@ namespace TEngine
         AssetHandle LoadAssetAsyncHandle<T>(string location, string packageName = "") where T : UnityEngine.Object;
 
         /// <summary>
+        /// 异步加载子资源对象
+        /// </summary>
+        /// <typeparam name="TObject">资源类型</typeparam>
+        /// <param name="location">资源的定位地址</param>
+        UniTask<TObject> LoadSubAssetsAsync<TObject>(string location, string subAssetsName) where TObject : UnityEngine.Object;
+        
+        /// <summary>
         /// 清理包裹未使用的缓存文件。
         /// </summary>
         /// <param name="clearMode">文件清理方式。</param>

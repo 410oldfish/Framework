@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: atlas_landtypes
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -510745428, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: 1759779906, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: 1001492550, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: 720161123, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: -1980435100, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: 499015639, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: -535382583, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: -1500120335, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    - {fileID: 1961148765, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 86a1bca7aa4d3b94887844473885af96: 1961148765
+    - 86a1bca7aa4d3b94887844473885af96: 1001492550
+    - 86a1bca7aa4d3b94887844473885af96: 720161123
+    - 86a1bca7aa4d3b94887844473885af96: -510745428
+    - 86a1bca7aa4d3b94887844473885af96: 1759779906
+    - 86a1bca7aa4d3b94887844473885af96: -535382583
+    - 86a1bca7aa4d3b94887844473885af96: -1500120335
+    - 86a1bca7aa4d3b94887844473885af96: -1980435100
+    - 86a1bca7aa4d3b94887844473885af96: 499015639
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1961148765, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: 1001492550, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: 720161123, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: -510745428, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: 1759779906, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: -535382583, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: -1500120335, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: -1980435100, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  - {fileID: 499015639, guid: 86a1bca7aa4d3b94887844473885af96, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - img_landtypes_8
+  - img_landtypes_2
+  - img_landtypes_3
+  - img_landtypes_0
+  - img_landtypes_1
+  - img_landtypes_6
+  - img_landtypes_7
+  - img_landtypes_4
+  - img_landtypes_5
+  m_RenderDataMap: {}
+  m_Tag: atlas_landtypes
+  m_IsVariant: 0

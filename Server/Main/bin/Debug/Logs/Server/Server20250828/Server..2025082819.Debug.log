@@ -1,0 +1,27 @@
+2025-08-28 19:07:44.3017 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2591131100872966144 CenterRouteId : 2591133317076090880
+2025-08-28 19:07:49.5502 (GameCoreDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2591133317076090881
+2025-08-28 19:07:49.5676 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:07:49.5730 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-28 19:07:49.5730 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2591133317076090882
+2025-08-28 19:07:54.5818 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:07:59.5816 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:04.5822 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:09.5839 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:14.5842 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:19.5841 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:24.5847 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:29.5841 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:34.5906 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:36.9555 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2591247649105510400 CenterRouteId : 2591247666285379584
+2025-08-28 19:08:37.5049 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-28 19:08:37.5049 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-28 19:08:37.5049 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2591133317076090880
+2025-08-28 19:08:43.4277 (GameCoreDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2591252064331890688
+2025-08-28 19:08:43.4415 (InventoryDataEntity.cs:42) 1111
+2025-08-28 19:08:43.4415 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-28 19:08:43.4415 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2591252064331890689
+2025-08-28 19:08:43.4448 (FarmlandDataEntity.cs:23) Auto Save FarmlandDataEntityEntity: 2591252064331890690
+2025-08-28 19:08:47.0370 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-28 19:08:47.0370 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-28 19:08:47.0370 (FarmlandDataEntity.cs:56) Dispose FarmlandDataEntityEntity: 0
+2025-08-28 19:08:47.0370 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2591247666285379584

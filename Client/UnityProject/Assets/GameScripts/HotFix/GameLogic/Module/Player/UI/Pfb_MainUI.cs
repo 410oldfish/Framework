@@ -21,6 +21,7 @@ namespace GameLogic
         private TMP_InputField _tInputItemCountInput;
 
         private Button _btnBag;
+        private Button _btnFarmland;
 
         private InventoryModel _inventoryModel;
         protected override void ScriptGenerator()
@@ -33,11 +34,17 @@ namespace GameLogic
             _tInputItemIdInput = FindChildComponent<TMP_InputField>("m_tInputItemIdInput");
             _tInputItemCountInput = FindChildComponent<TMP_InputField>("m_tInputItemCountInput");
             _btnBag = FindChildComponent<Button>("m_btn_Bag");
+            _btnFarmland = FindChildComponent<Button>("m_btn_Farmland");
             
             _btnBag.onClick.AddListener(() =>
             {
                 GameModule.UI.ShowUI<Pfb_Bag>(EGameModule.Farmland);
             });
+            _btnFarmland.onClick.AddListener(() =>
+            {
+                this.GetSystem<MainSystem>().OpenModule(EGameModule.Farmland);
+            });
+            
             _btnGetItems.onClick.AddListener(OnClickGetItemsBtn);
             _btnCostItems.onClick.AddListener(OnClickCostItemsBtn);
         }
@@ -51,6 +58,9 @@ namespace GameLogic
         }
 
         #region 事件
+        
+
+        
         private void OnClickGetItemsBtn()
         {
             this.SendCommand(new Cmd_Inventory_GetItems_Request()

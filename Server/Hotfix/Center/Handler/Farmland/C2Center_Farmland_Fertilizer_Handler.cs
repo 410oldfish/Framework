@@ -12,6 +12,7 @@ public class C2Center_Farmland_Fertilizer_Handler : RouteRPC<CenterUnit, C2Cente
     {
         Success = 0,
         NoEnoughFertilizer = 1, // 库存中没有足够的肥料
+        UnknownError = 2, //未知错误
     }
     protected override async FTask Run(CenterUnit entity, C2Center_Farmland_Fertilizer_Req request, Center2C_Farmland_Fertilizer_Resp response,
         Action reply)
@@ -28,5 +29,12 @@ public class C2Center_Farmland_Fertilizer_Handler : RouteRPC<CenterUnit, C2Cente
 
         var farmlandData = entity.GetComponent<FarmlandDataEntity>();
         var landData = farmlandData.Fertilizer(landId, fertilizerId);
+        if (landData == null)
+        {
+            response.ErrorCode = (int)ErrorCode.UnknownError; // 未知错误
+            return;
+        }
+
+        response.LandData = landData;
     }
 }

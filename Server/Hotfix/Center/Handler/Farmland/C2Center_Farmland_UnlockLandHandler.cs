@@ -70,10 +70,10 @@ public class C2Center_Farmland_UnlockLandHandler : RouteRPC<CenterUnit, C2Center
         var curItems = inventory.RemoveItems(costItems);
         
         // 解锁地块
-        long unlockStartTime = farmlandData.UnlockLand(request.LandId);
+        var newLandProto = farmlandData.UnlockLand(request.LandId);
 
         //--------------同步客户端----------------------------
-        response.UnlockStartTime = unlockStartTime;
+        response.LandData = newLandProto;
         response.CurItems = curItems;
     }
 }

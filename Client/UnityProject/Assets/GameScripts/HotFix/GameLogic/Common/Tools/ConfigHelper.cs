@@ -9,5 +9,6 @@ namespace GameLogic
         //Fast Config
         public static TbFarmlandUnlock FarmlandUnlockConfig = ConfigSystem.Instance.Tables.TbFarmlandUnlock;
         public static TbSeed SeedConfig = ConfigSystem.Instance.Tables.TbSeed;
+        public static TbFarmlandType FarmlandTypeConfig = ConfigSystem.Instance.Tables.TbFarmlandType;
     }
 }

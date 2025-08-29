@@ -35,5 +35,9 @@ public class C2Center_CreatePlayerHandler : RouteRPC<CenterUnit, C2Center_Create
         //Inventory
         var inventoryData = centerUnit.AddComponent<InventoryDataEntity>();
         inventoryData.SetPlayerId(playerId);
+        
+        //Farmland
+        var farmlandData = centerUnit.AddComponent<FarmlandDataEntity>();
+        farmlandData.SetPlayerId(playerId);
     }
 }

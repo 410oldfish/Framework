@@ -31,7 +31,8 @@ namespace GameLogic
                 Log.Error("没有找到农田数据");
             }
             
-            
+            var farmlandModel = this.GetModel<FarmlandModel>();
+            farmlandModel.SetFarmlandDatas(res.FarmlandData);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Fantasy;
 using GameConfig;
+using GameConfig.item;
 using QFramework;
 using TEngine;
 
@@ -92,7 +93,7 @@ namespace GameLogic
             }
         }
         
-        public void UpdateAllItems(List<ItemProto> items)
+        public void UpdateItems(List<ItemProto> items)
         {
             if(items.Count == 0)
             {
@@ -111,6 +112,33 @@ namespace GameLogic
         {
             SetItemCount(proto.Id, proto.Count);
             GameEvent.Send(EventID.INVENTORY_ITEM_UPDATE, proto.Id);
+        }
+
+        public bool CheckItemsCount(List<ItemExchange> items)
+        {
+            foreach (var item in items)
+            {
+                if (!CheckItemCount(item))
+                {
+                    return false; // 只要有一个物品数量不足就返回false
+                }
+            }
+            return true; // 所有物品数量都足够
+        }
+
+        /// <summary>
+        /// 检查物品数量是否足够
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public bool CheckItemCount(ItemExchange item)
+        {
+            return GetItemCount(item.Id) >= item.Count;
+        }
+
+        public bool CheckItemCountOne(int itemId)
+        {
+            return GetItemCount(itemId) >= 1;
         }
 
         protected override void OnInit()

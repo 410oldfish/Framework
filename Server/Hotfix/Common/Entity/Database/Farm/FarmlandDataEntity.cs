@@ -135,24 +135,25 @@ public class FarmlandDataEntity : GameDataEntityBase
         return _landDataDic.ContainsKey(landIdStr);
     }
     //解锁
-    public long UnlockLand(int landId)
+    public LandProto UnlockLand(int landId)
     {
         string landIdStr = landId.ToString();
         if (IsLandExist(landId))
         {
-            return -1; // 地块已解锁
+            return null; // 地块已解锁
         }
         
         long currentTime = TimeHelper.Now;
-        _landDataDic.Add(landIdStr, new Farm_LandData()
+        var newLandBlock = new Farm_LandData()
         {
             LandId = landId,
             LandType = ELandType.Unlocking, // 解锁中状态
             LandUnlockTime = currentTime,
-        });
-
+        };
+        _landDataDic.Add(landIdStr, newLandBlock);
+        LandProto proto = GetLandProtoFromLandData(newLandBlock);
         SetDirty();
-        return currentTime; // 成功解锁地块
+        return proto; // 成功解锁地块
     }
     
     public bool FinishUnlockLand(int landId)

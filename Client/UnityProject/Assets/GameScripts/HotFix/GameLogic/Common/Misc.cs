@@ -294,7 +294,7 @@ namespace GameLogic
 
         public static string GetLandTypeImgPath(ELandType landType)
         {
-            return "img_landtype_" + (int)landType;
+            return "img_landtypes_" + (int)landType;
         }
         
         public static string GetSeedImgPath(int seedId, int stage)

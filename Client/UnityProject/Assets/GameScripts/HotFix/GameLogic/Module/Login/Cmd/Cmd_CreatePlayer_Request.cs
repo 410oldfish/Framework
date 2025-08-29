@@ -32,7 +32,7 @@ namespace GameLogic
             Log.Debug("创建玩家成功 : " + nickName);
             //设置昵称成功，请求玩家数据
             
-            this.GetSystem<PlayerCtrl>().RequestAllModuleData();
+            this.GetSystem<PlayerSystem>().RequestAllModuleData();
         }
     }
 }

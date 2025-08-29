@@ -159,7 +159,7 @@ message C2Center_Farmland_UnlockLand_Req // ICustomRouteRequest, Center2C_Farmla
 
 message Center2C_Farmland_UnlockLand_Resp // ICustomRouteResponse
 {
-	int64 UnlockStartTime = 1;
+	LandProto LandData = 1;
 	repeated ItemProto CurItems = 2;
 }
 
@@ -258,7 +258,7 @@ message C2Center_Farmland_Fertilizer_Req // ICustomRouteRequest, Center2C_Farmla
 
 message Center2C_Farmland_Fertilizer_Resp // ICustomRouteResponse
 {
-	int32 FertilizerCount = 1;
+	LandProto LandData = 1;
 }
 
 //请求除虫

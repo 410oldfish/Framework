@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 592365085927658659}
   - component: {fileID: 640475986887851118}
   - component: {fileID: 715452170207866023}
+  - component: {fileID: 8358420440463377238}
   m_Layer: 0
   m_Name: Pfb_LandBlock
   m_TagString: Untagged
@@ -101,6 +102,18 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &8358420440463377238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183193199924269206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290f37121da142b9a9a9fb957803d2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6384247260566281535
 GameObject:
   m_ObjectHideFlags: 0

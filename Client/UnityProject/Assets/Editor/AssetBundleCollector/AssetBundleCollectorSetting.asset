@@ -115,6 +115,19 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: Prefabs
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Prefabs
+        CollectorGUID: 628310df69a3bf5408efc6fa30e85d7a
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
     - GroupName: Scenes
       GroupDesc: 
       AssetTags: 
@@ -122,6 +135,45 @@ MonoBehaviour:
       Collectors:
       - CollectPath: Assets/AssetRaw/Scenes
         CollectorGUID: cace6ee6539f661419b5e5f8ae1c0146
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Shader
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Shaders
+        CollectorGUID: 2a4bceb84ed685447ace957f497eb810
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Sprites
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/Sprites
+        CollectorGUID: 5a1f8e3c6a4836c4da16c149b923b00d
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: TileMap
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/AssetRaw/TileMap
+        CollectorGUID: e5435bcc31719474ab88fc1576ce2366
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
@@ -162,13 +214,13 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-    - GroupName: FontMaterial
+    - GroupName: Atlas
       GroupDesc: 
-      AssetTags: FontMaterial
+      AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/AssetRaw/FontMaterials
-        CollectorGUID: 6a213fb35a71b414b8850f96f93308c7
+      - CollectPath: Assets/AssetRaw/Atlas
+        CollectorGUID: f9ff86e7b11c1304db3b3fe9ec624d68
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory

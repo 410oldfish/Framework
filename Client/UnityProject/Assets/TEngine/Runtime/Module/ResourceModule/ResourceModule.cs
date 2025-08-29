@@ -5,6 +5,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using YooAsset;
+using Object = UnityEngine.Object;
 #if UNITY_WEBGL && WEIXINMINIGAME && !UNITY_EDITOR
 using WeChatWASM;
 #endif
@@ -933,6 +934,17 @@ namespace TEngine
                     loadAssetCallbacks.LoadAssetSuccessCallback(location, handle.AssetObject, duration, userData);
                 }
             }
+        }
+
+        /// <summary>
+        /// 异步加载子资源对象
+        /// </summary>
+        /// <typeparam name="TObject">资源类型</typeparam>
+        /// <param name="location">资源的定位地址</param>
+        public async UniTask<TObject> LoadSubAssetsAsync<TObject>(string location, string subAssetsName) where TObject : UnityEngine.Object
+        {
+            var subAssetsHandle = DefaultPackage.LoadSubAssetsAsync<TObject>(location);
+            return subAssetsHandle.GetSubAssetObject<TObject>(subAssetsName);
         }
 
         /// <summary>

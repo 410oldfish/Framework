@@ -15,6 +15,8 @@ public class GameMgr : Architecture<GameMgr>
         this.RegisterModel(new FishlandModel());
             
         //System
-        this.RegisterSystem(new PlayerCtrl());
+        this.RegisterSystem(new MainSystem());
+        this.RegisterSystem(new PlayerSystem());
+        this.RegisterSystem(new FarmlandSystem());
     }
 }

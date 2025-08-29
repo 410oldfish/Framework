@@ -31,7 +31,7 @@ namespace GameLogic
             }
             else //如果是老玩家，请求完整玩家数据
             {
-                this.GetSystem<PlayerCtrl>().RequestAllModuleData();
+                this.GetSystem<PlayerSystem>().RequestAllModuleData();
             }
         }
     }

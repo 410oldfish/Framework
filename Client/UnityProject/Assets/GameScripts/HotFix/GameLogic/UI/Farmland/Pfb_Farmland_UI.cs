@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
 using TEngine;
@@ -10,6 +11,8 @@ namespace GameLogic
     [Window(UILayer.UI)]
     class Pfb_Farmland_UI : UIWindow
     {
+        private FarmlandSystem _farmlandSystem;
+        
         #region 脚本工具生成的代码
         private Button _btn_RemoveLand;
         private Button _btn_Bag;
@@ -26,6 +29,10 @@ namespace GameLogic
         Dictionary<int, int> _waterTimerId = new Dictionary<int, int>();
         //除虫计时器ID
         Dictionary<int, int> _depestTimerId = new Dictionary<int, int>();
+        
+        
+        //Test-------------------------------
+        private Button _btn_GetAllData;
         protected override void ScriptGenerator()
         {
             _btn_RemoveLand = FindChildComponent<Button>("Bottom_btns/m_btn_RemoveLand");
@@ -41,8 +48,18 @@ namespace GameLogic
             _btn_Depest.onClick.AddListener(OnClick_DepestBtn);
             _btn_Gain.onClick.AddListener(OnClick_GainBtn);
             _btn_GainAll.onClick.AddListener(OnClick_GainAllBtn);
+            
+            //----Test--------------------------
+            _btn_GetAllData = FindChildComponent<Button>("m_btn_GetAllData");
+            _btn_GetAllData.onClick.AddListener(GetFarmlandAllData);
         }
         #endregion
+
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+            _farmlandSystem = this.GetSystem<FarmlandSystem>();
+        }
 
         #region 事件
         private void OnClick_RemoveLandBtn()
@@ -127,6 +144,12 @@ namespace GameLogic
         void OnFinishDepest(int landId)
         {
 
+        }
+        
+        //---------Operation-----------------------
+        void GetFarmlandAllData()
+        {
+            _farmlandSystem.GetFarmlandAllData();
         }
     }
 }

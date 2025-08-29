@@ -32,7 +32,7 @@ namespace GameLogic
                     }
                 });
             
-            this.GetModel<InventoryModel>().UpdateAllItems(res.CurItems);
+            this.GetModel<InventoryModel>().UpdateItems(res.CurItems);
         }
     }
 }

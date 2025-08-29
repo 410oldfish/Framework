@@ -6,6 +6,8 @@ using QFramework;
 using TEngine;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.TextCore.Text;
 
 namespace GameLogic
 {
@@ -16,13 +18,20 @@ namespace GameLogic
         Harvest = 3, //收获
     }
     
-    public class FarmlandBlockView : MonoBehaviour, ICanSendCommand
+    public class FarmlandBlockView : MonoBehaviour, ICanSendCommand, ICanGetSystem
     {
         private int _landId;
         public int LandId
         {
             get => _landId;
             set => _landId = value;
+        }
+        
+        private bool _active = false;
+        public bool Active
+        {
+            get => _active;
+            set => _active = value;
         }
 
         SpriteRenderer _landSpriteRenderer;
@@ -33,24 +42,40 @@ namespace GameLogic
         private int _waterTimerId; //浇水
         private int _depestTimerId; //除虫
 
+        private EventTrigger _eventTrigger;
+        private EventTrigger.Entry _clickEntry = new EventTrigger.Entry(){eventID = EventTriggerType.PointerClick};
+        private UnityAction<BaseEventData> _onClickLandAction;
+        
+        private FarmlandSystem _farmlandSystem;
         private void Start()
         {
+            _farmlandSystem = this.GetSystem<FarmlandSystem>();
             _landSpriteRenderer = transform.GetComponentInTargetChild<SpriteRenderer>("Land");
             _cropSpriteRenderer = transform.GetComponentInTargetChild<SpriteRenderer>("Crop");
-            
-            RegisterEvents();
+            _eventTrigger = gameObject.GetComponent<EventTrigger>();
+            _eventTrigger.triggers.Clear();
+            _clickEntry.callback.AddListener(OnClickProxy);
+            _eventTrigger.triggers.Add(_clickEntry);
         }
 
-        void RegisterEvents()
+        void OnClickProxy(BaseEventData data)
         {
-            GameEvent.AddEventListener<int, ELandType>(EventID.FARMLAND_LAND_TYPE_CHANGE, OnLandTypeChange);
+            _onClickLandAction?.Invoke(data);
         }
 
-        private void OnLandTypeChange(int landId, ELandType landType)
+        public void ChangeLandType(ELandType landType)
         {
-            if (landId != _landId) return;
             //土地类型变更
             SetLandImg(landType).Forget();
+        }
+
+        public async UniTask SetLockedBlock(int landId)
+        {
+            _landId = landId;
+            _onClickLandAction = (e) =>
+            {
+                _farmlandSystem.UnlockNewFarmland(_landId);
+            };
         }
 
         public async UniTask SetBlock(int landId, Farm_LandData data)
@@ -223,7 +248,7 @@ namespace GameLogic
         async UniTask SetLandImg(ELandType landType)
         {
             string landTypeImgPath = Misc.GetLandTypeImgPath(landType);
-            _landSpriteRenderer.sprite = await GameModule.Resource.LoadAssetAsync<Sprite>(landTypeImgPath);
+            _landSpriteRenderer.sprite = _farmlandSystem.GetSpriteFromAtlas(landTypeImgPath);
         }
 
         public IArchitecture GetArchitecture()

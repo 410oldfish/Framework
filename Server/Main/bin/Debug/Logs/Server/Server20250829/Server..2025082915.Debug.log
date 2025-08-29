@@ -1,0 +1,126 @@
+2025-08-29 15:26:30.0452 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592120661337964544 CenterRouteId : 2592125076564344832
+2025-08-29 15:26:35.2707 (GameCoreDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2592125076564344833
+2025-08-29 15:26:35.2846 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:26:35.2846 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-29 15:26:35.2846 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2592125076564344834
+2025-08-29 15:26:40.2942 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:26:45.2963 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:26:50.3044 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:26:55.3178 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:26:57.5199 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592186632035631104 CenterRouteId : 2592186649215500288
+2025-08-29 15:27:00.3286 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:01.7192 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:27:01.7192 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-29 15:27:01.7192 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2592125076564344832
+2025-08-29 15:27:04.2063 (GameCoreDataEntity.cs:20) Auto Save PlayerCoreDataEntity: 2592188848238755840
+2025-08-29 15:27:04.2063 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:04.2063 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-29 15:27:04.2063 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2592188848238755841
+2025-08-29 15:27:04.2063 (FarmlandDataEntity.cs:23) Auto Save FarmlandDataEntityEntity: 2592188848238755842
+2025-08-29 15:27:09.2151 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:14.2164 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:19.2282 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:24.2292 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:29.2308 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:34.2305 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:39.2366 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:44.2469 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:49.2480 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:54.2490 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:27:59.2490 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:28:04.2494 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:28:09.2491 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:28:14.2490 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:28:16.4391 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:28:16.4391 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-29 15:28:16.4391 (FarmlandDataEntity.cs:56) Dispose FarmlandDataEntityEntity: 0
+2025-08-29 15:28:16.4391 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2592186649215500288
+2025-08-29 15:29:30.0407 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592520883570475008 CenterRouteId : 2592520900750344192
+2025-08-29 15:29:35.0634 (GameCoreDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2592520900750344193
+2025-08-29 15:29:35.0634 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:29:35.0634 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-29 15:29:35.0634 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2592520900750344194
+2025-08-29 15:29:40.0670 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:29:45.0671 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:29:50.0686 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:29:55.0696 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:30:00.0699 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:30:03.4041 (GameCoreDataEntity.cs:53) Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:30:03.4041 (InventoryDataEntity.cs:58) Dispose InventoryDataEntity: 0
+2025-08-29 15:30:03.4041 (G2Center_DisposeCenterUnitHandler.cs:13) Dispose CenterUnit: 2592520900750344192
+2025-08-29 15:30:43.6442 (C2G_BuildCenterRouteHandler.cs:39) 建立到中心服的路由成功: 2592639630826274816 CenterRouteId : 2592683628471255040
+2025-08-29 15:30:48.6719 (GameCoreDataEntity.cs:40) Auto Save PlayerCoreDataEntity: 2592683628471255041
+2025-08-29 15:30:48.6719 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:30:48.6719 (InventoryDataEntity.cs:47)  Dirty : False
+2025-08-29 15:30:48.6719 (InventoryDataEntity.cs:48) Auto Save InventoryDataEntity: 2592683628471255042
+2025-08-29 15:30:53.0089 (FarmlandDataEntity.cs:43) Auto Save FarmlandDataEntityEntity: 2592692424564277248
+2025-08-29 15:30:53.6736 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:30:58.6784 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:31:03.6914 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:31:08.7027 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:31:13.7028 (InventoryDataEntity.cs:42) 1111
+2025-08-29 15:31:17.6066  Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:31:17.6066  Dispose InventoryDataEntity: 0
+2025-08-29 15:31:17.6092  Dispose FarmlandDataEntityEntity: 0
+2025-08-29 15:31:17.6092  Dispose CenterUnit: 2592683628471255040
+2025-08-29 15:31:23.5867  建立到中心服的路由成功: 2592771572221607936 CenterRouteId : 2592771589401477120
+2025-08-29 15:31:28.6380  Auto Save PlayerCoreDataEntity: 2592771589401477121
+2025-08-29 15:31:28.6502  1111
+2025-08-29 15:31:28.6502   Dirty : False
+2025-08-29 15:31:28.6502  Auto Save InventoryDataEntity: 2592771589401477122
+2025-08-29 15:31:32.3512  Auto Save FarmlandDataEntityEntity: 2592780385494499328
+2025-08-29 15:31:33.6502  1111
+2025-08-29 15:31:36.7659  Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:31:36.7659  Dispose InventoryDataEntity: 0
+2025-08-29 15:31:36.7659  Dispose FarmlandDataEntityEntity: 0
+2025-08-29 15:31:36.7659  Dispose CenterUnit: 2592771589401477120
+2025-08-29 15:33:37.0665  建立到中心服的路由成功: 2593061843291340800 CenterRouteId : 2593064059494465536
+2025-08-29 15:33:42.1131  Auto Save PlayerCoreDataEntity: 2593064059494465537
+2025-08-29 15:33:42.1279  1111
+2025-08-29 15:33:42.1279   Dirty : False
+2025-08-29 15:33:42.1279  Auto Save InventoryDataEntity: 2593064059494465538
+2025-08-29 15:33:47.1280  1111
+2025-08-29 15:33:49.6184  Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:33:49.6184  Dispose InventoryDataEntity: 0
+2025-08-29 15:33:49.6184  Dispose CenterUnit: 2593064059494465536
+2025-08-29 15:40:06.0556  建立到中心服的路由成功: 2593919462361006080 CenterRouteId : 2593919479540875264
+2025-08-29 15:40:11.0825  Auto Save PlayerCoreDataEntity: 2593919479540875265
+2025-08-29 15:40:11.0825  1111
+2025-08-29 15:40:11.0825   Dirty : False
+2025-08-29 15:40:11.0825  Auto Save InventoryDataEntity: 2593919479540875266
+2025-08-29 15:40:16.0880  1111
+2025-08-29 15:40:21.0888  1111
+2025-08-29 15:40:26.0894  1111
+2025-08-29 15:40:31.0897  1111
+2025-08-29 15:40:36.0896  1111
+2025-08-29 15:40:41.0890  1111
+2025-08-29 15:40:46.0899  1111
+2025-08-29 15:40:51.0089  Auto Save FarmlandDataEntityEntity: 2594007440471097344
+2025-08-29 15:40:51.0907  1111
+2025-08-29 15:40:54.1447  Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:40:54.1447  Dispose InventoryDataEntity: 0
+2025-08-29 15:40:54.1447  Dispose FarmlandDataEntityEntity: 0
+2025-08-29 15:40:54.1447  Dispose CenterUnit: 2593919479540875264
+2025-08-29 15:41:45.0678  建立到中心服的路由成功: 2594139364686561280 CenterRouteId : 2594137182843174912
+2025-08-29 15:41:51.8746  Auto Save PlayerCoreDataEntity: 2594141580889686016
+2025-08-29 15:41:51.8746  1111
+2025-08-29 15:41:51.8746   Dirty : False
+2025-08-29 15:41:51.8746  Auto Save InventoryDataEntity: 2594141580889686017
+2025-08-29 15:41:51.8752  Auto Save FarmlandDataEntityEntity: 2594141580889686018
+2025-08-29 15:41:56.8755  1111
+2025-08-29 15:41:59.1144  Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:41:59.1144  Dispose InventoryDataEntity: 0
+2025-08-29 15:41:59.1144  Dispose FarmlandDataEntityEntity: 0
+2025-08-29 15:41:59.1144  Dispose CenterUnit: 2594137182843174912
+2025-08-29 15:42:09.7583  建立到中心服的路由成功: 2594194340267950080 CenterRouteId : 2594192158424563712
+2025-08-29 15:42:14.8311  Auto Save PlayerCoreDataEntity: 2594192158424563713
+2025-08-29 15:42:14.8452  1111
+2025-08-29 15:42:14.8452   Dirty : False
+2025-08-29 15:42:14.8452  Auto Save InventoryDataEntity: 2594192158424563714
+2025-08-29 15:42:19.1716  Auto Save FarmlandDataEntityEntity: 2594200954517585920
+2025-08-29 15:42:19.8471  1111
+2025-08-29 15:42:24.8481  1111
+2025-08-29 15:42:28.8761  Dispose PlayerCoreDataEntity: 0
+2025-08-29 15:42:28.8761  Dispose InventoryDataEntity: 0
+2025-08-29 15:42:28.8761  Dispose FarmlandDataEntityEntity: 0
+2025-08-29 15:42:28.8761  Dispose CenterUnit: 2594192158424563712
